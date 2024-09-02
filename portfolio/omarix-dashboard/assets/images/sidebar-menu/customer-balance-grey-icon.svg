@@ -1,0 +1,8 @@
+<svg id="Component_2_1" data-name="Component 2 – 1" xmlns="http://www.w3.org/2000/svg" width="26.594" height="18.783" viewBox="0 0 26.594 18.783">
+  <g id="Component_1_1" data-name="Component 1 – 1">
+    <circle id="Ellipse_519" data-name="Ellipse 519" cx="9.392" cy="9.392" r="9.392" fill="#a0a5b9"/>
+    <path id="Path_13564" data-name="Path 13564" d="M410.7,411.468s12.639,7.548,0,17.086C410.7,428.554,418.66,422.352,410.7,411.468Z" transform="translate(-393.986 -410.105)" fill="#a0a5b9"/>
+    <path id="Path_13565" data-name="Path 13565" d="M466.468,411.468s12.639,7.548,0,17.086C466.468,428.554,474.426,422.352,466.468,411.468Z" transform="translate(-445.492 -410.105)" fill="#a0a5b9"/>
+  </g>
+  <text id="_" data-name="$" transform="translate(6.5 12.5)" fill="#fff" stroke="#fff" stroke-width="0.3" font-size="9" font-family="Rubik-Regular, Rubik"><tspan x="0" y="0">$</tspan></text>
+</svg>

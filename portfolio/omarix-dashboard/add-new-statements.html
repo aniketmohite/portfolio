@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Omarix - Add Statements</title>	
+
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+	<link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+	<!-- BOOTSTAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+	<!-- FONTS USED -->
+
+	<!-- RUBIK -->
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<!-- SANS SANS PRO -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+	<div class="wrapper">
+		<!-- SIDEBAR NAV -->
+		<div id="SidenavBar" class="dashboard-sidebar-section">
+			<div class="sidenavbar-close-btn-section">
+				<a href="javascript:void(0)" class="closebtn sidenavbar-close-btn" onclick="ToggleSidebar()">&times;</a>
+			</div>
+			<div class="dashboard-sidebar-logo-section">
+				<img class="dashboard-sidebar-logo" src="assets/images/logo.png">
+			</div>
+			<a href="#" class="theme-btn" type="submit" name="navbarsearchbtn">Register Patients<img class="theme-btn-icon" src="assets/images/add-icon.svg"></a>
+			<div class="dashboard-sidebar-list-section">
+				<ul class="dashboard-sidebar-list-ul">
+					<li class="dashboard-sidebar-list-li">
+						<a href="index.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/dashboard-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/dashboard-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Dashboard</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="customer-balance.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/customer-balance-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/customer-balance-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Customer Balance</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li dashboard-sidebar-list-li-active">
+						<a href="statements.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/statements-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/statements-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Statements</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="reminders.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/reminders-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/reminders-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Reminders</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="users.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/users-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/users-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Users</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="#" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/settings-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/settings-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Settings</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="#" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/help-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/help-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Help & Support</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="dashboard-sidebar-footer-section">
+				<div class="dashboard-sidebar-footer-logout-section">
+					<a href="#" class="dashboard-sidebar-list-link">
+						<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/logout-icon.svg">
+						<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/logout-grey-icon.svg">
+						<p class="dashboard-sidebar-list-title">Log Out</p>
+					</a>
+				</div>
+					
+				<div class="dashboard-sidebar-footer-credits-section">
+					<p class="dashboard-sidebar-footer-credits">© 2020 Omarix. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="dashboard-main-container">
+			<!-- TOP NAVBAR -->
+			<div class="dashboard-details-section">
+				<div class="dashboard-navbar">
+					<div class="nav_icon col-lg-4 col-12 navbar-sub-section" onclick="ToggleSidebar()">
+			          <button class="navbar-toggler" 
+						type="button" 
+						data-toggle="collapse" 
+						data-target="#navbarNav" 
+						aria-controls="navbarNav" 
+						aria-expanded="false" 
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<img class="dashboard-sidebar-logo" src="assets/images/logo.png" style="margin-left: 20px;">
+			        </div>
+					<!-- NAVBAR SEARCH SECTION -->
+					<div class="col-lg-4 col-md-6 col-12 navbar-search-section navbar-sub-section">
+						<form class="theme-form navbar-input-form">
+							<input class="theme-input navbar-input" type="text" name="navbarsearch" placeholder="Search for customers...">
+							<button class="theme-btn navbar-btn" type="submit" name="navbarsearchbtn"><img class="navbar-btn-icon" src="assets/images/search-btn-icon.svg"></button>
+
+						</form>
+					</div>
+
+					<!-- NAVBAR DETAILS SECTION -->
+					<div class="col-lg-4 col-md-6 col-12 navbar-details-section navbar-sub-section">
+						<ul class="navbar-details-menu">
+							<li class="nav-item">
+								<div data-toggle="dropdown" class="navbar-notification-icon-section">
+									<img class="navbar-notification-icon" src="assets/images/notification-bell-icon.svg">
+									<div class="navbar-notification-no">
+										3
+									</div>
+								</div>
+								<div class="navbar-dropdown-section">
+									<ul class="dropdown-menu navbar-dropdown-menu" >
+							            <!-- <div class="dropdownArrow"></div> -->
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification One
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification Two
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification Three
+							              	</a>
+							            </li>
+							        </ul>
+								</div>
+							</li>
+							<li class="nav-item">
+								<div data-toggle="dropdown" class="navbar-profile-section">
+									<div class="navbar-profile-status-section">
+										<div class="navbar-profile-img-section">
+											<img class="navbar-profile-img" src="assets/images/profile-img.png">
+											<div class="navbar-profile-status-active">
+											</div>
+										</div>
+									</div>
+									<div class="navbar-profile-title-section">
+										<h2 class="navbar-profile-title">ABC Hospitals</h2>
+										<img class="navbar-profile-dropdown-arrow" src="assets/images/dropdown-arrow.svg">
+									</div>
+								</div>
+								<div class="navbar-dropdown-section">
+									<ul class="dropdown-menu navbar-dropdown-menu" >
+							            <!-- <div class="dropdownArrow"></div> -->
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	DEF Hospitals
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	GHI Hospitals
+							              	</a>
+							            </li>
+							        </ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+
+			<!-- ADD NEW STATEMENT SECTION -->
+			<div class="all-main-sections-container">
+				<div class="main-section">
+					<div class="main-section-details-title-section">
+						<div class="col-12 main-section-details-title-div">
+							<div class="main-section-details-title-nav-section">
+								<a href="statements.html" class="main-section-details-title-nav"><</a>
+								<a href="#" class="main-section-details-title-nav">></a>
+							</div>
+							<h2 class="main-section-details-title">New Statement</h2>
+						</div>
+					</div>
+					<form class="new-statement-form">
+						<div class="main-sub-section">
+							<div class="main-sub-section-container new-statement-sub-section-container">
+								<div class="col-md-4">
+									<input type="text" name="" class="theme-input new-statement-input" placeholder="Search for customers...">
+								</div>
+								<div class="col-md-3 new-statement-client-info-section">
+									<img src="assets/images/right-arrow.svg" style="width: 10px; margin-right: 10px;">
+									<p>Client Info</p>
+								</div>
+								<div class="col-md-5 new-statement-sub-section-amount-section">
+									<h2 class="new-statement-sub-section-amount-title">$1000.00</h2>
+									<p class="new-statement-sub-section-amount-sub-title">Total Amount</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="main-sub-section">
+							<div class="main-sub-section-container new-statement-sub-section-container">
+								<div class="dashboard-form-row">
+	                                <div class="col-md-3">
+	                                    <div class="form-group">
+	                                        <label for="form_bill_id">Billing ID</label>
+	                                            <input id="form_bill_id" type="number" name="bill_id" class="form-control" placeholder="103" required>
+	                                    </div>
+	                                </div>
+	                                <div class="col-md-3">
+	                                    <div class="form-group">
+	                                        <label for="form_ref_id">Reference ID</label>
+	                                        <input id="form_ref_id" type="number" name="ref_id" class="form-control" placeholder="103" required>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="dashboard-form-row">
+	                                <div class="col-md-3">
+	                                    <div class="form-group">
+	                                        <label for="form_invo_date">Invoice Date</label>
+	                                            <input id="form_invo_date" type="date" name="invo_date" class="form-control" placeholder="12/20/20" required>
+	                                    </div>
+	                                </div>
+	                                <div class="col-md-3">
+	                                    <div class="form-group">
+	                                        <label for="form_vst_date">Visit Date</label>
+	                                        <input id="form_vst_date" type="date" name="vst_date" class="form-control" placeholder="12/20/20" required>
+	                                    </div>
+	                                </div>
+	                                <div class="col-md-3">
+	                                    <div class="form-group">
+	                                        <label for="form_due_date">Due Date</label>
+	                                        <input id="form_due_date" type="date" name="due_date" class="form-control" placeholder="12/20/20" required>
+	                                    </div>
+	                                </div>
+	                            </div>
+							</div>
+						</div>
+
+						<div class="main-sub-section">
+							<div class="main-sub-section-container new-statement-sub-section-container">
+								<div class="dashboard-form-row">
+	                                <div class="col-md-3">
+	                                    <div class="form-group">
+	                                        <label for="form_notes">Notes</label>
+	                                            <input id="form_notes" type="text" name="notes" class="form-control" placeholder="103" required>
+	                                    </div>
+	                                </div>
+	                                <div class="col-md-3" style="display: flex; align-items: flex-end;">
+	                                    <div class="form-group">
+	                                        <select>
+	                                        	<option>Flat Rate</option>
+	                                        	<option>Flat Rate</option>
+	                                        	<option>Flat Rate</option>
+	                                        </select>
+	                                    </div>
+	                                </div>
+	                                <div class="col-md-3">
+	                                    <div class="form-group">
+	                                        <label for="form_ref_id">Amount</label>
+	                                        <input id="form_ref_id" type="number" name="ref_id" class="form-control" placeholder="103" required>
+	                                    </div>
+	                                </div>
+	                            </div>
+							</div>
+						</div>
+
+						<div class="main-sub-section add-new-statements-footer-section">
+							<div class="col-lg-6 col-12 add-new-statements-footer-details-section">
+								<div class="add-new-statements-footer-add-notes-section">
+									<a href="#">Add Notes</a>
+								</div>
+								<div class="add-new-statements-footer-clear-section">
+									<a href="#">Clear all lines</a>
+								</div>
+							</div>
+							<div class="col-lg-6 col-12 add-new-statements-footer-btns-section">
+								<a href="#" class="secondary-theme-btn cancel-btn">
+									Cancel
+								</a>
+								<a href="#" class="theme-btn">
+									Add to Statement
+								</a>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="dashboard-overlay-footer">
+					<div class="col-md-6 dashboard-overlay-footer-btn-section">
+						<a href="#" class="secondary-theme-btn footer-overlay-white-color-btn">Cancel</a>
+					</div>
+					<div class="col-md-6 dashboard-overlay-footer-btn-section overlay-footer-flex-end">
+						<a href="#" class="secondary-theme-btn footer-overlay-white-color-btn">Create & Send Statement<img src="assets/images/right-btn-arrow.svg"></a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+	<script>
+		function ToggleSidebar() {
+		  var element = document.getElementById("SidenavBar");
+		  element.classList.toggle("sidebar-active");
+		} 
+	</script>
+
+	<script>
+
+      $(".dashboard-sidebar-list-li").click(function(){
+
+        $(".dashboard-sidebar-list-li").removeClass("dashboard-sidebar-list-li-active");
+        $(this).addClass("dashboard-sidebar-list-li-active");
+
+      })
+
+    </script>
+
+
+
+</body>
+</html>

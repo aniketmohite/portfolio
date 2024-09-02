@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="252" height="43.498" viewBox="0 0 252 43.498">
+  <g id="comp_x5F_86-dhl" transform="translate(0.248)">
+    <g id="Group_633" data-name="Group 633" transform="translate(0)">
+      <path id="Path_545" data-name="Path 545" d="M202.062,284.412h22.607l8.589-11.631H210.651Z" transform="translate(-104.965 -242.355)" fill="#707070"/>
+      <path id="Path_546" data-name="Path 546" d="M372.741,238.184l15.136-20.567H363.921l-15.135,20.567Z" transform="translate(-173.067 -216.751)" fill="#707070"/>
+      <path id="Path_547" data-name="Path 547" d="M116.608,264.273c-3.351,0-2.311-1.387-1.771-2.119,1.079-1.462,2.927-4.005,4-5.43s1.079-2.273-1.078-2.273H98.122L82.293,275.943h38.552c12.748,0,19.834-8.666,22.03-11.67H116.608Z" transform="translate(-49.373 -233.847)" fill="#707070"/>
+      <path id="Path_548" data-name="Path 548" d="M133.325,228.979c-1.079,1.463-2.888,4.006-3.967,5.469-.539.77-1.579,2.119,1.771,2.119h17.563s2.812-3.852,5.2-7.088c3.236-4.39.27-13.479-11.246-13.479H97.239l-7.858,10.706h42.9C134.442,226.706,134.4,227.554,133.325,228.979Z" transform="translate(-52.663 -216)" fill="#707070"/>
+      <path id="Path_549" data-name="Path 549" d="M269.589,217.617,260.924,229.4H250.833l8.666-11.785H236.891l-15.136,20.567h55.306L292.2,217.617Z" transform="translate(-114.105 -216.751)" fill="#707070"/>
+      <path id="Path_550" data-name="Path 550" d="M263.154,284.412h22.608l8.589-11.631H271.743C271.7,272.781,263.154,284.412,263.154,284.412Z" transform="translate(-133.321 -242.355)" fill="#707070"/>
+      <path id="Path_551" data-name="Path 551" d="M342.021,272.781s-1.657,2.271-2.465,3.351c-2.85,3.851-.348,8.318,8.935,8.318H384.81l8.588-11.67Z" transform="translate(-168.267 -242.355)" fill="#707070"/>
+      <line id="Line_15" data-name="Line 15" x2="21" transform="translate(230.752 43.498)" fill="none"/>
+      <line id="Line_16" data-name="Line 16" x2="16" transform="translate(235.752 31.498)" fill="none"/>
+      <line id="Line_17" data-name="Line 17" x2="11" transform="translate(240.752 21.498)" fill="none"/>
+      <line id="Line_18" data-name="Line 18" x1="21" transform="translate(-0.248 43.498)" fill="none"/>
+      <line id="Line_19" data-name="Line 19" x1="16" transform="translate(-0.248 31.498)" fill="none"/>
+      <line id="Line_20" data-name="Line 20" x1="11" transform="translate(-0.248 21.498)" fill="none"/>
+    </g>
+  </g>
+</svg>

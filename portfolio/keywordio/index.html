@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AdHelp.io</title>	
+
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+	<link rel="icon" type="image/png" href="assets/images/favicon.svg">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+
+	<!-- NAVBAR -->
+		<nav id="navbar" class="navbar fixed-top navbar-expand-md">
+			<div class="navbar-container container-fluid">
+				<div class="navbar-brand">
+					<a class="navbar-brand-link" href="#">AdHelp.io</a><span class="separator">|</span><a class="navbar-brand-link" href="#">Company name</a>
+				</div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-collapse collapse justify-content-end" id="navbarToggle">
+					<div class="navbar-collapse-section">
+						<a class="menu-link" href="#">Collaborate</a><span class="separator">|</span><a class="menu-link" href="#">Logout</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+	<!-- WRAPPER -->
+		<div class="wrapper">
+			<div class="container-fluid">
+
+				<!-- HEADER SECTION -->
+				<div class="header-section">
+					<div class="col-xl-7 p-0 header-details-container">
+						<div class="col-xl-11 d-flex justify-content-between header-details-section">
+							<div class="d-flex flex-diretion-row">
+								<p class="header-details-title">Daily cost :</p><p class="header-details-subtitle">SEK 1,000</p>
+							</div>
+							<div class="d-flex flex-diretion-row">
+								<p class="header-details-title">Projected monthly budget :</p><p class="header-details-subtitle">SEK 31,698</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-5 p-0 header-details-container">
+						<div class="col-sm-6 p-0 m-t-b-10 d-flex justify-content-start">
+							<div id="adDropdown"></div>
+						</div>
+						<div class="col-sm-6 p-0 m-t-b-10 d-flex justify-content-end">
+							<div id="rangeDropdown"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- STATS SECTION -->
+				<div class="stats-section">
+					<div class="col-xl-7 p-0 cards-container">
+						<div class="col-sm-6 p-0 card-section">
+							<div class="card">
+								<div class="card-title-section">
+									<h3 class="card-title">Clicks</h3>
+									<div class="card-icon-section">
+										<img class="card-icon" src="assets/images/success.svg">
+									</div>
+								</div>
+								<h4 class="card-subtitle">25,000</h4>
+								<p class="card-details">Yaay! <span class="success-color">+5,000</span> than last month</p>
+							</div>
+						</div>
+						<div class="col-sm-6 p-0 card-section">
+							<div class="card">
+								<div class="card-title-section">
+									<h3 class="card-title">Cost</h3>
+									<div class="card-icon-section">
+										<img class="card-icon" src="assets/images/danger.svg">
+									</div>
+								</div>
+								<h4 class="card-subtitle">29,256</h4>
+								<p class="card-details">Oops! <span class="danger-color">-SEK 500</span> than last month</p>
+							</div>
+						</div>
+						<div class="col-sm-6 p-0 card-section">
+							<div class="card">
+								<div class="card-title-section">
+									<h3 class="card-title">Revenue</h3>
+									<div class="card-icon-section">
+										<img class="card-icon" src="assets/images/warning.svg">
+									</div>
+								</div>
+								<h4 class="card-subtitle">79,963</h4>
+								<p class="card-details">Yaay! <span class="success-color">+500</span> than last month</p>
+							</div>
+						</div>
+						<div class="col-sm-6 p-0 card-section">
+							<div class="card">
+								<div class="card-title-section">
+									<h3 class="card-title">Conversion rate</h3>
+									<div class="card-icon-section">
+										<img class="card-icon" src="assets/images/warning.svg">
+									</div>
+								</div>
+								<h4 class="card-subtitle">20%</h4>
+								<p class="card-details">You are <span class="warning-color">+SEK 50</span> than last month</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-5 best-stats-section">
+						<div class="best-stats-title-section">
+							<h3 class="best-stats-title">Top 3 performing Ads/ URLs</h3>
+							<p class="best-stats-subtitle">(Based on most conversions/ Clicks)</p>
+						</div>
+						<div class="best-stats-card-section">
+							<div class="card">	
+								<a href="#" class="best-stats-card">
+									<div class="icon-section">
+										<p>1</p>
+									</div>
+									<h3 class="title">Nike Air | Sports Shoes | Summer Sale</h3>
+								</a>
+								<a href="#" class="best-stats-card">
+									<div class="icon-section">
+										<p>2</p>
+									</div>
+									<h3 class="title">Nike sport | Sports Shoes female | Summer Sale</h3>
+								</a>
+								<a href="#" class="best-stats-card">
+									<div class="icon-section">
+										<p>3</p>
+									</div>
+									<h3 class="title">Nike Air Max  | Men's Shoes | Summer Sale</h3>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- GRAPH SECTION -->
+				<div class="graph-section">
+					<div class="col-md-12 p-0 graph-title-section">
+						<h3 class="title">Conversion summary</h3>
+					</div>
+					<div class="w-100 graph-container">
+						<div class="card">
+							<canvas id="conversionchart" aria-label="chart" role="img"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<!-- FOOTER SECTION -->
+				<div class="footer-section">
+					<div class="btn-section">
+						<a href="#" class="border-btn fb-btn">
+							<div class="btn-icon-section">
+								<img class="btn-icon" src="assets/images/facebook-icon.svg">
+								<img class="btn-icon btn-icon-hover" src="assets/images/facebook-icon-white.svg">
+							</div>
+							Advertise on Facebook
+						</a>
+					</div>
+					<div class="btn-section">
+						<a href="#" class="border-btn slack-btn">
+							<div class="btn-icon-section">
+								<img class="btn-icon" src="assets/images/slack.svg">
+								<img class="btn-icon btn-icon-hover" src="assets/images/slack-white.svg">
+							</div>
+							Connect to Slack
+						</a>
+					</div>
+					<div class="btn-section">
+						<a href="#" class="border-btn">
+							<div class="btn-icon-section">
+								<img class="btn-icon" src="assets/images/bulb.svg">
+								<img class="btn-icon btn-icon-hover" src="assets/images/bulb-white.svg">
+							</div>
+							Knowledge center
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+	
+	<!-- FOR ADDING IMAGES IN DROPDOWN  -->
+	<script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
+	
+	<!-- CHART.JS -->
+	<script src="assets/js/chart.js"></script>
+
+	<!-- CUSTOM JS -->
+	<script src="assets/js/custom.js"></script>
+
+	<!-- Dropdown with images plugin data -->
+	<script>
+		
+		var ddData = [
+			{
+				text: "	Google Ads",
+				value: 1,
+				selected: true,
+				description: false,
+				imageSrc: "assets/images/google.svg"
+			},
+			{
+				text: "Facebook Ads",
+				value: 2,
+				selected: false,
+				description: false,
+				imageSrc: "assets/images/facebook.svg"
+			},
+			{
+				text: "LinkedIn Ads",
+				value: 3,
+				selected: false,
+				description: false,
+				imageSrc: "assets/images/linkedin.svg"
+			},
+			{
+				text: "YouTube Ads",
+				value: 4,
+				selected: false,
+				description: false,
+				imageSrc: "assets/images/youtube.svg"
+			}
+		];
+
+		$('#adDropdown').ddslick({
+			data:ddData,
+			width:250,
+			selectText: "Select your preferred social network",
+			imagePosition:"left",
+		});
+	</script>
+
+	<!-- Dropdown without images plugin data -->
+	<script>
+			
+		var ddData = [
+			{
+				text: "Today",
+				value: 1,
+				selected: false,
+				description: false
+			},
+			{
+				text: "Yesterday",
+				value: 2,
+				selected: false,
+				description: false
+			},
+			{
+				text: "This Week",
+				value: 3,
+				selected: false,
+				description: false
+			},
+			{
+				text: "Last Week",
+				value: 4,
+				selected: false,
+				description: false
+			},
+			{
+				text: "This Month",
+				value: 5,
+				selected: false,
+				description: false
+			},
+			{
+				text: "Last Month",
+				value: 6,
+				selected: false,
+				description: false
+			},
+			{
+				text: "Last 90 Days",
+				value: 7,
+				selected: false,
+				description: false
+			},
+			{
+				text: "Last Year",
+				value: 8,
+				selected: false,
+				description: false
+			}
+			
+		];
+
+		$('#rangeDropdown').ddslick({
+			data:ddData,
+			width:250,
+			selectText: "Select Range",
+			imagePosition: false,
+		});
+	</script>
+
+</body>
+</html>

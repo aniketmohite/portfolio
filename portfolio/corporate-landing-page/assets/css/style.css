@@ -1,0 +1,1149 @@
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    BASIC
+*/
+
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-os-font-smoothing: grayscale;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: Poppins;
+        padding: 0;
+        margin: 0;
+        background-color: #F5F5F5;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    .padding-0{
+        padding: 0 !important;
+    }
+
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    button:focus{
+        outline: none !important;
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    NAVBAR
+*/ 
+
+    .header-scrolled{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color:#fff !important;
+        -webkit-box-shadow: 0 4px 6px 0 rgba(12,0,46,.06);
+        box-shadow: 0 4px 6px 0 rgba(12,0,46,.06);
+    }
+
+    .navbar{
+        background-color: transparent;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        -webkit-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear;
+    }
+
+    .navbar-nav{
+        align-items: center;
+    }
+    
+    .navbar-brand{
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand-menu{
+        margin-right: 40px;
+    }
+
+    .menu-navbar-nav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-item{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .nav-item .nav-link{
+        text-align: right;
+    }
+
+    .nav-item .nav-link:hover .nav-link-number{
+        color: #FF3E81 !important; 
+    }
+
+    .nav-item .nav-link:hover .nav-link-menu{
+        color: #FF3E81 !important; 
+    }
+
+    .nav-link-number{
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 12px;
+        color: #000;
+    }
+
+    .nav-link-menu{
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        line-height: 1;
+    }
+
+    .learn-more-btn{
+        background-color: #3A88EC;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-weight: 400;
+        color: #fff;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        border-radius: 100px;
+    }
+
+    .learn-more-btn:hover{
+        color: #fff;
+        background-color: #FF3E81;
+    }
+
+    .navbar-toggler-icon{
+        background-image: url("../images/custom-responsive-toggle.svg");
+    }
+
+    @media screen and (max-width: 575.98px){
+        .navbar{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    HEADER
+*/
+    .header{
+        display: flex;
+        width: 100%;
+        padding: 160px 0 80px 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .header-img-section img{
+        width: 100%;
+    }
+
+    .header-subtitle{
+        font-family: Poppins;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+    .header-title{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 1.4;
+        color: #303669;
+    }
+
+    .header-title-text{
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.9;
+    }
+
+    .learn-more-btn-section{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    @media screen and (max-width: 991.98px){
+
+        .header-container{
+            flex-direction: column;
+        }
+
+        .header-title-section{
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .navbar-collapse{
+            background-color: rgba(0,0,0,0.4);
+            color: #fff;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .nav-link-number{
+            color: #fff;
+            display: none;
+        }
+
+        .nav-link-menu{
+            color: #fff;
+        }
+
+
+
+        .learn-more-btn-section{
+            justify-content: center;
+        }
+
+    }
+
+    @media screen and (max-width: 799.98px){
+
+        .header{
+            height: auto;
+            padding-top: 20%;
+        }
+
+    }
+
+
+    @media screen and (max-width: 499.98px){
+
+        .header{
+            padding-top: 30%;
+        }
+
+        .header-subtitle{
+            font-size: 24px;
+        }
+
+        .header-title{
+            font-size: 46px;
+        }
+
+        .header-title-text{
+            font-size: 18px;
+        }
+
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    STRATEGY SECTION
+*/
+
+    .strategy-section{
+        position: relative;
+    }
+
+    .strategy-section-bg-graphics-section{
+        position: absolute;
+        width: 25%;
+        left: -9%;
+        top: -25%;
+    }
+
+    .strategy-section-bg-graphics-section img{
+        width: 100%;
+    }
+
+    .strategy-container{
+        position: relative;
+        display: flex;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        flex-wrap: wrap;
+    }
+
+    .strategy-card-section{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .strategy-card{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .strategy-card img{
+        height: 80px;
+    }
+
+    .strategy-card h2{
+        color: #303669;
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 3;
+    }
+
+    .strategy-card p{
+        font-size: 16px;
+        line-height: 1.6;
+        color: #000;
+        font-family: Poppins;
+        font-weight: 400;
+        max-width: 300px;
+    }   
+
+
+    @media screen and (max-width: 576.98px){
+
+        .strategy-container{
+            flex-direction: column;
+        }
+
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    SERVICES SECTION
+*/
+    
+    .services-section{
+        position: relative;
+    }
+
+    .services-section-bg-graphics{
+        position: absolute;
+        width: 40%;
+        right: -23%;
+        top: -30%;
+    }
+
+    .services-section-bg-graphics img{
+        width: 100%;
+    }
+
+    .services-container{
+        position: relative;
+        display: flex;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        flex-wrap: wrap;
+    }
+
+    .services-header-img-section{
+        padding: 20px;
+    }
+
+    .services-header-img-section img{
+        width: 100%;
+    }
+
+    .services-title-section{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+    }
+
+    .services-subtitle{
+        font-family: Poppins;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+    .services-title{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1.4;
+        color: #303669;
+        margin-bottom: 20px;
+    }
+
+    .services-text{
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.9;
+    }
+
+    .services-accordion .accordion{
+        font-size: 18px;
+        font-family: Montserrat;
+        font-weight: 700;
+        color: #fff;
+        background-color: #A4C4F3;
+        border-radius: 12px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .services-accordion .accordion::after{
+        color: #fff !important;
+    }
+
+    .accordion:active, .accordion:hover{
+        background-color: #3A88EC !important;
+    }
+
+    .services-accordion .panel{
+        background-color: transparent !important; 
+    }   
+
+    .services-accordion .panel p{
+        color: #A4C4F3;
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.9;
+        
+    }
+
+    @media screen and (max-width: 991.98px){
+
+        .services-title-section{
+            text-align: center;
+        }
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    PRICING SECTION
+*/  
+
+    .pricing-section{
+        display: flex;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .pricing-section-left-bg-graphics{
+        position: absolute;
+        top: -10%;
+        left: -5%;
+    }
+
+    .pricing-section-left-bg-graphics img{
+        width: 100%;
+    }
+
+    .pricing-section-right-bg-graphics{
+        position: absolute;
+        right: -5%;
+        bottom: -1%;
+    }
+
+    .pricing-section-right-bg-graphics img{
+        width: 100%;
+    }
+
+    .pricing-container{
+
+    }
+
+    .pricing-title{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .pricing-title h2{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1.4;
+        color: #303669;
+        margin-bottom: 20px;
+    }
+
+    .pricing-title p{
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.9;
+        max-width: 800px;
+    }
+
+    .pricing-plan-cards-section{
+        display: flex;
+        flex-direction: row;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .pricing-card-section{
+        padding: 20px;
+    }
+
+    .pricing-card{
+        background-color:#fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 50px;
+        text-align: center;
+    }
+
+    .pricing-card:hover{
+        box-shadow: 0 3px 47px rgba(0,0,0,0.16);
+        cursor: pointer;
+    }
+
+    .pricing-rate{
+        color: #303669;
+        font-weight: 700;
+        font-family: Montserrat;
+        font-size: 70px;
+        line-height: 1.2;
+        margin-top: 25px;
+    }
+
+    .pricing-period{
+        font-size: 18px;
+        font-family: Poppins;
+        font-weight: 400;
+        color: #78C2FF;
+    }
+
+    .pricing-text{
+        font-size: 18px;
+        font-family: Poppins;
+        font-weight: 400;
+        color: #000;
+        margin-top: 20px;
+    }
+
+    .pricing-all-plan-features-section{
+        text-align: left;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .pricing-all-plan-features-section ul{
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    .pricing-all-plan-features-section li{
+        font-size: 15px;
+        color: #000;
+        font-family: Poppins;
+        font-weight: 400;
+        line-height: 1.9;
+        background: url(../images/pricing-section-true.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 6px 5px;
+        padding-left: 33px;
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    .basic-plan-features-section li:nth-child(3){
+        background: url(../images/pricing-section-false.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 6px 5px;
+        padding-left: 33px;
+    }
+
+    .basic-plan-features-section li:nth-child(4){
+        background: url(../images/pricing-section-false.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 6px 5px;
+        padding-left: 33px;
+    }
+
+    .medium-plan-features-section li:nth-child(4){
+        background: url(../images/pricing-section-false.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 6px 5px;
+        padding-left: 33px;
+    }
+
+    @media screen and (max-width: 991.98px){
+
+        .pricing-plan-cards-section {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    CLIENTS SECTION
+*/
+
+    .clients-section{
+        display: flex;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background-color: #E6F2FE;
+    }
+
+    .clients-title-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        text-align: center;
+    }   
+
+    .clients-subtitle{
+        font-family: Poppins;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+    .clients-title{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1.4;
+        color: #303669;
+        margin-bottom: 20px;
+    }
+
+    .client-logo-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .client-logo-section img{
+        height: 80px;
+        width: auto !important;
+    }    
+
+    .owl-theme .owl-nav{
+        display: none;
+    }
+
+    .owl-theme .owl-dots, .owl-theme .owl-nav{
+        margin-top: 20px;
+    }
+
+    .owl-theme .owl-dots .owl-dot span{
+        background-color: #fff !important;
+
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+        background-color: #303669 !important;
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    BLOG SECTION
+*/
+
+    .blog-section{
+        display: flex;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        position: relative;
+    }
+
+    .blog-section-left-bg{
+        position: absolute;
+        top: 5%;
+        left: 5%;
+    }
+
+    .blog-section-right-bg{
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+    }
+
+    .blog-container{
+        position: relative;
+    }
+
+    .blog-title-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        text-align: center;
+    }   
+
+    .blog-subtitle{
+        font-family: Poppins;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+    .blog-title{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1.4;
+        color: #303669;
+        margin-bottom: 20px;
+    }
+
+    .blog-posts-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .blog-post-card-container{
+        padding: 20px;
+    }
+
+    .blog-post-card{
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 50px;
+        padding: 25px;
+    }
+
+    .blog-post-card:hover{
+        box-shadow: 0 3px 17px rgba(0,0,0,0.16);
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+    .blog-post-icon{
+        margin-top: 20px;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .blog-post-icon img{
+        width: 100%;
+    }
+
+    .blog-post-title{
+        font-size: 18px;
+        color: #303669;
+        font-family: Montserrat;
+        font-weight: 700;
+        line-height: 2;
+        margin-bottom: 10px;
+    }
+
+    .blog-post-text{
+        font-size: 16px;
+        color: #000;
+        font-family: Poppins;
+        font-weight: 400;
+        line-height: 1.4;   
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .blog-post-link{
+        color: #A4C4F3;
+        font-size: 18px;
+        font-family: Montserrat;
+        font-weight: 700;
+        line-height: 2;
+    }
+
+    .blog-post-link:hover{
+        color: #FF3E81;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 991.98px){
+        .blog-posts-section{
+            flex-direction: column;
+        }
+    }
+
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    CONTACT SECTION
+*/
+
+    .contact-section{
+        background-color: #E6F2FE;
+    }
+
+    .contact-container{
+        position: relative;
+        display: flex;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        flex-wrap: wrap;
+    }
+
+    .contact-header-img-section{
+        padding: 20px;
+    }
+
+    .contact-header-img img{
+        width: 100%;
+    }
+
+    .contact-title-section{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+    }
+
+    .contact-subtitle{
+        font-family: Poppins;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+    .contact-title{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1.4;
+        color: #303669;
+        margin-bottom: 20px;
+    }
+
+    .contact-text{
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.9;
+    }
+
+    @media screen and (max-width: 991.98px){
+
+        .contact-container{
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-title-section{
+            text-align: center;
+        }
+
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    FOOTER SECTION
+*/
+
+
+    .footer-section{
+        padding-top: 5%;
+        padding-bottom: 5%;
+        position: relative;
+    }
+
+    .footer-section-bg-graphics{
+        position: absolute;
+        right: -10%;
+        bottom: -15%;
+    }
+
+    .footer-container{
+        display: flex;
+        position: relative;
+        padding: 0;
+    }
+
+    .footer-logo{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .footer-logo img{
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .footer-logo p{
+        max-width: 250px;
+        font-family: Poppins;
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 300;   
+    }
+
+    .footer-subsection-title{
+        font-size: 22px;
+        font-family: Montserrat;
+        font-weight: 700;
+        color: #A4C4F3;
+        line-height: 1.9;
+        margin-bottom: 10px;
+    }
+
+    .footer-subsection-text{
+        font-family: Poppins;
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 300; 
+    }
+
+    .footer-subsection-2-1{
+        margin-bottom: 20px;
+    }
+
+    .footer-subsection-2-2{
+        margin-bottom: 20px;
+    }
+
+    .footer-subsection-list{
+        list-style: none;
+        padding-left: 0px;
+    }
+
+    .footer-subsection-list li{
+        font-size: 15px;
+        color: #000;
+        font-family: Poppins;
+        font-weight: 300;
+        line-height: 1.9;
+        background: url(../images/pricing-section-true.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+        padding-left: 30px;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .footer-subsection-list li:nth-child(1){
+        background: url(../images/mappin.png);
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+        padding-left: 30px;
+    }
+
+    .footer-subsection-list li:nth-child(2){
+        background: url(../images/call.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+        padding-left: 30px;
+    }
+
+    .footer-subsection-list li:nth-child(3){
+        background: url(../images/email.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+        padding-left: 30px;
+    }
+
+    .footer-subsection-list-call{
+        color: #000;
+    }
+
+    .footer-subsection-list-email{
+        color: #000;
+    }
+
+    .footer-subsection-list-call:hover{
+        color: #FF3E81;
+        text-decoration: none;
+    }
+
+    .footer-subsection-list-email:hover{
+        color: #FF3E81;
+        text-decoration: none;
+    }
+
+    .footer-subsection-form{
+        display: flex;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .footer-subsection-form-input{
+        width: 75%;
+        border: none;
+        border-radius: 50px;
+        height: 40px;
+        position: relative;
+        padding-left: 20px;
+        padding-left: 20px;
+        color: #E4E4E4;
+        font-size: 15px;
+        font-family: Montserrat;
+        font-weight: 300;
+    }
+
+    .footer-subsection-form-btn{
+        border: none;
+        border-radius: 50px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 40px;
+        font-size: 15px;
+        background-color: #3A88EC;
+        color: #fff;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .footer-subsection-form-btn:hover{
+        background-color: #FF3E81;
+        color: #fff;
+    }
+
+    .footer-social-media-icons-section{
+        display: flex;
+    }
+
+    .footer-social-media-icon{
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+
+    .footer-social-media-icon:hover{
+        background-color: #3A88EC;
+
+    }
+
+    .footer-social-media-icon-white{
+        display: none;
+    }
+
+    .footer-social-media-icon:hover .footer-social-media-icon-white{
+        display: block;
+    }
+
+    .footer-social-media-icon:hover .footer-social-media-icon-blue{
+        display: none;
+    }
+
+    .footer-credits{
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-credits p{
+        font-size: 10px;
+        font-weight: 300;
+        font-family: Poppins;
+        line-height: 1.2;
+    }
+
+    @media screen and (max-width: 991.98px){ 
+
+        .footer-container{
+            flex-wrap: wrap;
+        }
+
+    }
+
+
+
+

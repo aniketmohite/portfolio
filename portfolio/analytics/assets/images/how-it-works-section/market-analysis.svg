@@ -1,0 +1,6 @@
+<svg id="Component_3_1" data-name="Component 3 – 1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <circle id="Ellipse_129" data-name="Ellipse 129" cx="25" cy="25" r="25" fill="#5784f7" opacity="0.2"/>
+  <g id="_2" data-name="2" transform="translate(10 10)">
+    <path id="bar_chart_graph_analysis" d="M25.282,22.909V9.477a.9.9,0,0,0-.9-.9H20.8a.9.9,0,0,0-.9.9V22.909H18.118V5.9a.9.9,0,0,0-.9-.9H13.641a.9.9,0,0,0-.9.9V22.909H10.955V13.955a.9.9,0,0,0-.9-.9H6.477a.9.9,0,0,0-.9.9v8.955H3.791V5H2V23.8a.9.9,0,0,0,.9.9H27.073V22.909ZM21.7,10.373h1.791V22.909H21.7ZM14.536,6.791h1.791V22.909H14.536ZM7.373,14.85H9.164v8.059H7.373Z" fill="#5784f7"/>
+  </g>
+</svg>

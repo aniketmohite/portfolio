@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Omarix - Reminders</title>	
+
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+	<link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+	<!-- BOOTSTAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+	<!-- FONTS USED -->
+
+	<!-- RUBIK -->
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<!-- SANS SANS PRO -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+	<div class="wrapper">
+		<!-- SIDEBAR NAV -->
+		<div id="SidenavBar" class="dashboard-sidebar-section">
+			<div class="sidenavbar-close-btn-section">
+				<a href="javascript:void(0)" class="closebtn sidenavbar-close-btn" onclick="ToggleSidebar()">&times;</a>
+			</div>
+			<div class="dashboard-sidebar-logo-section">
+				<img class="dashboard-sidebar-logo" src="assets/images/logo.png">
+			</div>
+			<a href="#" class="theme-btn" type="submit" name="navbarsearchbtn">Register Patients<img class="theme-btn-icon" src="assets/images/add-icon.svg"></a>
+			<div class="dashboard-sidebar-list-section">
+				<ul class="dashboard-sidebar-list-ul">
+					<li class="dashboard-sidebar-list-li">
+						<a href="index.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/dashboard-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/dashboard-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Dashboard</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="customer-balance.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/customer-balance-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/customer-balance-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Customer Balance</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="statements.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/statements-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/statements-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Statements</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li dashboard-sidebar-list-li-active">
+						<a href="reminders.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/reminders-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/reminders-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Reminders</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="users.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/users-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/users-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Users</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="#" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/settings-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/settings-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Settings</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="#" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/help-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/help-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Help & Support</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="dashboard-sidebar-footer-section">
+				<div class="dashboard-sidebar-footer-logout-section">
+					<a href="#" class="dashboard-sidebar-list-link">
+						<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/logout-icon.svg">
+						<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/logout-grey-icon.svg">
+						<p class="dashboard-sidebar-list-title">Log Out</p>
+					</a>
+				</div>
+					
+				<div class="dashboard-sidebar-footer-credits-section">
+					<p class="dashboard-sidebar-footer-credits">© 2020 Omarix. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="dashboard-main-container">
+			<!-- TOP NAVBAR -->
+			<div class="dashboard-details-section">
+				<div class="dashboard-navbar">
+					<div class="nav_icon col-lg-4 col-12 navbar-sub-section" onclick="ToggleSidebar()">
+			          <button class="navbar-toggler" 
+						type="button" 
+						data-toggle="collapse" 
+						data-target="#navbarNav" 
+						aria-controls="navbarNav" 
+						aria-expanded="false" 
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<img class="dashboard-sidebar-logo" src="assets/images/logo.png" style="margin-left: 20px;">
+			        </div>
+					<!-- NAVBAR SEARCH SECTION -->
+					<div class="col-lg-4 col-md-6 col-12 navbar-search-section navbar-sub-section">
+						<form class="theme-form navbar-input-form">
+							<input class="theme-input navbar-input" type="text" name="navbarsearch" placeholder="Search for customers...">
+							<button class="theme-btn navbar-btn" type="submit" name="navbarsearchbtn"><img class="navbar-btn-icon" src="assets/images/search-btn-icon.svg"></button>
+
+						</form>
+					</div>
+
+					<!-- NAVBAR DETAILS SECTION -->
+					<div class="col-lg-4 col-md-6 col-12 navbar-details-section navbar-sub-section">
+						<ul class="navbar-details-menu">
+							<li class="nav-item">
+								<div data-toggle="dropdown" class="navbar-notification-icon-section">
+									<img class="navbar-notification-icon" src="assets/images/notification-bell-icon.svg">
+									<div class="navbar-notification-no">
+										3
+									</div>
+								</div>
+								<div class="navbar-dropdown-section">
+									<ul class="dropdown-menu navbar-dropdown-menu" >
+							            <!-- <div class="dropdownArrow"></div> -->
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification One
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification Two
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification Three
+							              	</a>
+							            </li>
+							        </ul>
+								</div>
+							</li>
+							<li class="nav-item">
+								<div data-toggle="dropdown" class="navbar-profile-section">
+									<div class="navbar-profile-status-section">
+										<div class="navbar-profile-img-section">
+											<img class="navbar-profile-img" src="assets/images/profile-img.png">
+											<div class="navbar-profile-status-active">
+											</div>
+										</div>
+									</div>
+									<div class="navbar-profile-title-section">
+										<h2 class="navbar-profile-title">ABC Hospitals</h2>
+										<img class="navbar-profile-dropdown-arrow" src="assets/images/dropdown-arrow.svg">
+									</div>
+								</div>
+								<div class="navbar-dropdown-section">
+									<ul class="dropdown-menu navbar-dropdown-menu" >
+							            <!-- <div class="dropdownArrow"></div> -->
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	DEF Hospitals
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	GHI Hospitals
+							              	</a>
+							            </li>
+							        </ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+
+			<!-- CUSTOMER BALANCE SECTION -->
+			<div class="all-main-sections-container">
+				<div class="main-section customer-balance-main-section">
+					<div class="main-section-details-title-section">
+						<div class="col-xl-6 col-lg-5 col-12 main-section-details-title-div">
+							<h2 class="main-section-details-title">Sent Reminders</h2>
+						</div>
+						<div class="col-xl-6 col-lg-7 col-12 main-section-details-btn-div">
+							<a href="#" class="theme-btn secondary-theme-btn" data-toggle="modal" data-target="#addnewremindermodal">Add New Reminders
+								<img class="theme-btn-icon" src="assets/images/add-icon-theme.svg">
+								<img class="theme-btn-icon-hover" src="assets/images/add-icon.svg">
+							</a>
+						</div>
+					</div>
+
+					<!-- ADD REMINDER MODAL -->
+					<div class="modal  fade dashboard-modal" id="addnewremindermodal" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+						    <!-- STEP 1 -->
+						    <div id="add_reminder_step1" class="modal-content add-reminder-modal-content">
+						    	<div class="dashboard-modal-title-section">
+						    		<h2 class="dashboard-modal-title">Step 01 - Add New Reminder</h2>
+						    	</div>
+						    	<div class="dashboard-form-section">
+						    		<form class="dashboard-form">
+	                                    <div class="controls">
+	                                        <div class="dashboard-form-row">
+	                                            <div class="col-md-12">
+	                                                <div class="form-group">
+	                                                    <label for="form_name">Name</label>
+	                                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Overdue Reminder" required>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                        <div class="dashboard-form-row">
+	                                            <div class="col-md-6">
+	                                                <div class="form-group">
+	                                                    <label for="form_name">Remind (Days)</label>
+	                                                        <input id="form_remind" type="number" name="name" class="form-control" placeholder="15" required>
+	                                                </div>
+	                                            </div>
+	                                            <div class="col-md-6">
+	                                                <div class="form-group">
+	                                                    <label for="form_email">Due Date</label>
+				                                        <select>
+				                                        	<option>After</option>
+				                                        	<option>Before</option>
+				                                        </select>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                        <div class="dashboard-form-row dashboard-form-btn-section">
+	                                        	<a href="#" class="secondary-theme-btn cancel-btn">Cancel</a>
+	                                        	<p class="theme-btn addreminderbtn" target="2">Next</p>
+	                                        </div>
+	                                    </div>
+	                                </form>
+						    	</div>
+						    </div>
+
+						    <!-- STEP 2 -->
+						    <div id="add_reminder_step2" class="modal-content add-reminder-modal-content">
+						    	<div class="dashboard-modal-title-section">
+						    		<h2 class="dashboard-modal-title">Preview</h2>
+						    	</div>
+						    	<div class="dashboard-form-section">
+	                                    <div class="controls">
+	                                        <div class="reminder-modal-preview-section">
+	                                            <div class="col-md-6 reminder-modal-preview-img-section">
+	                                            	<img src="assets/images/reminder-preview.png">
+	                                            	<div class="reminder-modal-preview-card-section">
+		                                            	<div class="reminder-modal-preview-card">
+		                                            		This is Devin with Alpine Family Medecine. You have a %%Status%% Payment due on %%Due Date&&. Click the link below to verify and pay this Balance.
+		                                            	</div>
+		                                            </div>
+	                                            </div>
+	                                        </div>
+	                                        <div class="dashboard-form-row dashboard-form-btn-section">
+	                                        	<p class="secondary-theme-btn cancel-btn addreminderbtn" target="1">Back</p>
+	                                        	<p class="theme-btn addreminderbtn" target="3">Next</p>
+	                                        </div>
+	                                    </div>
+						    	</div>
+						    </div>
+
+						    <!-- STEP 3 -->
+						    <div id="add_reminder_step3" class="modal-content add-reminder-modal-content">
+						    	<div class="dashboard-modal-title-section">
+						    		<h2 class="dashboard-modal-title">Step 03</h2>
+						    	</div>
+						    	<div class="dashboard-form-section">
+						    		<form class="dashboard-form">
+	                                    <div class="controls">
+	                                        <div class="dashboard-form-row">
+	                                            <div class="col-md-12">
+	                                                <div class="form-group">
+	                                                    <label for="form_subject">Subject</label>
+	                                                        <input id="form_subject" type="text" name="subject" class="form-control" placeholder="This is a Subject Line" required>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                        <div class="dashboard-form-row">
+	                                            <div class="col-md-12">
+	                                                <div class="form-group">
+	                                                    <label style="font-style: italic;">This is what your preview email will look like</label>
+	                                                    <div class="reminder-email-preview-card">
+	                                                    	<div class="reminder-email-preview-card-logo-section">
+	                                                    		<img class="reminder-email-preview-card-logo" src="assets/images/reminder-preview-email-logo.png">
+	                                                    	</div>
+	                                                    	<div class="reminder-email-preview-card-draft-section">
+	                                                    		<p>Dear %CustomerName%,</p>
+	                                                    		<p>This is to remind you about the statement balance that is %%Status%%</p>
+	                                                    		<p>ReferenceID# : %Invoice Number%<br>
+																Due Date : %Due Date%<br>
+																Visit date : %Visit Date%<br>
+																Balance Due : %Balance%
+																<br>
+																<br>
+																View your invoice and take the easy way out by making
+																an online payment.
+																<br>
+																<br>
+																If you have already paid, please accept our apologies
+																and kindly ignore this payment reminder.
+																<br>
+																<br>
+																Regards,<br>
+																%CompanyName%</p>
+	                                                    	</div>
+	                                                    	<div class="reminder-email-preview-card-btn-section">
+	                                                    		<a href="#" class="secondary-theme-btn">View Now</a>
+	                                                    	</div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                        <div class="dashboard-form-row dashboard-form-btn-section">
+	                                        	<p class="secondary-theme-btn cancel-btn addreminderbtn" target="2">Back</p>
+	                                        	<a href="#" class="theme-btn">Save</a>
+	                                        </div>
+	                                    </div>
+	                                </form>
+						    	</div>
+						    </div>
+						</div>
+					</div>
+
+					<div class="main-section-table-section">
+						<div class="main-section-table-container">
+							<table class="main-section-table set-reminder-table">
+								<thead class="main-section-table-head">
+									<tr class="main-section-head-table-tr">
+									    <th class="main-section-head-table-th set-reminder-table-head-th">Sr.No</th>
+									    <th class="main-section-head-table-th set-reminder-table-head-th">Reminder</th>
+									    <th class="main-section-head-table-th set-reminder-table-head-th">Action</th>
+									  </tr>
+								</thead>
+								<tbody class="main-section-table-body">
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-sr">
+									    		<p>1</p>
+									    	</div>
+										</td>
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-reminder-section">
+									    		<div class="set-reminder-table-reminder-title-section">
+									    			<h2 class="table-user-title set-reminder-table-title">Remind 15days Before Due date</h2>
+									    		</div>
+									    		<div class="set-reminder-table-status set-reminder-table-enable-status">
+									    			Enabled
+									    		</div>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td  set-reminder-table-body-td">
+									    	<div class="table-action-section-div set-reminder-table-action-td">
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-edit-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-add-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-delete-icon.svg">
+									    		</a>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-sr">
+									    		<p>2</p>
+									    	</div>
+										</td>
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-reminder-section">
+									    		<div class="set-reminder-table-reminder-title-section">
+									    			<h2 class="table-user-title set-reminder-table-title">Remind 15days Before Due date</h2>
+									    		</div>
+									    		<div class="set-reminder-table-status set-reminder-table-enable-status">
+									    			Enabled
+									    		</div>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td  set-reminder-table-body-td">
+									    	<div class="table-action-section-div set-reminder-table-action-td">
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-edit-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-add-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-delete-icon.svg">
+									    		</a>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-sr">
+									    		<p>3</p>
+									    	</div>
+										</td>
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-reminder-section">
+									    		<div class="set-reminder-table-reminder-title-section">
+									    			<h2 class="table-user-title set-reminder-table-title">Remind 15days Before Due date</h2>
+									    		</div>
+									    		<div class="set-reminder-table-status set-reminder-table-enable-status">
+									    			Enabled
+									    		</div>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td  set-reminder-table-body-td">
+									    	<div class="table-action-section-div set-reminder-table-action-td">
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-edit-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-add-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-delete-icon.svg">
+									    		</a>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-sr">
+									    		<p>4</p>
+									    	</div>
+										</td>
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-reminder-section">
+									    		<div class="set-reminder-table-reminder-title-section">
+									    			<h2 class="table-user-title set-reminder-table-title">Remind 15days Before Due date</h2>
+									    		</div>
+									    		<div class="set-reminder-table-status set-reminder-table-enable-status">
+									    			Enabled
+									    		</div>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td  set-reminder-table-body-td">
+									    	<div class="table-action-section-div set-reminder-table-action-td">
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-edit-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-add-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-delete-icon.svg">
+									    		</a>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-sr">
+									    		<p>5</p>
+									    	</div>
+										</td>
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-reminder-section">
+									    		<div class="set-reminder-table-reminder-title-section">
+									    			<h2 class="table-user-title set-reminder-table-title">Remind 15days Before Due date</h2>
+									    		</div>
+									    		<div class="set-reminder-table-status set-reminder-table-enable-status">
+									    			Enabled
+									    		</div>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td  set-reminder-table-body-td">
+									    	<div class="table-action-section-div set-reminder-table-action-td">
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-edit-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-add-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-delete-icon.svg">
+									    		</a>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-sr">
+									    		<p>6</p>
+									    	</div>
+										</td>
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-reminder-section">
+									    		<div class="set-reminder-table-reminder-title-section">
+									    			<h2 class="table-user-title set-reminder-table-title">Remind 15days Before Due date</h2>
+									    		</div>
+									    		<div class="set-reminder-table-status">
+									    			Disabled
+									    		</div>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td  set-reminder-table-body-td">
+									    	<div class="table-action-section-div set-reminder-table-action-td">
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-edit-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-add-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-delete-icon.svg">
+									    		</a>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-sr">
+									    		<p>7</p>
+									    	</div>
+										</td>
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-reminder-section">
+									    		<div class="set-reminder-table-reminder-title-section">
+									    			<h2 class="table-user-title set-reminder-table-title">Remind 15days Before Due date</h2>
+									    		</div>
+									    		<div class="set-reminder-table-status">
+									    			Disabled
+									    		</div>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td  set-reminder-table-body-td">
+									    	<div class="table-action-section-div set-reminder-table-action-td">
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-edit-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-add-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-delete-icon.svg">
+									    		</a>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-sr">
+									    		<p>8</p>
+									    	</div>
+										</td>
+									    <td class="main-section-table-body-td set-reminder-table-body-td">
+									    	<div class="set-reminder-table-reminder-section">
+									    		<div class="set-reminder-table-reminder-title-section">
+									    			<h2 class="table-user-title set-reminder-table-title">Remind 15days Before Due date</h2>
+									    		</div>
+									    		<div class="set-reminder-table-status">
+									    			Disabled
+									    		</div>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td  set-reminder-table-body-td">
+									    	<div class="table-action-section-div set-reminder-table-action-td">
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-edit-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-add-icon.svg">
+									    		</a>
+									    		<a href="#" class="set-reminder-table-action-section">
+									    			<img src="assets/images/reminder-delete-icon.svg">
+									    		</a>
+									    	</div>
+									    </td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script>
+		function ToggleSidebar() {
+		  var element = document.getElementById("SidenavBar");
+		  element.classList.toggle("sidebar-active");
+		} 
+	</script>
+
+	<script>
+
+      $(".dashboard-sidebar-list-li").click(function(){
+
+        $(".dashboard-sidebar-list-li").removeClass("dashboard-sidebar-list-li-active");
+        $(this).addClass("dashboard-sidebar-list-li-active");
+
+      })
+
+    </script>
+
+    <!-- ADD NEW REMINDER MODAL STEPS SECTION -->
+    <script>
+    	jQuery(function(){
+
+	        jQuery('.add-reminder-modal-content').hide();
+	        jQuery('.add-reminder-modal-content:first').show();
+	        jQuery('.addreminderbtn').click(function(){
+	              jQuery('.add-reminder-modal-content').hide();
+	              jQuery('#add_reminder_step'+$(this).attr('target')).show();
+	        });
+		});
+    </script>
+
+
+
+</body>
+</html>

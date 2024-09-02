@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Omarix - Customer Balance</title>	
+
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+	<link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+	<!-- BOOTSTAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+	<!-- FONTS USED -->
+
+	<!-- RUBIK -->
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<!-- SANS SANS PRO -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+	<div class="wrapper">
+		<!-- SIDEBAR NAV -->
+		<div id="SidenavBar" class="dashboard-sidebar-section">
+			<div class="sidenavbar-close-btn-section">
+				<a href="javascript:void(0)" class="closebtn sidenavbar-close-btn" onclick="ToggleSidebar()">&times;</a>
+			</div>
+			<div class="dashboard-sidebar-logo-section">
+				<img class="dashboard-sidebar-logo" src="assets/images/logo.png">
+			</div>
+			<a href="#" class="theme-btn" type="submit" name="navbarsearchbtn">Register Patients<img class="theme-btn-icon" src="assets/images/add-icon.svg"></a>
+			<div class="dashboard-sidebar-list-section">
+				<ul class="dashboard-sidebar-list-ul">
+					<li class="dashboard-sidebar-list-li">
+						<a href="index.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/dashboard-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/dashboard-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Dashboard</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li dashboard-sidebar-list-li-active">
+						<a href="customer-balance.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/customer-balance-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/customer-balance-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Customer Balance</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="statements.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/statements-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/statements-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Statements</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="reminders.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/reminders-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/reminders-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Reminders</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="users.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/users-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/users-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Users</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="#" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/settings-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/settings-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Settings</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="#" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/help-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/help-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Help & Support</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="dashboard-sidebar-footer-section">
+				<div class="dashboard-sidebar-footer-logout-section">
+					<a href="#" class="dashboard-sidebar-list-link">
+						<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/logout-icon.svg">
+						<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/logout-grey-icon.svg">
+						<p class="dashboard-sidebar-list-title">Log Out</p>
+					</a>
+				</div>
+					
+				<div class="dashboard-sidebar-footer-credits-section">
+					<p class="dashboard-sidebar-footer-credits">© 2020 Omarix. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="dashboard-main-container">
+			<!-- TOP NAVBAR -->
+			<div class="dashboard-details-section">
+				<div class="dashboard-navbar">
+					<div class="nav_icon col-lg-4 col-12 navbar-sub-section" onclick="ToggleSidebar()">
+			          <button class="navbar-toggler" 
+						type="button" 
+						data-toggle="collapse" 
+						data-target="#navbarNav" 
+						aria-controls="navbarNav" 
+						aria-expanded="false" 
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<img class="dashboard-sidebar-logo" src="assets/images/logo.png" style="margin-left: 20px;">
+			        </div>
+					<!-- NAVBAR SEARCH SECTION -->
+					<div class="col-lg-4 col-md-6 col-12 navbar-search-section navbar-sub-section">
+						<form class="theme-form navbar-input-form">
+							<input class="theme-input navbar-input" type="text" name="navbarsearch" placeholder="Search for customers...">
+							<button class="theme-btn navbar-btn" type="submit" name="navbarsearchbtn"><img class="navbar-btn-icon" src="assets/images/search-btn-icon.svg"></button>
+
+						</form>
+					</div>
+
+					<!-- NAVBAR DETAILS SECTION -->
+					<div class="col-lg-4 col-md-6 col-12 navbar-details-section navbar-sub-section">
+						<ul class="navbar-details-menu">
+							<li class="nav-item">
+								<div data-toggle="dropdown" class="navbar-notification-icon-section">
+									<img class="navbar-notification-icon" src="assets/images/notification-bell-icon.svg">
+									<div class="navbar-notification-no">
+										3
+									</div>
+								</div>
+								<div class="navbar-dropdown-section">
+									<ul class="dropdown-menu navbar-dropdown-menu" >
+							            <!-- <div class="dropdownArrow"></div> -->
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification One
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification Two
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification Three
+							              	</a>
+							            </li>
+							        </ul>
+								</div>
+							</li>
+							<li class="nav-item">
+								<div data-toggle="dropdown" class="navbar-profile-section">
+									<div class="navbar-profile-status-section">
+										<div class="navbar-profile-img-section">
+											<img class="navbar-profile-img" src="assets/images/profile-img.png">
+											<div class="navbar-profile-status-active">
+											</div>
+										</div>
+									</div>
+									<div class="navbar-profile-title-section">
+										<h2 class="navbar-profile-title">ABC Hospitals</h2>
+										<img class="navbar-profile-dropdown-arrow" src="assets/images/dropdown-arrow.svg">
+									</div>
+								</div>
+								<div class="navbar-dropdown-section">
+									<ul class="dropdown-menu navbar-dropdown-menu" >
+							            <!-- <div class="dropdownArrow"></div> -->
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	DEF Hospitals
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	GHI Hospitals
+							              	</a>
+							            </li>
+							        </ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+
+			<!-- CUSTOMER BALANCE SECTION -->
+			<div class="all-main-sections-container">
+				<div class="main-section customer-balance-main-section">
+					<div class="main-section-details-title-section">
+						<div class="col-xl-6 col-lg-5 col-12 main-section-details-title-div">
+							<h2 class="main-section-details-title">Customer Balance Summary</h2>
+							<p class="main-section-details-title-details">( 1 of 8 Selected )</p>
+						</div>
+						<div class="col-xl-6 col-lg-7 col-12 main-section-details-btn-div">
+							<a href="#" class="theme-btn secondary-theme-btn" data-toggle="modal" data-target="#addcustomermodal">Add Customer
+								<img class="theme-btn-icon" src="assets/images/add-icon-theme.svg">
+								<img class="theme-btn-icon-hover" src="assets/images/add-icon.svg">
+							</a>
+							<a href="#" class="theme-btn secondary-theme-btn" data-toggle="modal" data-target="#addbulkcustomermodal">Bulk Add Customers</a>
+							<a href="#" class="theme-btn" style="min-width: auto"><img src="assets/images/bar-btn-icons.svg"></a>
+						</div>
+					</div>
+
+					<!-- ADD CUSTOMER MODAL -->
+					<div class="modal  fade dashboard-modal" id="addcustomermodal" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+					    <div class="modal-content">
+					    	<div class="dashboard-modal-title-section">
+					    		<h2 class="dashboard-modal-title">Add New Customer</h2>
+					    	</div>
+					    	<div class="dashboard-form-section">
+					    		<form class="dashboard-form">
+                                    <div class="controls">
+                                        <div class="dashboard-form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_name">Name</label>
+                                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="John Deo" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_email">Email</label>
+                                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="johndeo@gmail.com" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashboard-form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_name">Phone Number</label>
+                                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="John Deo" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_email">Date of Birth</label>
+                                                    <div class="form-input-icon">
+                                                    	<input id="form_email" type="email" name="email" class="form-control" placeholder="DD/MM/YYYY" required>
+                                                    	<div class="form-input-icon-section">
+                                                    		<img src="assets/images/cal-icon.svg">
+                                                    	</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashboard-form-row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="form_name">Residential Address</label>
+                                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Enter Customer's Permanent  Address" required>
+                                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Enter Customer's Permanent  Address" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashboard-form-row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="form_name">Zip Code</label>
+                                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="123456" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashboard-form-row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="form_name">Customer Notes</label>
+                                                    <textarea id="form_message" name="message" class="form-control" rows="4" placeholder="Enter Customer Notes..." required spellcheck="false"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashboard-form-row dashboard-form-btn-section">
+                                        	<a href="#" class="theme-btn">Add Customer</a>
+                                        </div>
+                                    </div>
+                                </form>
+					    	</div>
+					    </div>
+					  </div>
+					</div>
+
+					<!-- ADD CUSTOMER MODAL -->
+					<div class="modal  fade dashboard-modal" id="addbulkcustomermodal" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+					    <div class="modal-content" style="padding: 20px 0">
+					    	<div class="dashboard-modal-title-section no-border">
+					    		<h2 class="dashboard-modal-title">Bulk Upload</h2>
+					    	</div>
+					    	<div class="dashboard-form-section">
+					    		<form class="dashboard-form">
+                                    <div class="controls">
+                                        <div class="dashboard-form-row">
+                                            <div class="col-md-12">
+                                                <div class="image-upload">
+												  <label for="file-input">
+												    <img src="assets/images/upload-icon.svg"/>
+												    <p>Drop Files Here or Double Click to Upload</p>
+												  </label>
+												  <input id="file-input" type="file" />
+												</div>
+                                            </div>
+                                        </div>
+                                        <div class="dashboard-form-row dashboard-form-btn-section">
+                                        	<a href="#" class="theme-btn">Upload From Computer</a>
+                                        </div>
+                                    </div>
+                                </form>
+					    	</div>
+					    </div>
+					  </div>
+					</div>
+
+					<div class="main-section-table-section">
+						<div class="main-section-table-container">
+							<table class="main-section-table">
+								<thead class="main-section-table-head">
+									<tr class="main-section-head-table-tr">
+									    <th class="main-section-head-table-th">S.No</th>
+									    <th class="main-section-head-table-th">Customer Name</th> 
+									    <th class="main-section-head-table-th">Due Date</th>
+									    <th class="main-section-head-table-th">Receivables</th>
+									    <th class="main-section-head-table-th">Email</th>
+									    <th class="main-section-head-table-th">Status</th>
+									    <th class="main-section-head-table-th">Phone</th>
+									    <th class="main-section-head-table-th">Action</th>
+									  </tr>
+								</thead>
+								<tbody class="main-section-table-body">
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox" checked="checked">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html" class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">7 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn paid-btn">Paid</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html"class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">6 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn pending-btn">Pending</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html" class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">5 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn overdue-btn">Overdue</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html" class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">7 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn paid-btn">Paid</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html" class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">6 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn pending-btn">Pending</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html" class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">5 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn overdue-btn">Overdue</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html" class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">7 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn paid-btn">Paid</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html" class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">6 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn pending-btn">Pending</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html" class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">5 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn overdue-btn">Overdue</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html" class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">7 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn paid-btn">Paid</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html" class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">6 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn pending-btn">Pending</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+
+									<tr class="main-section-table-body-tr">
+									    <td class="main-section-table-body-td">
+									    	<label class="table-body-checkbox-container">
+		  										<input type="checkbox">
+		  										<span class="table-body-checkbox-checkmark"></span>
+											</label>
+										</td>
+									    <td class="main-section-table-body-td">
+									    	<div class="table-user-section">
+									    		<div class="table-user-profile-img-section">
+									    			<img class="table-user-profile-img" src="assets/images/user-icon.svg">
+									    		</div>
+									    		<a href="customer-profile.html" class="table-user-title-section">
+									    			<h2 class="table-user-title">John Deo</h2>
+									    		</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td table-due-date-section">5 Dec 2020</td>
+									    <td class="main-section-table-body-td">$82,341</td>
+									    <td class="main-section-table-body-td">johndoe@gmail.com</td>
+									    <td class="main-section-table-body-td table-status-btn-section">
+									    	<div class="table-status-btn-section-div">
+									    		<a href="#" class="table-status-btn overdue-btn">Overdue</a>
+									    	</div>
+									    </td>
+									    <td class="main-section-table-body-td">1234567</td>
+									    <td class="main-section-table-body-td table-action-section">
+									    	<div class="table-action-section-div">
+									    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+									    		<!-- DROPDOWN SECTION -->
+												<div class="dashboard-dropdown-section">
+													<ul class="dropdown-menu dashboard-dropdown-menu" >
+											            <div class="dropdownArrow"></div>
+											            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+											            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+											                	Send Reminder
+											              	</a>
+											            </li>
+											        </ul>
+												</div>
+									    	</div>
+									    </td>
+									</tr>
+									  
+								</tbody>
+							</table>
+						</div>
+						<div class="table-footer-paging-section">
+							<div class="table-footer-paging">
+								<ul class="table-footer-paging-ul">
+									<li class="table-footer-paging-li"><a href="#" class="table-paging-link"><</a></li>
+									<li class="table-footer-paging-li"><a href="#" class="table-paging-link table-paging-active-page">01</a></li>
+									<li class="table-footer-paging-li"><a href="#" class="table-paging-link">02</a></li>
+									<li class="table-footer-paging-li"><a href="#" class="table-paging-link">03</a></li>
+									<li class="table-footer-paging-li"><a href="#" class="table-paging-link">...</a></li>
+									<li class="table-footer-paging-li"><a href="#" class="table-paging-link">50</a></li>
+									<li class="table-footer-paging-li"><a href="#" class="table-paging-link">></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script>
+		function ToggleSidebar() {
+		  var element = document.getElementById("SidenavBar");
+		  element.classList.toggle("sidebar-active");
+		} 
+	</script>
+
+	<script>
+
+      $(".dashboard-sidebar-list-li").click(function(){
+
+        $(".dashboard-sidebar-list-li").removeClass("dashboard-sidebar-list-li-active");
+        $(this).addClass("dashboard-sidebar-list-li-active");
+
+      })
+
+    </script>
+
+
+
+</body>
+</html>

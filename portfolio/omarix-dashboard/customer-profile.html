@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Omarix - Customer Profile</title>	
+
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+	<link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+	<!-- BOOTSTAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+	<!-- FONTS USED -->
+
+	<!-- RUBIK -->
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<!-- SANS SANS PRO -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+	<div class="wrapper">
+		<!-- SIDEBAR NAV -->
+		<div id="SidenavBar" class="dashboard-sidebar-section">
+			<div class="sidenavbar-close-btn-section">
+				<a href="javascript:void(0)" class="closebtn sidenavbar-close-btn" onclick="ToggleSidebar()">&times;</a>
+			</div>
+			<div class="dashboard-sidebar-logo-section">
+				<img class="dashboard-sidebar-logo" src="assets/images/logo.png">
+			</div>
+			<a href="#" class="theme-btn" type="submit" name="navbarsearchbtn">Register Patients<img class="theme-btn-icon" src="assets/images/add-icon.svg"></a>
+			<div class="dashboard-sidebar-list-section">
+				<ul class="dashboard-sidebar-list-ul">
+					<li class="dashboard-sidebar-list-li">
+						<a href="index.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/dashboard-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/dashboard-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Dashboard</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li dashboard-sidebar-list-li-active">
+						<a href="customer-balance.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/customer-balance-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/customer-balance-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Customer Balance</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="statements.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/statements-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/statements-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Statements</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="reminders.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/reminders-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/reminders-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Reminders</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="users.html" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/users-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/users-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Users</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="#" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/settings-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/settings-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Settings</p>
+						</a>
+					</li>
+					<li class="dashboard-sidebar-list-li">
+						<a href="#" class="dashboard-sidebar-list-link">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/help-icon.svg">
+							<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/help-grey-icon.svg">
+							<p class="dashboard-sidebar-list-title">Help & Support</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="dashboard-sidebar-footer-section">
+				<div class="dashboard-sidebar-footer-logout-section">
+					<a href="#" class="dashboard-sidebar-list-link">
+						<img class="dashboard-sidebar-icon dashboard-sidebar-icon-active" src="assets/images/sidebar-menu/logout-icon.svg">
+						<img class="dashboard-sidebar-icon dashboard-sidebar-icon-inactive" src="assets/images/sidebar-menu/logout-grey-icon.svg">
+						<p class="dashboard-sidebar-list-title">Log Out</p>
+					</a>
+				</div>
+					
+				<div class="dashboard-sidebar-footer-credits-section">
+					<p class="dashboard-sidebar-footer-credits">© 2020 Omarix. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="dashboard-main-container">
+			<!-- TOP NAVBAR -->
+			<div class="dashboard-details-section">
+				<div class="dashboard-navbar">
+					<div class="nav_icon col-lg-4 col-12 navbar-sub-section" onclick="ToggleSidebar()">
+			          <button class="navbar-toggler" 
+						type="button" 
+						data-toggle="collapse" 
+						data-target="#navbarNav" 
+						aria-controls="navbarNav" 
+						aria-expanded="false" 
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<img class="dashboard-sidebar-logo" src="assets/images/logo.png" style="margin-left: 20px;">
+			        </div>
+					<!-- NAVBAR SEARCH SECTION -->
+					<div class="col-lg-4 col-md-6 col-12 navbar-search-section navbar-sub-section">
+						<form class="theme-form navbar-input-form">
+							<input class="theme-input navbar-input" type="text" name="navbarsearch" placeholder="Search for customers...">
+							<button class="theme-btn navbar-btn" type="submit" name="navbarsearchbtn"><img class="navbar-btn-icon" src="assets/images/search-btn-icon.svg"></button>
+
+						</form>
+					</div>
+
+					<!-- NAVBAR DETAILS SECTION -->
+					<div class="col-lg-4 col-md-6 col-12 navbar-details-section navbar-sub-section">
+						<ul class="navbar-details-menu">
+							<li class="nav-item">
+								<div data-toggle="dropdown" class="navbar-notification-icon-section">
+									<img class="navbar-notification-icon" src="assets/images/notification-bell-icon.svg">
+									<div class="navbar-notification-no">
+										3
+									</div>
+								</div>
+								<div class="navbar-dropdown-section">
+									<ul class="dropdown-menu navbar-dropdown-menu" >
+							            <!-- <div class="dropdownArrow"></div> -->
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification One
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification Two
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	Notification Three
+							              	</a>
+							            </li>
+							        </ul>
+								</div>
+							</li>
+							<li class="nav-item">
+								<div data-toggle="dropdown" class="navbar-profile-section">
+									<div class="navbar-profile-status-section">
+										<div class="navbar-profile-img-section">
+											<img class="navbar-profile-img" src="assets/images/profile-img.png">
+											<div class="navbar-profile-status-active">
+											</div>
+										</div>
+									</div>
+									<div class="navbar-profile-title-section">
+										<h2 class="navbar-profile-title">ABC Hospitals</h2>
+										<img class="navbar-profile-dropdown-arrow" src="assets/images/dropdown-arrow.svg">
+									</div>
+								</div>
+								<div class="navbar-dropdown-section">
+									<ul class="dropdown-menu navbar-dropdown-menu" >
+							            <!-- <div class="dropdownArrow"></div> -->
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	DEF Hospitals
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li navbar-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link navbar-dropdown-menu-link">
+							                	GHI Hospitals
+							              	</a>
+							            </li>
+							        </ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+
+			<!-- ADD NEW STATEMENT SECTION -->
+			<div class="all-main-sections-container">
+				<div class="main-section">
+					<div class="main-section-details-title-section">
+						<div class="col-xl-5 col-lg-5 col-12 main-section-details-title-div">
+							<div class="main-section-details-title-nav-section">
+								<a href="customer-balance.html" class="main-section-details-title-nav"><</a>
+								<a href="#" class="main-section-details-title-nav">></a>
+							</div>
+							<h2 class="main-section-details-title">Customer Profile</h2>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-12 main-section-details-btn-div">
+							<a href="#" class="theme-btn secondary-theme-btn" data-toggle="modal" data-target="#paynowmodal">Pay Now
+							</a>
+
+							<div class="modal  fade dashboard-modal" id="paynowmodal" tabindex="-1" role="dialog" aria-hidden="true">
+							  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+							    <div class="modal-content">
+							    	<div class="dashboard-modal-title-section">
+							    		<h2 class="dashboard-modal-title">Select Invoices to be Paid</h2>
+							    	</div>
+							    	<div class="">
+							    		<div class="main-section-table-container">
+											<table class="main-section-table">
+												<thead class="main-section-table-head">
+													<tr class="main-section-head-table-tr">
+													    <th class="main-section-head-table-th">Reference ID</th> 
+													    <th class="main-section-head-table-th">Visit Date</th>
+													    <th class="main-section-head-table-th">Amount</th>
+													  </tr>
+												</thead>
+												<tbody class="main-section-table-body">
+													<tr class="main-section-table-body-tr customer-profile-pay-modal-tr">
+													    <td class="main-section-table-body-td align-item-center">
+													    	<label class="table-body-checkbox-container">
+						  										<input type="checkbox" checked="checked">
+						  										<span class="table-body-checkbox-checkmark"></span>
+															</label>
+															<div class="margin-left-50">
+																#9023842
+															</div>
+														</td>
+													    <td class="main-section-table-body-td">12/02/2020</td>
+													    <td class="main-section-table-body-td align-center">$15945.00</td>
+													</tr>
+													<tr class="main-section-table-body-tr customer-profile-pay-modal-tr">
+													    <td class="main-section-table-body-td align-item-center">
+													    	<label class="table-body-checkbox-container">
+						  										<input type="checkbox" checked="checked">
+						  										<span class="table-body-checkbox-checkmark"></span>
+															</label>
+															<div class="margin-left-50">
+																#9023842
+															</div>
+														</td>
+													    <td class="main-section-table-body-td">12/02/2020</td>
+													    <td class="main-section-table-body-td align-center">$15945.00</td>
+													</tr>
+													<tr class="main-section-table-body-tr customer-profile-pay-modal-tr">
+													    <td class="main-section-table-body-td align-item-center">
+													    	<label class="table-body-checkbox-container">
+						  										<input type="checkbox" checked="checked">
+						  										<span class="table-body-checkbox-checkmark"></span>
+															</label>
+															<div class="margin-left-50">
+																#9023842
+															</div>
+														</td>
+													    <td class="main-section-table-body-td">12/02/2020</td>
+													    <td class="main-section-table-body-td align-center">$15945.00</td>
+													</tr>
+													<tr class="main-section-table-body-tr customer-profile-pay-modal-tr">
+													    <td class="main-section-table-body-td align-item-center">
+													    	<label class="table-body-checkbox-container">
+						  										<input type="checkbox">
+						  										<span class="table-body-checkbox-checkmark"></span>
+															</label>
+															<div class="margin-left-50">
+																#9023842
+															</div>
+														</td>
+													    <td class="main-section-table-body-td">12/02/2020</td>
+													    <td class="main-section-table-body-td align-center">$15945.00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+
+						</div>
+						<div class="col-xl-1 col-lg-1 col-12 main-section-details-btn-div justify-content-center">
+							<div class="table-action-section-div">
+					    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+					    		<!-- DROPDOWN SECTION -->
+								<div class="dashboard-dropdown-section">
+									<ul class="dropdown-menu dashboard-dropdown-menu" >
+							            <div class="dropdownArrow"></div>
+							            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+							                	Send Reminder
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+							                	Add Note
+							              	</a>
+							            </li>
+							            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+							            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+							                	Send Receipt
+							              	</a>
+							            </li>
+							        </ul>
+								</div>
+					    	</div>
+						</div>
+					</div>
+
+					<div class="sub-section-container customer-profile-sub-section-container">
+						<div class="col-md-5" style="padding: 0;">
+							<div class="main-sub-section" style="margin-bottom: 10px;">
+								<div class="profile-details-card">
+									<div class="profile-details-card-header-section">
+										<div class="col-md-9 profile-details-card-header-details-secton">
+											<div class="profile-details-card-header-img-section">
+												<img class="profile-details-card-header-img" src="assets/images/user-icon.svg">
+											</div>
+											<div class="profile-details-card-header-title-section">
+												<h2>John Deo</h2>
+												<p>johndeo@gmail.com</p>
+											</div>
+										</div>
+										<div class="col-3 profile-details-card-header-status-section">
+											<a href="#" class="table-status-btn overdue-btn">Overdue</a>
+										</div>
+									</div>
+
+									<div class="profile-details-card-content-section">
+										<div class="profile-details-card-content">
+											<div class="col-md-4 profile-details-card-title-content">
+												<p class="profile-details-card-content-title">Phone Number</p>:
+											</div>
+											<div class="col-md-8 profile-details-card-sub-title-content">
+												<p class="profile-details-card-content-title">801-990-9990</p>
+											</div>
+										</div>
+
+										<div class="profile-details-card-content">
+											<div class="col-md-4 profile-details-card-title-content">
+												<p class="profile-details-card-content-title">Address</p>:
+											</div>
+											<div class="col-md-8 profile-details-card-sub-title-content">
+												<p class="profile-details-card-content-title">1000 N 550 W Highland UT 84003</p>
+											</div>
+										</div>
+
+										<div class="profile-details-card-content">
+											<div class="col-md-4 profile-details-card-title-content">
+												<p class="profile-details-card-content-title">DOB</p>:
+											</div>
+											<div class="col-md-8 profile-details-card-sub-title-content">
+												<p class="profile-details-card-content-title">12/02/1990</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- TOTAL BALANCE CARD SECTION -->
+							<div class="main-sub-section" style="margin-bottom: 10px;">
+								<div class="total-balance-card">
+									<div class="total-balance-card-header-section">
+										<div class="col-md-6 total-balance-card-header-title-section">
+											<h2 class="total-balance-card-header-title">Total Balance</h2>
+										</div>
+										<div class="col-md-6 total-balance-card-header-title-section">
+											<h2 class="total-balance-card-header-title total-balance-card-header-title-amount">$66,030.85</h2>
+										</div>
+									</div>
+									<div class="main-section-table-container total-balance-card-table-container">
+										<table class="main-section-table">
+											<thead class="main-section-table-head">
+												<tr class="main-section-head-table-tr">
+												    <th class="main-section-head-table-th">Reference ID</th> 
+												    <th class="main-section-head-table-th">Visit Date</th>
+												    <th class="main-section-head-table-th">Amount</th>
+												    <th class="main-section-head-table-th">Action</th>
+												  </tr>
+											</thead>
+											<tbody class="main-section-table-body">
+												<tr class="main-section-table-body-tr total-balance-card-unpaid-status">
+													<td class="main-section-table-body-td">#9023842</td>
+												    <td class="main-section-table-body-td">7 Dec 2020</td>
+												    <td class="main-section-table-body-td">$15945.00</td>
+												    <td class="main-section-table-body-td table-action-section">
+												    	<div class="table-action-section-div">
+												    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+												    		<!-- DROPDOWN SECTION -->
+															<div class="dashboard-dropdown-section">
+																<ul class="dropdown-menu dashboard-dropdown-menu" >
+														            <div class="dropdownArrow"></div>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	View
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Edit
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Delete
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Mark as Paid
+														              	</a>
+														            </li>
+														        </ul>
+															</div>
+												    	</div>
+												    </td>
+												</tr>
+												<tr class="main-section-table-body-tr total-balance-card-unpaid-status">
+													<td class="main-section-table-body-td">#9023842</td>
+												    <td class="main-section-table-body-td">7 Dec 2020</td>
+												    <td class="main-section-table-body-td">$15945.00</td>
+												    <td class="main-section-table-body-td table-action-section">
+												    	<div class="table-action-section-div">
+												    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+												    		<!-- DROPDOWN SECTION -->
+															<div class="dashboard-dropdown-section">
+																<ul class="dropdown-menu dashboard-dropdown-menu" >
+														            <div class="dropdownArrow"></div>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	View
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Edit
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Delete
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Mark as Paid
+														              	</a>
+														            </li>
+														        </ul>
+															</div>
+												    	</div>
+												    </td>
+												</tr>
+												<tr class="main-section-table-body-tr">
+													<td class="main-section-table-body-td">#9023842</td>
+												    <td class="main-section-table-body-td">7 Dec 2020</td>
+												    <td class="main-section-table-body-td">$15945.00</td>
+												    <td class="main-section-table-body-td table-action-section">
+												    	<div class="table-action-section-div">
+												    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+												    		<!-- DROPDOWN SECTION -->
+															<div class="dashboard-dropdown-section">
+																<ul class="dropdown-menu dashboard-dropdown-menu" >
+														            <div class="dropdownArrow"></div>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	View
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Edit
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Delete
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Mark as Paid
+														              	</a>
+														            </li>
+														        </ul>
+															</div>
+												    	</div>
+												    </td>
+												</tr>
+												<tr class="main-section-table-body-tr">
+													<td class="main-section-table-body-td">#9023842</td>
+												    <td class="main-section-table-body-td">7 Dec 2020</td>
+												    <td class="main-section-table-body-td">$15945.00</td>
+												    <td class="main-section-table-body-td table-action-section">
+												    	<div class="table-action-section-div">
+												    		<img data-toggle="dropdown" class="table-action-icon" src="assets/images/more-options-icon.svg">
+
+												    		<!-- DROPDOWN SECTION -->
+															<div class="dashboard-dropdown-section">
+																<ul class="dropdown-menu dashboard-dropdown-menu" >
+														            <div class="dropdownArrow"></div>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	View
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Edit
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Delete
+														              	</a>
+														            </li>
+														            <li class="dropdown-menu-li dashboard-dropdown-menu-li">
+														            	<a href="#" class="nav-link-dropdown-link dashboard-dropdown-menu-link">
+														                	Mark as Paid
+														              	</a>
+														            </li>
+														        </ul>
+															</div>
+												    	</div>
+												    </td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- ACTIVITY FEED SECTION -->
+						<div class="col-md-7" style="padding: 0;">
+							<div class="main-sub-section" style="margin-bottom: 10px;">
+								<div class="activity-feed-card">
+									<div class="activity-feed-card-header-section">
+										<div class="activity-feed-card-header-title-section">
+											<h2 class="activity-feed-card-header-title">Activity Feed</h2>
+										</div>
+									</div>
+
+									<div class="activity-feed-list-container">
+										<div class="activity-feed-list-card">
+											<div class="activity-feed-list-card-icon">
+											</div>
+											<div class="col-md-9 activity-feed-list-card-details-section">
+												<div class="activity-feed-list-sub-title-section">
+													<p class="activity-feed-list-sub-title">26/10/2020</p><p class="activity-feed-list-sub-title">-</p><p class="activity-feed-list-sub-title">10:56AM</p>
+												</div>
+												<div class="activity-feed-list-sub-title">
+													<p class="activity-feed-list-title">Sent Email "First Outreach"</p>
+												</div>
+											</div>
+											<div class="col-md-3 activity-feed-list-card-btn-section">
+												<a href="#" class="preview-btn">Preview</a>
+											</div>
+										</div>
+										<div class="activity-feed-list-card">
+											<div class="activity-feed-list-card-icon">
+											</div>
+											<div class="col-md-9 activity-feed-list-card-details-section">
+												<div class="activity-feed-list-sub-title-section">
+													<p class="activity-feed-list-sub-title">26/10/2020</p><p class="activity-feed-list-sub-title">-</p><p class="activity-feed-list-sub-title">10:56AM</p>
+												</div>
+												<div class="activity-feed-list-sub-title">
+													<p class="activity-feed-list-title">Sent Email "First Outreach"</p>
+												</div>
+											</div>
+											<div class="col-md-3 activity-feed-list-card-btn-section">
+												<a href="#" class="preview-btn">Preview</a>
+											</div>
+										</div>
+										<div class="activity-feed-list-card">
+											<div class="activity-feed-list-card-icon">
+											</div>
+											<div class="col-md-9 activity-feed-list-card-details-section">
+												<div class="activity-feed-list-sub-title-section">
+													<p class="activity-feed-list-sub-title">26/10/2020</p><p class="activity-feed-list-sub-title">-</p><p class="activity-feed-list-sub-title">10:56AM</p>
+												</div>
+												<div class="activity-feed-list-sub-title">
+													<p class="activity-feed-list-title">Sent Email "First Outreach"</p>
+												</div>
+											</div>
+											<div class="col-md-3 activity-feed-list-card-btn-section">
+												<a href="#" class="preview-btn">Preview</a>
+											</div>
+										</div>
+										<div class="activity-feed-list-card">
+											<div class="activity-feed-list-card-icon">
+											</div>
+											<div class="col-md-9 activity-feed-list-card-details-section">
+												<div class="activity-feed-list-sub-title-section">
+													<p class="activity-feed-list-sub-title">26/10/2020</p><p class="activity-feed-list-sub-title">-</p><p class="activity-feed-list-sub-title">10:56AM</p>
+												</div>
+												<div class="activity-feed-list-sub-title">
+													<p class="activity-feed-list-title">Sent Email "First Outreach"</p>
+												</div>
+											</div>
+											<div class="col-md-3 activity-feed-list-card-btn-section">
+												<a href="#" class="preview-btn">Preview</a>
+											</div>
+										</div>
+										<div class="activity-feed-list-card">
+											<div class="activity-feed-list-card-icon">
+											</div>
+											<div class="col-md-9 activity-feed-list-card-details-section">
+												<div class="activity-feed-list-sub-title-section">
+													<p class="activity-feed-list-sub-title">26/10/2020</p><p class="activity-feed-list-sub-title">-</p><p class="activity-feed-list-sub-title">10:56AM</p>
+												</div>
+												<div class="activity-feed-list-sub-title">
+													<p class="activity-feed-list-title">Sent Email "First Outreach"</p>
+												</div>
+											</div>
+											<div class="col-md-3 activity-feed-list-card-btn-section">
+												<a href="#" class="preview-btn">Preview</a>
+											</div>
+										</div>
+										<div class="activity-feed-list-card">
+											<div class="activity-feed-list-card-icon">
+											</div>
+											<div class="col-md-9 activity-feed-list-card-details-section">
+												<div class="activity-feed-list-sub-title-section">
+													<p class="activity-feed-list-sub-title">26/10/2020</p><p class="activity-feed-list-sub-title">-</p><p class="activity-feed-list-sub-title">10:56AM</p>
+												</div>
+												<div class="activity-feed-list-sub-title">
+													<p class="activity-feed-list-title">Sent Email "First Outreach"</p>
+												</div>
+											</div>
+											<div class="col-md-3 activity-feed-list-card-btn-section">
+												<a href="#" class="preview-btn">Preview</a>
+											</div>
+										</div>
+										<div class="activity-feed-list-card">
+											<div class="activity-feed-list-card-icon">
+											</div>
+											<div class="col-md-9 activity-feed-list-card-details-section">
+												<div class="activity-feed-list-sub-title-section">
+													<p class="activity-feed-list-sub-title">26/10/2020</p><p class="activity-feed-list-sub-title">-</p><p class="activity-feed-list-sub-title">10:56AM</p>
+												</div>
+												<div class="activity-feed-list-sub-title">
+													<p class="activity-feed-list-title">Sent Email "First Outreach"</p>
+												</div>
+											</div>
+											<div class="col-md-3 activity-feed-list-card-btn-section">
+												<a href="#" class="preview-btn">Preview</a>
+											</div>
+										</div>
+										<div class="activity-feed-list-card">
+											<div class="activity-feed-list-card-icon">
+											</div>
+											<div class="col-md-9 activity-feed-list-card-details-section">
+												<div class="activity-feed-list-sub-title-section">
+													<p class="activity-feed-list-sub-title">26/10/2020</p><p class="activity-feed-list-sub-title">-</p><p class="activity-feed-list-sub-title">10:56AM</p>
+												</div>
+												<div class="activity-feed-list-sub-title">
+													<p class="activity-feed-list-title">Sent Email "First Outreach"</p>
+												</div>
+											</div>
+											<div class="col-md-3 activity-feed-list-card-btn-section">
+												<a href="#" class="preview-btn">Preview</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script>
+		function ToggleSidebar() {
+		  var element = document.getElementById("SidenavBar");
+		  element.classList.toggle("sidebar-active");
+		} 
+	</script>
+
+	<script>
+
+      $(".dashboard-sidebar-list-li").click(function(){
+
+        $(".dashboard-sidebar-list-li").removeClass("dashboard-sidebar-list-li-active");
+        $(this).addClass("dashboard-sidebar-list-li-active");
+
+      })
+
+    </script>
+
+
+
+</body>
+</html>

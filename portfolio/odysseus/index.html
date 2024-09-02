@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- TITLE -->
+    <title>Lufthansa</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <!-- ANIMATION -->
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+
+    <!-- OWL CAROUSEL -->
+	<link rel="stylesheet" href="assets/js/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/js/owlcarousel/owl.theme.default.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar navbar-expand-xl">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img id="logo" class=" wow fadeInDown" src="assets/images/logo.png" width="200px"/>
+            </a>
+            <button class="navbar-toggler wow fadeInDown" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle"
+                aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarToggle">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link wow fadeInDown" aria-current="page" href="#">Book & manage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wow fadeInDown" href="#">Prepare for travel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wow fadeInDown" href="#">During your trip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link wow fadeInDown" href="#">Discover</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile-dropdown-container">
+                <div class="dropdown">
+                    <div id="profiledropdown" class="dropdown-toggle d-flex flex-row align-items-center profile-dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img class="profile-img wow fadeInDown" src="assets/images/profile-img.png" />
+                      <div class="d-flex flex-row align-items-center profile-details wow fadeInDown">
+                          <p class="profile-title">John Doe</p>
+                          <img class="profile-dropdown-icon wow fadeInDown" src="assets/images/arrow-down.svg" />
+                          <img class="profile-dropdown-icon profile-dropdown-icon-hover wow fadeInDown" src="assets/images/arrow-down-yellow.svg" />
+                      </div>
+                    </div>
+                    <ul class="dropdown-menu wow fadeInDown" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item wow fadeInDown" href="#">My Profile</a></li>
+                      <li><a class="dropdown-item wow fadeInDown" href="#">My Bookings</a></li>
+                      <li><a class="dropdown-item wow fadeInDown" href="#">Logout</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WRAPPER -->
+    <div class="wrapper">
+
+        <!-- HEADER SECTION -->
+        <div class="header-section">
+            <div class="container">
+
+                <!-- HEADER TITLE SECTION -->
+                <div class="header-title-section">
+                    <h1 class="wow fadeInDown">Say yes to the world</h1>
+                    <p class="wow fadeInDown">Find your flight and explore the world with us.</p>
+                    <p class="wow fadeInDown">We will take care of the rest.</p>
+                    <hr class="yellow-hr wow fadeInDown" />
+                </div>
+
+                <!-- SEARCH BAR SECTION -->
+                <div class="container p-0 margin-top-40">
+                    <div class="card search-card wow fadeInDown">
+                        <div class="col-lg-3 col-12 card-section wow fadeInDown">
+                            <div class="search-input-container">
+                                <input list="departureairports" type="text" class="header-search-input" name="departure" placeholder="Departure Airport" autocomplete="off" /> 
+                                <div class="card-icon-section">
+                                    <img src="assets/images/departures-icon.svg" /> 
+                                </div>
+                            </div> 
+                            <datalist id="departureairports">
+                                <option value="BOM, CSIA Airtport India"></option>
+                                <option value="DEL, Delhi Airport India"></option>
+                                <option value="BKK, Suvarnabhumi Airport Thailand"></option>
+                                <option value="Pune Airport"></option>
+                                <option value="BLR, Bengaluru International Airport India"></option>
+                            </datalist>
+                        </div>
+                        <div class="col-lg-3 col-12 card-section wow fadeInDown">
+                            <div class="search-input-container">
+                                <input list="arrivalairports" type="text" class="header-search-input" name="arrival" placeholder="Arrival Airport" autocomplete="off" /> 
+                                <div class="card-icon-section">
+                                    <img src="assets/images/arrivals-icon.svg" /> 
+                                </div>
+                            </div>
+                            <datalist id="arrivalairports">
+                                <option value="BOM, CSIA Airtport India"></option>
+                                <option value="DEL, Delhi Airport India"></option>
+                                <option value="BKK, Suvarnabhumi Airport Thailand"></option>
+                                <option value="Pune Airport"></option>
+                                <option value="BLR, Bengaluru International Airport India"></option>
+                            </datalist>
+                        </div>
+                        <div class="col-lg-2 col-12 card-section wow fadeInDown">
+                            <div class="search-input-container">
+                                <input type="text" class="header-search-input dateselect header-search-input-p-l-40" name="date" placeholder="Date" autocomplete="off"/> 
+                                <div class="card-icon-section">
+                                    <img src="assets/images/calendar-icon.svg" /> 
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-lg-2 col-12 card-section wow fadeInDown">
+                            <div class="search-input-container search-input-container-p-r-0">
+                                <input list="passangerlist" type="text" class="header-search-input header-search-input-p-l-35" name="passangerlist" placeholder="1 Passenger" autocomplete="off"/> 
+                                <div class="card-icon-section">
+                                    <img src="assets/images/user-icon.svg" /> 
+                                </div>
+                            </div>
+                            <datalist id="passangerlist">
+                                <option value="1 Passenger"></option>
+                                <option value="2 Passenger"></option>
+                                <option value="3 Passenger"></option>
+                                <option value="4 Passenger"></option>
+                                <option value="5 Passenger"></option>
+                            </datalist>
+                        </div>
+                        <div class="col-lg-2 col-12 card-section">
+                            <button class="primary-btn wow fadeInDown">Search Your Flight</button>
+                        </div>
+                    </div>
+                    <div class="w-100 plane-img-container">
+                        <img class="w-100  wow fadeInUp" src="assets/images/plane.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORMS SECTION -->
+        <section class="section-container mb-5">
+            <div class="container action-cards-container">
+                <div class="col-lg-3 col-md-6 action-card-section wow fadeInUp">
+                    <div class="action-card fadeInUp" type="button" id="checkin" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="action-card-details">
+                            <div class="action-card-details-icon-section">
+                                <img class="action-card-details-icon" src="assets/images/check-in.svg" />
+                            </div>
+                            <h2 class="action-card-details-title">Check-in</h2>
+                        </div>
+                        <div class="action-card-add-icon-section">
+                            <img class="action-card-add-icon" src="assets/images/add.svg" />
+                        </div>
+                    </div>
+                    <div class="dropdown-menu action-card-dropdown wow fadeInDown" aria-labelledby="checkin">
+                        <div class="">
+                            <form>
+                                <div class="mb-4">
+                                  <input type="name" class="form-control" id="checkinfirstname" placeholder="First Name">
+                                </div>
+                                <div class="mb-4">
+                                  <input type="text" class="form-control" id="checkinlastname" placeholder="Last Name">
+                                </div>
+                                <div class="mb-5">
+                                    <input type="number" class="form-control" id="checkinticketno" placeholder="Ticket No">
+                                </div>                                
+                                <button type="submit" class="primary-btn w-100">check-in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 action-card-section wow fadeInUp">
+                    <div class="action-card" type="button" id="checkin" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="action-card-details">
+                            <div class="action-card-details-icon-section">
+                                <img class="action-card-details-icon" src="assets/images/flight-status.svg" />
+                            </div>
+                            <h2 class="action-card-details-title">Flight Status</h2>
+                        </div>
+                        <div class="action-card-add-icon-section">
+                            <img class="action-card-add-icon" src="assets/images/add.svg" />
+                        </div>
+                    </div>
+                    <div class="dropdown-menu action-card-dropdown wow fadeInDown" aria-labelledby="checkin">
+                        <div class="">
+                            <form>
+                                <div class="mb-4">
+                                  <input type="name" class="form-control" id="statusairline" placeholder="Airline Name">
+                                </div>
+                                <div class="mb-4">
+                                    <input type="number" class="form-control" id="statusairlineno" placeholder="Airline No">
+                                </div>
+                                <div class="mb-5">
+                                    <input type="text" class="form-control dateselect" id="statusdate" placeholder="Date Select">
+                                </div>                                
+                                <button type="submit" class="primary-btn w-100">Find</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 action-card-section wow fadeInUp">
+                    <div class="action-card" type="button" id="checkin" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="action-card-details">
+                            <div class="action-card-details-icon-section">
+                                <img class="action-card-details-icon" src="assets/images/my-bookings.svg" />
+                            </div>
+                            <h2 class="action-card-details-title">My Booking</h2>
+                        </div>
+                        <div class="action-card-add-icon-section">
+                            <img class="action-card-add-icon" src="assets/images/add.svg" />
+                        </div>
+                    </div>
+                    <div class="dropdown-menu action-card-dropdown wow fadeInDown" aria-labelledby="checkin">
+                        <div class="">
+                            <form>
+                                <div class="mb-4">
+                                  <input type="name" class="form-control" id="bookingfirstname" placeholder="First Name">
+                                </div>
+                                <div class="mb-4">
+                                  <input type="text" class="form-control" id="bookinglastname" placeholder="Last Name">
+                                </div>
+                                <div class="mb-5">
+                                    <input type="number" class="form-control" id="bookingcode" placeholder="Booking Code">
+                                </div>                                
+                                <button type="submit" class="primary-btn w-100">Find Bookings</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 action-card-section wow fadeInUp">
+                    <div class="action-card" type="button" id="checkin" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="action-card-details">
+                            <div class="action-card-details-icon-section">
+                                <img class="action-card-details-icon" src="assets/images/miles-and-more.svg" />
+                            </div>
+                            <h2 class="action-card-details-title">Miles & More</h2>
+                        </div>
+                        <div class="action-card-add-icon-section">
+                            <img class="action-card-add-icon" src="assets/images/add.svg" />
+                        </div>
+                    </div>
+                    <div class="dropdown-menu action-card-dropdown wow fadeInDown" aria-labelledby="checkin">
+                        <div class="w-100">
+                            <h2 class="action-card-details-title mb-4">Login with your Miles & More login data</h2>
+                            <button type="submit" class="primary-btn w-100">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POPULAR DESTINATIONS SECTION -->
+        <section class="section-container destinations-section">
+            <div class="col-xl-4 col-lg-5 destinations-details-section">
+                <div class="destinations-details-title-section">
+                    <h2 class="destinations-details-title wow fadeInUp">Popular Destinations</h2>
+                </div>
+                <div class="destinations-details-content wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="wow fadeInUp" data-wow-delay="0.2s">From activity and adventure to culture, cruise and safari, be inspired with the fantastic choice of experiences fro all around the world. We offer the perfect variety of holidy and travl options to satify your desire for an adventure.</p>
+                </div>
+                <a href="#" class="primary-btn wow fadeInUp"data-wow-delay="0.3s">Discover more<a></a>
+            </div>
+            <div class="col-lg-6 p-0 destinations-slider-section">
+                <div class="owl-carousel owl-theme destinations-slider slider-card-container wow slideInRight">
+                    <!-- SLIDE ONE -->
+                    <div class="item">
+                        <div class="slider-card wow slideInRight"data-wow-delay="0.1s">
+                            <img class="slider-card-img" src="assets/images/slider-images/1.jpg">
+                            <div class="slider-card-overlay">
+                                <h3 class="slider-card-overlay-title">Rome</h3>
+                                <p class="slider-card-overlay-subtitle">from $124</p>
+                                <a href="#" class="overlay-circular-btn"><img class="overlay-circular-btn-icon" src="assets/images/slider-plane-btn-icon.svg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slider-card wow slideInRight" data-wow-delay="0.2s">
+                            <img class="slider-card-img" src="assets/images/slider-images/2.jpg">
+                            <div class="slider-card-overlay">
+                                <h3 class="slider-card-overlay-title">Shanghai</h3>
+                                <p class="slider-card-overlay-subtitle">from $362</p>
+                                <a href="#" class="overlay-circular-btn"><img class="overlay-circular-btn-icon" src="assets/images/slider-plane-btn-icon.svg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slider-card wow slideInRight" data-wow-delay="0.3s">
+                            <img class="slider-card-img" src="assets/images/slider-images/3.jpg">
+                            <div class="slider-card-overlay">
+                                <h3 class="slider-card-overlay-title">Mosco</h3>
+                                <p class="slider-card-overlay-subtitle">from $137</p>
+                                <a href="#" class="overlay-circular-btn"><img class="overlay-circular-btn-icon" src="assets/images/slider-plane-btn-icon.svg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="slider-card wow slideInRight" data-wow-delay="0.4s">
+                            <img class="slider-card-img" src="assets/images/slider-images/4.jpg">
+                            <div class="slider-card-overlay">
+                                <h3 class="slider-card-overlay-title">Paris</h3>
+                                <p class="slider-card-overlay-subtitle">from $250</p>
+                                <a href="#" class="overlay-circular-btn"><img class="overlay-circular-btn-icon" src="assets/images/slider-plane-btn-icon.svg" /></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="section-container services-section wow fadeInUp">
+            <div class="container">
+                <div class="col-md-12 section-title-container">
+                    <h2 class="section-title wow fadeInUp" data-wow-delay="0.1s">All services at a glance</h2>
+                    <p class="section-details wow fadeInUp" data-wow-delay="0.2s">You can book the offers conveniently from home before you start your trip. You can opt for further services during your trip too.</p>
+                </div>
+                <br>
+                <br>
+                <div class="services-block-section">
+                    <div class="col-md-3 services-title-block">
+                        <h3 class="services-title wow fadeInUp" data-wow-delay="0.3s">Why book<br>lufthansa.com?</h3>
+                    </div>
+                    <div class="col-md-4 offset-md-1 services-details-block">
+                        <div class="services-details-icon-section wow fadeInUp" data-wow-delay="0.3s">
+                            <img class="services-details-icon" src="assets/images/no-hidden-costs.svg" />
+                        </div>
+                        <div class="services-details-section">
+                            <h4 class="services-details-title wow fadeInUp" data-wow-delay="0.3s">No hidden costs</h4>
+                            <p class="services-details-content wow fadeInUp" data-wow-delay="0.3s">You save yourself the booking fees and always obtain the best-value flights.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 services-details-block">
+                        <div class="services-details-icon-section wow fadeInUp" data-wow-delay="0.4s">
+                            <img class="services-details-icon" src="assets/images/more-comfort.svg" />
+                        </div>
+                        <div class="services-details-section">
+                            <h4 class="services-details-title wow fadeInUp" data-wow-delay="0.4s">No hidden costs</h4>
+                            <p class="services-details-content wow fadeInUp" data-wow-delay="0.4s">You save yourself the booking fees and always obtain the best-value flights.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-block-section">
+                    <div class="col-md-3 services-title-block">
+                        <h3 class="services-title wow fadeInUp" data-wow-delay="0.5s">Even more comfort<br>during yoru flight</h3>
+                    </div>
+                    <div class="col-md-4 offset-md-1 services-details-block">
+                        <div class="services-details-icon-section wow fadeInUp" data-wow-delay="0.5s">
+                            <img class="services-details-icon" src="assets/images/plane.svg" />
+                        </div>
+                        <div class="services-details-section">
+                            <h4 class="services-details-title wow fadeInUp" data-wow-delay="0.5s">Advance seat reservation</h4>
+                            <p class="services-details-content wow fadeInUp" data-wow-delay="0.5s">Reserve your seat before you start your journey exactly accordingly to your preferences - from a window seats with more legroom.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 services-details-block">
+                        <div class="services-details-icon-section wow fadeInUp" data-wow-delay="0.5s">
+                            <img class="services-details-icon" src="assets/images/upgrade.svg" />
+                        </div>
+                        <div class="services-details-section">
+                            <h4 class="services-details-title wow fadeInUp" data-wow-delay="0.5s">Upgrade</h4>
+                            <p class="services-details-content wow fadeInUp" data-wow-delay="0.5s">Treat yourself to an upgrade and enjoy the amenities of Premium Economy Class or Business Class or the luxury of First Class and arrive at your destination more relaxed.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 services-details-block">
+                        <div class="services-details-icon-section wow fadeInUp" data-wow-delay="0.5s">
+                            <img class="services-details-icon" src="assets/images/baggage-and-light-fare.svg" />
+                        </div>
+                        <div class="services-details-section">
+                            <h4 class="services-details-title wow fadeInUp" data-wow-delay="0.5s">Baggage on the light fare</h4>
+                            <p class="services-details-content wow fadeInUp" data-wow-delay="0.5s">Add a first piece of baagage weighing up to 23 kg on your trip within Europe on the light fare.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-block-section">
+                    <div class="col-md-3 services-title-block">
+                        <h3 class="services-title wow fadeInUp" data-wow-delay="0.6s">Further benefits<br>at your arrival</h3>
+                    </div>
+                    <div class="col-md-4 offset-md-1 services-details-block">
+                        <div class="services-details-icon-section wow fadeInUp" data-wow-delay="0.6s">
+                            <img class="services-details-icon" src="assets/images/travel-cover.svg" />
+                        </div>
+                        <div class="services-details-section">
+                            <h4 class="services-details-title wow fadeInUp" data-wow-delay="0.6s">Travel cover</h4>
+                            <p class="services-details-content wow fadeInUp" data-wow-delay="0.6s">Travel carefree and relaxed from from than 27 countries with your dependable Lufthansa travel insurance in cooperation with Travel Guard.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 services-details-block">
+                        <div class="services-details-icon-section wow fadeInUp" data-wow-delay="0.6s">
+                            <img class="services-details-icon" src="assets/images/rental-cars.svg" />
+                        </div>
+                        <div class="services-details-section">
+                            <h4 class="services-details-title wow fadeInUp" data-wow-delay="0.6s">Rental cars</h4>
+                            <p class="services-details-content wow fadeInUp" data-wow-delay="0.6s">Select a rental car that is suitable for you when your are booking your flight or separately afterwards and earn 500 Miles & More miles per rental.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offset-md-4 services-details-block">
+                        <div class="services-details-icon-section wow fadeInUp" data-wow-delay="0.6s">
+                            <img class="services-details-icon" src="assets/images/hotel.svg" />
+                        </div>
+                        <div class="services-details-section">
+                            <h4 class="services-details-title wow fadeInUp" data-wow-delay="0.6s">Hotel</h4>
+                            <p class="services-details-content wow fadeInUp" data-wow-delay="0.6s">Book your accomodation via our hotel partner booking.com and secure one Miles & More award mile for every euro that you spend.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 services-details-block">
+                        <div class="services-details-icon-section wow fadeInUp" data-wow-delay="0.6s">
+                            <img class="services-details-icon" src="assets/images/tours-and-activities.svg" />
+                        </div>
+                        <div class="services-details-section">
+                            <h4 class="services-details-title wow fadeInUp" data-wow-delay="0.6s">Tours and activities</h4>
+                            <p class="services-details-content wow fadeInUp" data-wow-delay="0.6s">Book tours and activites, which are tailored to your personal interests by our experts, before the start of your trip.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAYMENT SECTION -->
+        <section class="section-container payment-section">
+            <div class="col-md-11 payment-section-container wow slideInLeft">
+                <div class="col-xl-4 offset-xl-1 col- col-lg-5 destinations-details-section wow fadeInUp" data-wow-delay="0.3">
+                    <div class="destinations-details-title-section">
+                        <h2 class="destinations-details-title color-white wow fadeInUp" data-wow-delay="0.4s">Payment Options</h2>
+                    </div>
+                    <div class="destinations-details-content">
+                        <p class="color-white wow fadeInUp" data-wow-delay="0.5s">You can easily book and securely pay for your flight at lufthansa.com. The menthods of payment available and much more information can be found in the following sections.</p>
+                    </div>
+                    <a href="#" class="primary-btn wow fadeInUp" data-wow-delay="0.6s">Learn more<a></a>
+                </div>
+                <div class="col-lg-6 payment-icons-container">
+                    <div class="col-md-4">
+                        <div class="payment-icon-section wow fadeInUp" data-wow-delay="0.6">
+                            <img class="payment-icon" src="assets/images/payments/mastercard-logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="payment-icon-section wow fadeInUp" data-wow-delay="0.6">
+                            <img class="payment-icon" src="assets/images/payments/visa-logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="payment-icon-section wow fadeInUp" data-wow-delay="0.6">
+                            <img class="payment-icon" src="assets/images/payments/american-express-logo.png">
+                        </div>
+                    </div>
+                    <div class= "col-md-4">
+                        <div class="payment-icon-section wow fadeInUp" data-wow-delay="0.6">
+                            <img class="payment-icon" src="assets/images/payments/diners-club-logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="payment-icon-section wow fadeInUp" data-wow-delay="0.6">
+                            <img class="payment-icon" src="assets/images/payments/jcb-logo.png">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="payment-icon-section wow fadeInUp" data-wow-delay="0.6">
+                            <img class="payment-icon" src="assets/images/payments/dotpay-logo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUBSCRIBE SECTION -->
+        <section class="section-container subscribe-section">
+            <div class="container">
+                <div class="col-md-12 section-title-container">
+                    <h2 class="section-title wow fadeInUp">Stay Connected</h2>
+                    <p class="section-details wow fadeInUp" data-wow-delay="0.1s">Save with our latest fares and offers. Leave us your e-mail adress and recrive information about our special offers</p>
+                </div>
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                    <div class="subscribe-form-section wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="subscribe-form-icon-section">
+                            <img class="subscribe-form-icon" src="assets/images/paper-plane.svg">
+                        </div>
+                        <input class="form-control subscribe-control" type="text" placeholder="Type your e-mail address">
+                        <div class="subscribe-form-btn-section">
+                            <button type="submit" class="primary-btn">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER SECTION -->
+        <footer class="footer-section">
+            <div class="container footer-container">
+                <div class="col-lg-3 col-md-6 footer-subsection">
+                    <h3 class="footer-subsection-title wow fadeInUp">Frequently visited pages</h3>
+                    <ul class="footer-subsection-ul">
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.1s" href="#">View & amend flights</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.2s" href="#">Flight offers worldwide</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.3s" href="#">Baggage</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.4s" href="#">Check-in</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.5s" href="#">At the airport</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.6s" href="#">In-flight services at a glance</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-subsection">   
+                    <h3 class="footer-subsection-title wow fadeInUp">Customer services</h3>
+                    <ul class="footer-subsection-ul">
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.1s" href="#">Lufthansa iD account</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.2s" href="#">Miles & More</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.3s" href="#">Help & Contact</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.5s" href="#">Feedback</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.6s" href="#">Newsletter</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-subsection">
+                    <h3 class="footer-subsection-title wow fadeInUp">Lufthansa Group</h3>
+                    <ul class="footer-subsection-ul">
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.1s" href="#">Jobs & careers</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.2s" href="#">Aviation Group</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.2s" href="#">Lufthansa Group Airlines</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.3s" href="#">Press</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.4s" href="#">Lufthansa partners</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-subsection">
+                    <h3 class="footer-subsection-title wow fadeInUp">Corporate customers</h3>
+                    <ul class="footer-subsection-ul">
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.1s" href="#">For travel agents</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.2s" href="#">For corporate customers</a>
+                        </li>
+                        <li class="footer-subsection-li">
+                            <a class="footer-subsection-link wow fadeInUp" data-wow-delay="0.3s" href="#">Corporate bonus programme</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container footer-link-section">
+                <div class="footer-logo">
+                    <a href="#" class="wow fadeInUp" data-wow-delay="0.1s">
+                        <img src="assets/images/logo.png" width="160px">
+                    </a>
+                </div>
+                <div class="footer-logo">
+                    <a href="#" class="wow fadeInUp"  data-wow-delay="0.1s">
+                        <img src="assets/images/star-alliance.svg" width="200px">
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </div><!-- WRAPPER ENDS HERE -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+    <script src="assets/js/script.js"></script>
+
+    <!-- OWL CAROUSEL SLIDER -->
+	<script src="assets/js/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- DATEPICKER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- ANIMATION -->
+    <script>
+		new WOW().init();
+	</script>
+
+    <!-- Header scroll -->
+		<script type="text/javascript">
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 20) {
+                  $('#navbar').addClass('header-scrolled');
+                  $('.nav-link').addClass('color-white');
+                  $('.profile-title').addClass('color-white');
+                  $('#logo').attr('src', 'assets/images/logo-white.svg');
+                  $('.navbar-toggler-icon').css("background-image","url('assets/images/custom-responsive-toggle-white.svg')");
+                } else {
+                  $('#navbar').removeClass('header-scrolled');
+                  $('.nav-link').removeClass('color-white');
+                  $('.profile-title').removeClass('color-white');
+                  $('#logo').attr('src', 'assets/images/logo.png');
+                  $('.navbar-toggler-icon').css("background-image","url('assets/images/custom-responsive-toggle.svg')");
+                }
+              });		
+        </script>
+
+    <!-- DATE PICKER -->
+        <script>
+            $('.dateselect').datepicker({
+                format: 'mm/dd/yyyy',
+            });
+        </script>
+
+    <!-- SLIDER -->
+	<script>
+		$('.destinations-slider').owlCarousel({
+		    loop:true,
+		    margin:30,
+            dots: false,
+		    nav:true,
+		    navText: ["<img class='nav-custom-btn' src='assets/images/left-arrow.svg'>","<img class='nav-custom-btn' src='assets/images/right-arrow.svg'>"],
+		    items: 2,
+            stagePadding: 90,
+            responsiveClass:true,
+		    responsive:{
+		        0:{
+		            items:1,
+		            nav:true
+		        },
+		        600:{
+		            items:2,
+		            nav:false
+		        },
+                768:{
+		            items:2,
+		            nav:false
+		        },
+                992:{
+		            items:1,
+		            nav:false
+		        },
+		        1200:{
+		            items:2,
+		            nav:true,
+		            loop:false
+		        }
+		    }
+		})
+	</script>
+</body>
+
+</html>

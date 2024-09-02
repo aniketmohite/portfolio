@@ -1,0 +1,23 @@
+<svg id="Component_15_1" data-name="Component 15 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1273" height="792" viewBox="0 0 1273 792">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#48d2ff"/>
+      <stop offset="1" stop-color="#4b7191"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0062ec"/>
+      <stop offset="1" stop-color="#4b7191"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="0.729" y1="-0.029" x2="0.474" y2="1.017" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#48d2ff"/>
+      <stop offset="1" stop-color="#0259a5"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_62" data-name="Rectangle 62" width="909" height="600" rx="20" transform="translate(364 96)" opacity="0.4" fill="url(#linear-gradient)"/>
+  <rect id="Rectangle_61" data-name="Rectangle 61" width="909" height="700" rx="20" transform="translate(271 51)" opacity="0.7" fill="url(#linear-gradient-2)"/>
+  <g id="Component_14_1" data-name="Component 14 – 1">
+    <rect id="Rectangle_63" data-name="Rectangle 63" width="909" height="600" rx="20" transform="translate(0 96)" opacity="0.4" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_64" data-name="Rectangle 64" width="909" height="700" rx="20" transform="translate(111 51)" opacity="0.7" fill="url(#linear-gradient-2)"/>
+    <rect id="Rectangle_60" data-name="Rectangle 60" width="850" height="792" rx="20" transform="translate(222)" fill="url(#linear-gradient-5)"/>
+  </g>
+</svg>

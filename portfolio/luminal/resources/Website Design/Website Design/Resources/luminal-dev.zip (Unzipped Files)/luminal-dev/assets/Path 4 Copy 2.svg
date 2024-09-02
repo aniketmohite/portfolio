@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="679px" height="958px" viewBox="0 0 679 958" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Path 4 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="55.5946429%" y1="0.660796109%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#C8C8C8" offset="0%"></stop>
+            <stop stop-color="#979797" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.157226562">
+        <g id="Luminal-Landing" transform="translate(0.000000, -1965.000000)" fill-rule="nonzero" stroke="url(#linearGradient-1)">
+            <g id="BG" transform="translate(0.000000, 1966.000000)">
+                <g id="Shape-2">
+                    <path d="M625.790641,0 C551.756257,42.645728 505.067906,105.115056 485.725589,187.407984 C456.712114,310.847377 711.330369,508.250453 674.313177,683.664327 C637.295984,859.0782 440.204448,972.5225 258.119881,954.031579 C136.730169,941.704298 50.6902091,892.728345 0,807.103719" id="Path-4-Copy-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

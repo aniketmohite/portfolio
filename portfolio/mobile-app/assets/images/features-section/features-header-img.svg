@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="343.483" height="683.793" viewBox="0 0 343.483 683.793">
+  <g id="Group_1125" data-name="Group 1125" transform="translate(-1238 -634)">
+    <path id="Path_356" data-name="Path 356" d="M354.394,700.249c0,16.629-13.935,29.371-30.564,29.371H86.693a28.917,28.917,0,0,1-29.435-29.371V116.2c0-16.629,12.805-30.375,29.435-30.375h27.415c5.8,0,7.938.042,8.289,7.389.364,7.633,5.6,11.788,12.7,14.008,2.406.753,5.084.508,7.639.508h125.31c2.555,0,5.234.43,7.637-.323,7.1-2.221,12.335-6.745,12.7-14.379.351-7.345,2.491-7.2,8.289-7.2h27.16c16.629,0,30.564,13.745,30.564,30.375Z" transform="translate(1205.344 566.269)" fill="#fff"/>
+    <path id="Path_357" data-name="Path 357" d="M354.394,116.2A30.463,30.463,0,0,0,324.02,85.826H296.67c-5.8,0-7.938-.141-8.289,7.2-.364,7.633-5.6,12.158-12.7,14.379-2.4.753-5.082.323-7.637.323H142.734c-2.555,0-5.234.245-7.639-.508C128,105,122.761,100.848,122.4,93.215c-.351-7.347-2.493-7.389-8.289-7.389H86.693a29.435,29.435,0,0,0-29.435,29.435v89.493c0,82.05,66.517,118.694,148.569,118.694h0c82.05,0,148.567-36.644,148.567-118.694Z" transform="translate(1205.344 566.269)" fill="#0984e3"/>
+    <path id="Path_358" data-name="Path 358" d="M205.827,264.237h0c-82.052,0-148.569-36.644-148.569-118.694v5.975c0,82.05,66.517,118.694,148.569,118.694h0c82.05,0,148.567-36.644,148.567-118.694v-5.975C354.394,227.593,287.878,264.237,205.827,264.237Z" transform="translate(1205.344 625.479)" fill="#0da9fe"/>
+    <path id="Path_359" data-name="Path 359" d="M74.823,128.249a.754.754,0,0,1-.506-.2l-7.628-7A.746.746,0,0,1,66.643,120l7-7.628a.746.746,0,0,1,1.1,1.008l-6.494,7.078,7.078,6.494a.747.747,0,0,1-.506,1.3Z" transform="translate(1214.455 592.35)" fill="#fff"/>
+    <path id="Path_360" data-name="Path 360" d="M199.366,112.534a2.105,2.105,0,1,1-2.105-2.1A2.1,2.1,0,0,1,199.366,112.534Z" transform="translate(1342.071 590.665)" fill="#fff"/>
+    <path id="Path_361" data-name="Path 361" d="M199.366,121.748a2.105,2.105,0,1,1-2.105-2.105A2.1,2.1,0,0,1,199.366,121.748Z" transform="translate(1342.071 599.799)" fill="#fff"/>
+    <path id="Path_362" data-name="Path 362" d="M199.366,117.14a2.105,2.105,0,1,1-2.105-2.1A2.1,2.1,0,0,1,199.366,117.14Z" transform="translate(1342.071 595.232)" fill="#fff"/>
+    <text id="BALANCE" transform="translate(1403.158 715.999)" fill="#fff" font-size="9" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-23.035" y="0">BALANCE</tspan></text>
+    <path id="Path_363" data-name="Path 363" d="M382.92,126.375A49.634,49.634,0,0,0,333.285,76.74H96.371a49.633,49.633,0,0,0-49.633,49.635V710.9a49.633,49.633,0,0,0,49.633,49.635H333.285A49.634,49.634,0,0,0,382.92,710.9ZM375.3,710.422a42.49,42.49,0,0,1-42.491,42.491H95.895A42.491,42.491,0,0,1,53.4,710.422V125.9A42.491,42.491,0,0,1,95.895,83.408H332.809A42.489,42.489,0,0,1,375.3,125.9Z" transform="translate(1194.912 557.26)" fill="#58595b"/>
+    <path id="Path_364" data-name="Path 364" d="M48.555,122.063H48.1a3.2,3.2,0,0,0-3.2,3.2v19.473a3.2,3.2,0,0,0,3.2,3.2h.452" transform="translate(1193.095 602.199)"/>
+    <path id="Path_365" data-name="Path 365" d="M215.545,234.441h0a3.65,3.65,0,0,0,3.65-3.65v-72.3a3.651,3.651,0,0,0-3.65-3.65h0" transform="translate(1362.287 634.698)"/>
+    <path id="Path_366" data-name="Path 366" d="M48.555,147.069h0a3.65,3.65,0,0,0-3.65,3.652V191.83a3.65,3.65,0,0,0,3.65,3.65h0" transform="translate(1193.095 626.993)"/>
+    <path id="Path_367" data-name="Path 367" d="M48.555,178.272h0a3.65,3.65,0,0,0-3.65,3.65v41.111a3.649,3.649,0,0,0,3.65,3.65h0" transform="translate(1193.095 657.931)"/>
+    <path id="Path_368" data-name="Path 368" d="M371.982,122.577a42.489,42.489,0,0,0-42.491-42.489H92.576a42.491,42.491,0,0,0-42.491,42.489V707.1a42.491,42.491,0,0,0,42.491,42.491H329.491A42.49,42.49,0,0,0,371.982,707.1Zm-121.216-25.8a4.166,4.166,0,1,1-4.166-4.166A4.165,4.165,0,0,1,250.766,96.779ZM194.1,94.373h37.142a2.421,2.421,0,1,1,0,4.762H194.1a2.421,2.421,0,1,1,0-4.762Zm167.4,611.565c0,16.629-13.935,29.371-30.564,29.371H93.8A28.917,28.917,0,0,1,64.37,705.938V121.89c0-16.629,12.805-30.375,29.435-30.375H121.22c5.8,0,7.938.042,8.289,7.389.364,7.633,5.6,11.788,12.7,14.008,2.406.753,5.084.508,7.639.508h125.31c2.555,0,5.234.43,7.637-.323,7.1-2.221,12.335-6.745,12.7-14.379.349-7.345,2.491-7.2,8.289-7.2h27.16c16.629,0,30.564,13.745,30.564,30.375Z" transform="translate(1198.231 560.58)" fill="#231f20"/>
+    <path id="Path_369" data-name="Path 369" d="M146.669,90.543a4.166,4.166,0,1,0,4.166-4.166A4.166,4.166,0,0,0,146.669,90.543Z" transform="translate(1293.996 566.815)" fill="#fff"/>
+    <path id="Path_370" data-name="Path 370" d="M123.823,92.023h37.142a2.421,2.421,0,1,0,0-4.762H123.823a2.421,2.421,0,1,0,0,4.762Z" transform="translate(1268.51 567.692)" fill="#fff"/>
+    <rect id="Rectangle_36" data-name="Rectangle 36" width="2.269" height="5.166" transform="translate(1526.012 663.892)" fill="#fff"/>
+    <rect id="Rectangle_37" data-name="Rectangle 37" width="2.269" height="5.166" transform="translate(1528.933 663.892)" fill="#fff"/>
+    <rect id="Rectangle_38" data-name="Rectangle 38" width="2.269" height="5.166" transform="translate(1531.853 663.892)" fill="#fff"/>
+    <rect id="Rectangle_39" data-name="Rectangle 39" width="2.269" height="5.166" transform="translate(1534.774 663.892)" fill="#fff"/>
+    <rect id="Rectangle_40" data-name="Rectangle 40" width="1.135" height="3.138" transform="translate(1537.694 664.906)" fill="#fff"/>
+    <path id="Path_371" data-name="Path 371" d="M183.122,93.968a1.091,1.091,0,1,0,1.093,1.091A1.092,1.092,0,0,0,183.122,93.968Z" transform="translate(1329.058 574.342)" fill="#fff"/>
+    <path id="Path_372" data-name="Path 372" d="M186.982,93.364a4.938,4.938,0,0,0-5.674,0,.743.743,0,0,0-.09,1.129.735.735,0,0,0,.94.088,3.459,3.459,0,0,1,3.973,0,.735.735,0,0,0,.94-.088A.743.743,0,0,0,186.982,93.364Z" transform="translate(1328.035 572.855)" fill="#fff"/>
+    <path id="Path_373" data-name="Path 373" d="M190.048,92.77a7.78,7.78,0,0,0-9.784,0,.742.742,0,1,0,.938,1.149,6.3,6.3,0,0,1,7.906,0,.742.742,0,1,0,.94-1.149Z" transform="translate(1327.025 571.438)" fill="#fff"/>
+    <text id="_08.00" data-name="08.00" transform="translate(1281.151 665.103)" fill="#fff" font-size="6" font-family="Montserrat-Regular, Montserrat"><tspan x="0" y="0">08.00</tspan></text>
+    <path id="Path_374" data-name="Path 374" d="M200.665,407.63h-88.23a4.742,4.742,0,0,1-4.728-4.728h0a4.741,4.741,0,0,1,4.728-4.726h88.23a4.741,4.741,0,0,1,4.728,4.726h0A4.742,4.742,0,0,1,200.665,407.63Z" transform="translate(1255.364 875.969)" fill="#3a3f47" opacity="0.4"/>
+    <text id="_4.000_00" data-name="$ 4.000,00" transform="translate(1402.295 807.977)" fill="#fff" font-size="30" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-82.65" y="0">$ 4.000,00</tspan></text>
+    <path id="Path_375" data-name="Path 375" d="M211.043,173.273a58.5,58.5,0,0,1-105.23,0" transform="translate(1253.486 652.974)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_376" data-name="Path 376" d="M105.941,163.507a58.5,58.5,0,0,1,104.722,0" transform="translate(1253.613 611.148)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_377" data-name="Path 377" d="M118.23,145.605a49.237,49.237,0,0,1,54.129-1.083" transform="translate(1265.798 616.955)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <path id="Path_378" data-name="Path 378" d="M115.383,147.96a5.655,5.655,0,1,1-5.654-5.654A5.654,5.654,0,0,1,115.383,147.96Z" transform="translate(1251.761 622.27)" fill="#fff"/>
+    <path id="Path_379" data-name="Path 379" d="M166.169,147.96a5.655,5.655,0,1,1-5.656-5.654A5.655,5.655,0,0,1,166.169,147.96Z" transform="translate(1302.116 622.27)" fill="#fff"/>
+    <path id="Path_380" data-name="Path 380" d="M115.383,178.174a5.655,5.655,0,1,1-5.654-5.654A5.654,5.654,0,0,1,115.383,178.174Z" transform="translate(1251.761 652.228)" fill="#fff"/>
+    <path id="Path_381" data-name="Path 381" d="M166.169,178.174a5.655,5.655,0,1,1-5.656-5.654A5.656,5.656,0,0,1,166.169,178.174Z" transform="translate(1302.116 652.228)" fill="#fff"/>
+    <path id="Path_382" data-name="Path 382" d="M172.359,179.368a49.237,49.237,0,0,1-54.129,1.083" transform="translate(1265.798 659.017)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    <rect id="Rectangle_41" data-name="Rectangle 41" width="93.75" height="37.304" rx="4.502" transform="translate(1301.359 941.216)" fill="#0da9fe"/>
+    <text id="Send" transform="translate(1342.407 962.057)" fill="#fff" font-size="12" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-15.594" y="0">Send</tspan></text>
+    <rect id="Rectangle_42" data-name="Rectangle 42" width="93.75" height="37.304" rx="4.502" transform="translate(1428.813 941.216)" fill="#ec41ff"/>
+    <text id="Recieve" transform="translate(1468.284 962.057)" fill="#fff" font-size="12" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-23.682" y="0">Recieve</tspan></text>
+    <text id="Transactions" transform="translate(1285.842 1011.661)" fill="#3a3f47" font-size="10" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">Transactions</tspan></text>
+    <text id="Recieve-2" data-name="Recieve" transform="translate(1285.843 1056.337)" fill="#ec41ff" font-size="12" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">Recieve</tspan></text>
+    <text id="From_order_N_1" data-name="From order Nº 1" transform="translate(1285.842 1075.234)" fill="#3a3f47" font-size="7" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">From order Nº 1</tspan></text>
+    <text id="Recieve-3" data-name="Recieve" transform="translate(1285.843 1169.284)" fill="#ec41ff" font-size="12" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">Recieve</tspan></text>
+    <text id="From_order_N_3" data-name="From order Nº 3" transform="translate(1285.842 1188.182)" fill="#3a3f47" font-size="7" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">From order Nº 3</tspan></text>
+    <text id="_500" data-name="$ 500" transform="translate(1530.323 1056.337)" fill="#ec41ff" font-size="12" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-33.576" y="0">$ 500</tspan></text>
+    <text id="_08.02.20" data-name="08.02.20" transform="translate(1524.332 1075.234)" fill="#3a3f47" font-size="7" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-29.813" y="0">08.02.20</tspan></text>
+    <text id="_1500" data-name="$ 1500" transform="translate(1524.34 1167.284)" fill="#ec41ff" font-size="10" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-31.68" y="0">$ 1500</tspan></text>
+    <text id="_20.06.19" data-name="20.06.19" transform="translate(1524.323 1188.182)" fill="#3a3f47" font-size="7" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-27.552" y="0">20.06.19</tspan></text>
+    <line id="Line_6" data-name="Line 6" x2="269.708" transform="translate(1274.411 1026.135)" fill="none" stroke="#0da9fe" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.25"/>
+    <rect id="Rectangle_43" data-name="Rectangle 43" width="296.639" height="55.478" transform="translate(1263.098 1094.023)" fill="#3a3f47" opacity="0.08"/>
+    <rect id="Rectangle_44" data-name="Rectangle 44" width="296.639" height="55.478" transform="translate(1263.098 1204.979)" fill="#3a3f47" opacity="0.08"/>
+    <g id="Group_80" data-name="Group 80" transform="translate(1285.842 1100.81)">
+      <text id="Sent" transform="translate(0 10)" fill="#0da9fe" font-size="10" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">Sent</tspan></text>
+      <text id="From_order_N_2" data-name="From order Nº 2" transform="translate(0 30.898)" fill="#3a3f47" font-size="7" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">From order Nº 2</tspan></text>
+    </g>
+    <g id="Group_81" data-name="Group 81" transform="translate(1488.357 1100.81)">
+      <text id="_-_200" data-name="- $ 200" transform="translate(34 10)" fill="#0da9fe" font-size="10" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-34.47" y="0">- $ 200</tspan></text>
+      <text id="_06.09.19" data-name="06.09.19" transform="translate(35.966 30.898)" fill="#3a3f47" font-size="7" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-27.874" y="0">06.09.19</tspan></text>
+    </g>
+    <g id="Group_82" data-name="Group 82" transform="translate(1285.842 1213.758)">
+      <text id="Sent-2" data-name="Sent" transform="translate(0 10)" fill="#0da9fe" font-size="10" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">Sent</tspan></text>
+      <text id="From_order_N_4" data-name="From order Nº 4" transform="translate(0 30.898)" fill="#3a3f47" font-size="7" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">From order Nº 4</tspan></text>
+    </g>
+    <g id="Group_83" data-name="Group 83" transform="translate(1488.357 1213.758)">
+      <text id="_-_200-2" data-name="- $ 200" transform="translate(34 10)" fill="#0da9fe" font-size="10" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-34.47" y="0">- $ 200</tspan></text>
+      <text id="_11.02.19" data-name="11.02.19" transform="translate(37.94 30.898)" fill="#3a3f47" font-size="7" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-23.828" y="0">11.02.19</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1172 @@
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    BASIC
+*/
+
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-os-font-smoothing: grayscale;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: Poppins;
+        padding: 0;
+        margin: 0;
+        background-color: #F5F5F5;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    .padding-0{
+        padding: 0 !important;
+    }
+
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    button:focus{
+        outline: none !important;
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    NAVBAR
+*/ 
+
+    .header-scrolled{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color:#fff !important;
+        -webkit-box-shadow: 0 4px 6px 0 rgba(12,0,46,.06);
+        box-shadow: 0 4px 6px 0 rgba(12,0,46,.06);
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .navbar{
+        background-color: transparent;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        -webkit-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear;
+    }
+
+    .navbar-nav{
+        align-items: center;
+    }
+    
+    .navbar-brand{
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand-menu{
+        margin-right: 40px;
+    }
+
+    .menu-navbar-nav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-item{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .nav-item .nav-link{
+        text-align: right;
+    }
+
+    .nav-item .nav-link:hover .nav-link-number{
+        color: #FF3E81 !important; 
+    }
+
+    .nav-item .nav-link:hover .nav-link-menu{
+        color: #FF3E81 !important; 
+    }
+
+    .nav-link-number{
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 12px;
+        color: #000;
+    }
+
+    .nav-link-menu{
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        line-height: 1;
+    }
+
+    .learn-more-btn{
+        background-color: #FF3E81;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-weight: 400;
+        color: #fff;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        border-radius: 100px;
+    }
+
+    .learn-more-btn:hover{
+        color: #fff;
+        background-color: #746AFE;
+    }
+
+    .navbar-toggler-icon{
+        background-image: url("../images/custom-responsive-toggle.svg");
+    }
+
+    @media screen and (max-width: 575.98px){
+        .navbar{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    HEADER
+*/
+    .header{
+        display: flex;
+        width: 100%;
+        padding: 160px 0 80px 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .header-img-section{
+        position: relative;
+    }
+
+    .header-img-section-bg-graphic-one{
+        position: absolute;
+        left: 0;
+        top: 10%;
+    }
+
+    .header-img-section-bg-graphic-two{
+        position: absolute;
+        top: 0;
+        left: 40%;
+    }
+
+    .header-img-section-bg-graphic-three{
+        position: absolute;
+        top: -10%;
+        right: 10%;
+    }
+
+    .header-img-section-bg-graphic-four{
+        position: absolute;
+        right: 0;
+        bottom: 30%;
+    }
+
+    .header-img-section-bg-graphic-five{
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+    }
+
+    .bg-graphic-img{
+        width: 80% !important;
+    }
+
+    .header-img-section img{
+        width: 100%;
+        position: relative;
+    }
+
+    .header-title-section{
+        position: relative;
+    }
+
+    .header-title-section-bg-graphic-one{
+        position: absolute;
+        top: 0;
+        right: 35%;
+    }
+
+    .header-title-section-bg-graphic-two{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+    }
+
+    .header-title-section-bg-graphic-three{
+        position: absolute;
+        right: 0;
+        bottom: 10%;
+    }
+
+    .header-title-section-bg-graphic-four{
+        position: absolute;
+        bottom: -25%;
+        right: 20%;
+    }
+
+    .header-subtitle{
+        font-family: Poppins;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+    .header-title{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 1.4;
+        color: #746AFE;
+    }
+
+    .header-title-text{
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.9;
+    }
+
+    .learn-more-btn-section{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    @media screen and (max-width: 991.98px){
+
+        .header-container{
+            flex-direction: column;
+        }
+
+        .header-title-section{
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .navbar-collapse{
+            background-color: rgba(0,0,0,0.4);
+            color: #fff;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .nav-link-number{
+            color: #fff;
+            display: none;
+        }
+
+        .nav-link-menu{
+            color: #fff;
+        }
+
+
+
+        .learn-more-btn-section{
+            justify-content: center;
+        }
+
+    }
+
+    @media screen and (max-width: 799.98px){
+
+        .header{
+            height: auto;
+            padding-top: 20%;
+        }
+
+    }
+
+
+    @media screen and (max-width: 499.98px){
+
+        .header{
+            padding-top: 30%;
+        }
+
+        .header-subtitle{
+            font-size: 24px;
+        }
+
+        .header-title{
+            font-size: 46px;
+        }
+
+        .header-title-text{
+            font-size: 18px;
+        }
+
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    EDU-EX SECTION
+*/
+    
+    .edu-ex-section{
+        display: flex;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        position: relative;
+    }
+
+    .edu-ex-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .edu-ex-section-div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .edu-ex-section-div:hover .edu-ex-section-details-bg-graphics{
+        display: flex;
+    }
+
+    .edu-ex-section-header{
+        display: flex;
+    }
+
+    .edu-ex-section-header{
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .edu-title-icon{
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .edu-title{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1.4;
+        color: #746AFE;
+    }
+
+    .edu-ex-section-details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .edu-ex-section-details-bg-graphics{
+        position: absolute;
+        width: 100%;
+        display: none;
+    }
+
+    .edu-ex-section-details-bg-graphics img{
+        width: 100%;
+    }
+
+    .edu-ex-section-details-div{
+        padding-top: 80px;
+    }
+
+    .edu-ex-section-details-card{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .edu-ex-section-degree{
+        width: 120px;
+    }
+
+    .edu-ex-section-degree-title{
+        color: #B6B2FF;
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    .edu-ex-section-degree-details-card{
+        width: 100%;
+    }
+
+    .edu-ex-section-degree-details-title{
+        color: #746AFE;
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .edu-ex-section-degree-details-text{
+        font-size: 16px;
+        line-height: 1.6;
+        color: #000;
+        font-family: Poppins;
+        font-weight: 400;
+        max-width: 400px;
+    }
+
+    .edu-ex-section-degree-details-year{
+        font-size: 14px;
+        line-height: 1.6;
+        color: #C4C4C4;
+        font-family: Poppins;
+        font-weight: 400;
+    }
+
+    @media screen and (max-width: 991.98px){
+
+        .edu-ex-container{
+            flex-direction: column;
+        }
+
+        .edu-ex-two-container{
+            flex-direction: column !important;
+        }
+
+        .edu-ex-section-div{
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .ex-aw-section-div{
+            margin-bottom: 40px;
+        }
+
+        .edu-ex-two-container{
+            flex-direction: column !important;
+        }
+
+        .edu-ex-section-div:hover .edu-ex-section-details-bg-graphics{
+            display: none;
+        }
+
+    }
+
+    @media screen and (max-width: 575.98px){
+
+        .edu-ex-section-details-bg-graphics img{
+            height: 100%;
+            width: auto;
+        }
+
+        .edu-ex-section-details-div{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .edu-title{
+            font-size: 40px;
+        }
+
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    EDU-EX SECTION
+*/
+    
+    .ex-aw-section{
+        display: flex;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        position: relative;
+    }
+
+    .edu-ex-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ex-aw-section-div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ex-aw-section-header{
+        display: flex;
+    }
+
+    .ex-aw-section-header{
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .edu-title-icon{
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .edu-title{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1.4;
+        color: #746AFE;
+    }
+
+    .ex-aw-section-details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .ex-aw-section-details-div{
+        padding-top: 10px;
+    }
+
+    .ex-aw-section-details-card{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .ex-aw-section-degree{
+        width: 120px;
+    }
+
+    .ex-aw-section-degree-title{
+        color: #A4C4F3;
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    .ex-aw-section-degree-details-card{
+        width: 100%;
+    }
+
+    .ex-aw-section-degree-details-title{
+        color: #746AFE;
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .ex-aw-section-degree-details-text{
+        font-size: 16px;
+        line-height: 1.6;
+        color: #000;
+        font-family: Poppins;
+        font-weight: 400;
+        max-width: 400px;
+    }
+
+    .ex-aw-section-degree-details-year{
+        font-size: 14px;
+        line-height: 1.6;
+        color: #C4C4C4;
+        font-family: Poppins;
+        font-weight: 400;
+    }
+
+    .ex-aw-progress-bar-title{
+        color: #C4C4C4;
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .ex-aw-progress-bar-container{
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .ex-aw-progress{
+        background-color: #EBEBEB;
+        height: 0.8rem;
+    }
+
+    .ex-aw-progress-bar{
+        background-color: #B6B2FF;
+    }
+
+
+    @media screen and (max-width: 991.98px){
+
+        .edu-ex-container{
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 575.98px){
+
+        .ex-aw-section-details-bg-graphics img{
+            height: 100%;
+            width: auto;
+        }
+
+        .ex-aw-section-details-div{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .edu-title{
+            font-size: 40px;
+        }
+
+        .owl-theme .owl-dots, .owl-theme .owl-nav{
+            margin-top: 20px !important;
+        }
+
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    REVIEWS SECTION
+*/
+    
+    .reviews-section{
+        display: flex;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-color: transparent;
+    }
+
+    .reviews-title-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        text-align: center;
+    }   
+
+    .reviews-title{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1.4;
+        color: #746AFE;
+        margin-bottom: 20px;
+    }
+
+    .reviews-card{
+        padding: 20px;
+    }
+
+    .reviews-card-img-box{
+        width: 250px;
+        z-index: 1;
+        position: relative;
+        padding-bottom: 40px;
+    }
+
+    .reviews-card-img-box-bg-graphic-one{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .reviews-card-img-box-bg-graphic-two{
+        position: absolute;
+        top: 10%;
+        left: 0;
+    }
+
+    .reviews-card-img-box-bg-graphic-three{
+        position: absolute;
+        top: -10%;
+        left: 30%;
+    }
+
+    .reviews-card-img-box-bg-graphic-four{
+        position: absolute;
+        right: -15%;
+        top: 10%;
+    }
+
+    .reviews-card-img-box-bg-graphic-five{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .reviews-card-img-box-two-bg-graphic-one{
+        position: absolute;
+        left: 6%;
+        bottom: 2%;
+    }
+
+    .reviews-card-img-box-two-bg-graphic-two{
+        position: absolute;
+        top: 25%;
+        left: 5%;
+    }
+
+    .reviews-card-img-box-two-bg-graphic-three{
+        position: absolute;
+        top: 5%;
+        left: 20%;
+    }
+
+    .reviews-card-img-box-two-bg-graphic-four{
+        position: absolute;
+        right: 25%;
+        top: -12%;
+    }
+
+    .reviews-card-img-box-two-bg-graphic-five{
+        position: absolute;
+        right: -20%;
+        top: 23%;
+    }
+
+    .reviews-card-img-box-two-bg-graphic-six{
+        position: absolute;
+        left: 45%;
+        bottom: 8%;
+    }
+
+    .reviews-card-details-two-bg-graphic-one{
+        position: absolute;
+        top: 30%;
+        right: 10%;
+    }
+
+    .reviews-card-img-box img{
+        width: 100%;
+    }
+
+    .reviews-card-details{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #fff;
+        padding-left: 140px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        border-radius: 20px;
+    }
+
+    .reviews-card-details-bg-graphic-one{
+        position: absolute;
+        right: 10%;
+        top: 10%;
+    }
+
+    .reviews-card-title{
+        color: #303669;
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .reviews-card-text{
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: #C4C4C4;
+    }
+
+    @media screen and (max-width: 1999.98px){
+
+        .reviews-card-details{
+            padding-left: 160px;
+        }
+
+        .reviews-card-title{
+            font-size: 18px;
+        }
+
+        .reviews-card-text{
+            font-size: 16px;
+        }
+
+    }
+
+    @media screen and (max-width: 991.98px){
+
+        .reviews-card-img-box{
+            width: 300px;
+            padding-bottom: 0;
+        }
+
+        .reviews-card-details{
+            padding-left: 100px;
+        }
+
+        .reviews-card-title{
+            font-size: 20px;
+        }
+
+        .reviews-card-text{
+            font-size: 18px;
+        }
+
+    }
+
+    @media screen and (max-width: 767.98px){
+
+        .reviews-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .reviews-card-img-box{
+            margin-bottom: -60px;
+        }
+
+        .reviews-card-details{
+            position: relative;
+            height: 250px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    CLIENTS SECTION
+*/
+
+    .clients-section{
+        display: flex;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-color: transparent;
+    }
+
+    .clients-title-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        text-align: center;
+    }   
+
+    .clients-subtitle{
+        font-family: Poppins;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+    .clients-title{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1.4;
+        color: #746AFE;
+        margin-bottom: 20px;
+    }
+
+    .client-logo-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .client-logo-section img{
+        height: 60px;
+        width: auto !important;
+        opacity: 40%;
+    }    
+
+    .owl-theme .owl-nav{
+        display: none;
+    }
+
+    .owl-theme .owl-dots, .owl-theme .owl-nav{
+        margin-top: 40px;
+    }
+
+    .owl-theme .owl-dots .owl-dot span{
+        background-color: #fff !important;
+
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+        background-color: #746AFE !important;
+    }
+
+
+/*#####################################################*/
+/*#####################################################*/
+/*#####################################################*/
+/*
+    FOOTER SECTION
+*/
+
+
+    .footer-section{
+        display: flex;
+        padding-top: 5%;
+        padding-bottom: 10%;
+        background-color: transparent;
+    }
+
+    .footer-title-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        text-align: center;
+    }   
+
+    .footer-title{
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 1.4;
+        color: #746AFE;
+        margin-bottom: 20px;
+    }
+
+    .footer-form-card{
+        background-color: #fff;
+        border-radius: 10px;
+        display: flex;
+        justify-content: right;
+        padding: 40px;
+        position: relative;
+    }
+
+    .footer-contact-form-input{
+        border: 1px solid #C4C4C4;
+        border-radius: 10px;
+        height: 45px;
+        margin-bottom: 20px;
+        color: #C4C4C4;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.6;
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .footer-contact-form-textarea{
+        border: 1px solid #C4C4C4;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        color: #C4C4C4;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.6;
+        resize: none;
+        height: 120px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .submit-form-btn{
+        display: flex;
+        justify-content: center;
+        background-color: #FF3E81;
+        font-size: 20px;
+        font-family: Montserrat;
+        font-weight: 400;
+        color: #fff;
+        border-radius: 100px;
+        width: 100%;
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px; 
+    }
+
+    .submit-form-btn:hover{
+        background-color: #3A88EC;
+    }
+
+    .footer-contact-hover-card{
+        position: absolute;
+        left: -120px;
+        width: 250px;
+        top: 20%;
+    }
+
+    .footer-contact-hover-list{
+        background-color: #746AFE;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 3px 56px 0 rgba(0,0,0,.35);
+    }
+
+    .footer-contact-hover-list{
+        list-style: none;
+    }
+
+    .footer-contact-hover-list li{
+        font-size: 15px;
+        color: #fff;
+        font-family: Poppins;
+        font-weight: 400;
+        line-height: 1.6;
+        background: url(../images/pricing-section-true.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+        padding-left: 30px;
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    .footer-contact-hover-list li:nth-child(1){
+        background: url(../images/mappin.png);
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+        padding-left: 30px;
+    }
+
+    .footer-contact-hover-list li:nth-child(2){
+        background: url(../images/call.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+        padding-left: 30px;
+    }
+
+    .footer-contact-hover-list li:nth-child(3){
+        background: url(../images/email.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 0px 5px;
+        padding-left: 30px;
+    }
+
+    .footer-contact-hover-list-call{
+        color: #fff;
+    }
+
+    .footer-contact-hover-list-email{
+        color: #fff;
+    }
+
+    .footer-contact-hover-list-call:hover{
+        color: #FF3E81;
+        text-decoration: none;
+    }
+
+    .footer-contact-hover-list-email:hover{
+        color: #FF3E81;
+        text-decoration: none;
+    }
+
+    .footer-social-media-icons-section{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 40px !important;
+        padding-left: 0 !important;
+    }
+
+    .footer-social-media-icon{
+
+    }
+
+    .footer-social-media-icon img{
+        width: auto;
+        height: 25px;
+    }
+
+    .footer-social-media-icon-white{
+        display: none;
+    }
+
+    .footer-social-media-icon:hover .footer-social-media-icon-white{
+        display: initial;
+    }
+
+    .footer-social-media-icon:hover .footer-social-media-icon-blue{
+        display: none;
+    }
+
+
+    @media screen and (max-width: 767.98px){
+
+        .footer-form-card{
+            flex-direction: column;
+        }
+
+        .footer-contact-hover-card{
+            position: relative;
+            left: auto;
+            top: auto;
+            margin-top: 60px;
+            width: 100%;
+
+        }
+
+    }
+

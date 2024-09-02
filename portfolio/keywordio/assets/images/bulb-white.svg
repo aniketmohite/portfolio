@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.825" height="30.173" viewBox="0 0 17.825 30.173">
+  <g id="bulb" transform="translate(-104.766)">
+    <g id="Group_378" data-name="Group 378" transform="translate(108.686 24.276)">
+      <g id="Group_377" data-name="Group 377" transform="translate(0)">
+        <path id="Path_505" data-name="Path 505" d="M171.288,411.925v1.318a4.585,4.585,0,0,0,4.58,4.58h.825a4.585,4.585,0,0,0,4.58-4.58v-1.318Z" transform="translate(-171.288 -411.925)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_380" data-name="Group 380" transform="translate(108.69 19.98)">
+      <g id="Group_379" data-name="Group 379" transform="translate(0)">
+        <rect id="Rectangle_314" data-name="Rectangle 314" width="9.976" height="2.443" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_382" data-name="Group 382" transform="translate(104.766)">
+      <g id="Group_381" data-name="Group 381">
+        <path id="Path_506" data-name="Path 506" d="M113.678,0h-.127a8.912,8.912,0,0,0-6.594,14.765,7.017,7.017,0,0,1,1.624,3.362h2V13.434L109.336,10.1l1.734-.65,1.367,3.649v5.03H114.9V13.1L116.27,9.45,118,10.1l-1.249,3.334v4.695h2.017a6.82,6.82,0,0,1,1.6-3.328A8.912,8.912,0,0,0,113.678,0Z" transform="translate(-104.766)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

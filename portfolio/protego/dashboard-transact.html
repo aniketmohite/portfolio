@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Protego - Transact</title>	
+
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+	<link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+	<!-- FONTS USED -->
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="container dashboard-container">
+			
+			<!-- NAVBAR -->
+			<div class="dashboard-navbar">
+				<div class="col-md-8 navbar-search-section">
+					<form class="navbar-search-form-section" action="">
+						<input id="navbar-search" type="text" name="navbar-search" class="navbar-search" placeholder="Search for an Entity">
+						<button class="navbar-search-btn" type="button" onclick="showdropdown()">
+							<img id="navbar-search-btn-search-icon" class="navbar-search-btn-icon" src="assets/images/dashboard/search-btn-icon.svg" />
+							<img id="navbar-search-btn-drop-icon" class="navbar-search-btn-icon" src="assets/images/dashboard/search-icon-dropdown-arrow.svg" />
+						</button>
+						<div id="search-drop-down" class="search-drop-down-section">
+							<div class="search-drop-down">
+								<a class="search-drop-down-opt" href="#"><span class="search-drop-down-opt-username">John Doe</span>, <span class="search-drop-down-opt-userid">ID: 12345</span></a>
+								<a class="search-drop-down-opt" href="#"><span class="search-drop-down-opt-username">John Doe</span>, <span class="search-drop-down-opt-userid">ID: 12345</span></a>
+								<a class="search-drop-down-opt" href="#"><span class="search-drop-down-opt-username">John Doe</span>, <span class="search-drop-down-opt-userid">ID: 12345</span></a>
+								<a class="search-drop-down-opt" href="#"><span class="search-drop-down-opt-username">John Doe</span>, <span class="search-drop-down-opt-userid">ID: 12345</span></a>
+								<a class="search-drop-down-opt" href="#"><span class="search-drop-down-opt-username">John Doe</span>, <span class="search-drop-down-opt-userid">ID: 12345</span></a>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4 navbar-user-section">
+					<div class="navbar-user-profile-section">
+						<div class="navbar-user-id-section">
+							<p class="navbar-user-id">Your ID : 123456</p>
+						</div>
+						<div class="navbar-user-profile-section">
+							<div onclick="showlogout()" class="navbar-user-profile-img-section">
+								<img class="navbar-user-profile-img" src="assets/images/dashboard/user.svg" />
+							</div>
+							<div id="profile-logout-section" class="profile-logout-section">
+								<div class="logout-btn-dropdown"></div>
+								<a href="login.html" class="theme-btn user-logout-btn">Logout</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- SUB MENU -->
+			<div class="dashboard-sub-menu-section">
+				<div class="col-md-8 dashboard-tabs-section">
+					<div class="dashboard-tabs-container">
+						<ul class="dashboard-tabs-ul">
+							<li class="dashboard-tabs-li "><a class="dashboard-tabs-li-a" href="#home">Home</a></li>
+							<li class="dashboard-tabs-li"><a class="dashboard-tabs-li-a" href="#accounts">Accounts</a></li>
+							<li class="dashboard-tabs-li active"><a class="dashboard-tabs-li-a" href="#transact">Transact</a></li>
+							<li class="dashboard-tabs-li"><a class="dashboard-tabs-li-a" href="#reports">Reports</a></li>
+							<li class="dashboard-tabs-li"><a class="dashboard-tabs-li-a" href="#addresses">Addresses</a></li>
+							<li class="dashboard-tabs-li"><a class="dashboard-tabs-li-a" href="#settings">Settings</a></li>
+							<li class="dashboard-tabs-li"><a class="dashboard-tabs-li-a border-right-none" href="#help">Help</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- NAVBAR PROFILE BTN SECTION -->
+				<div class="col-md-4 profile-btn-section">
+					<div class="profile-btn-container">
+						<a href="#" class="theme-primary-btn"><p class="profile-btn-name">John Doe</p>//<p class="profile-btn-id">123456</p></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- TABLE CONTENT SECTION -->
+			<div class="tables-section">
+				<!-- <div id="home" class="dashbaord-tables-container-section">
+					<div class="dashbaord-tables-container">
+						<div class="dashbaord-section-tables-container">
+							<div class="col-md-12 dashbaord-tables-title-container">
+								<h2 class="dashbaord-section-title">Accounts Summary</h2>
+							</div>
+							<div class="table-container container">
+								<div class="table-scroll-container">
+									<table class="dashboard-table account-summary-table">
+										<thead class="dashboard-table-thead">
+											<tr class="dashboard-table-tr">
+											    <th class="dashboard-table-th account-summary-table-10">
+											    	<div class="dashboard-table-th-inner-section">
+											    		ACCOUNT
+											    		<div class="dashboard-table-th-sort">
+											    			<img class="dashboard-table-th-sort-down" src="assets/images/dashboard/down-arrow.svg" />
+											    			<img class="dashboard-table-th-sort-up" src="assets/images/dashboard/up-arrow.svg" />
+											    		</div>
+											    	</div>
+											    </th>
+											    <th class="dashboard-table-th account-summary-table-10">
+											    	<div class="dashboard-table-th-inner-section">
+											    		ASSET
+											    		<div class="dashboard-table-th-sort">
+											    			<p class="dashboard-table-sort-title">A-Z</p>
+											    			<img class="dashboard-table-th-sort-down" src="assets/images/dashboard/down-arrow.svg" />
+											    			<img class="dashboard-table-th-sort-up" src="assets/images/dashboard/up-arrow.svg" />
+											    		</div>
+											    	</div>
+											    </th>
+											    <th class="dashboard-table-th account-summary-table-20">
+											    	<div class="dashboard-table-th-inner-section">
+											    		QTY_CONFIRMED
+											    		<div class="dashboard-table-th-sort">
+											    			<p class="dashboard-table-sort-title">Low-High</p>
+											    			<img class="dashboard-table-th-sort-down" src="assets/images/dashboard/down-arrow.svg" />
+											    			<img class="dashboard-table-th-sort-up" src="assets/images/dashboard/up-arrow.svg" />
+											    		</div>
+											    	</div>
+											    </th>
+											    <th class="dashboard-table-th account-summary-table-20">
+											    	<div class="dashboard-table-th-inner-section">
+											    		QTY_WITHDRAWABLE
+											    		<div class="dashboard-table-th-sort">
+											    			<p class="dashboard-table-sort-title">Low-High</p>
+											    			<img class="dashboard-table-th-sort-down" src="assets/images/dashboard/down-arrow.svg" />
+											    			<img class="dashboard-table-th-sort-up" src="assets/images/dashboard/up-arrow.svg" />
+											    		</div>
+											    	</div>
+											    </th>
+											    <th class="dashboard-table-th account-summary-table-20">
+											    	<div class="dashboard-table-th-inner-section">
+											    		QTY_UNCONFIRMED_RECEIVED
+											    		<div  class="dashboard-table-th-sort">
+											    			<p class="dashboard-table-sort-title">Low-High</p>
+											    			<img class="dashboard-table-th-sort-down" src="assets/images/dashboard/down-arrow.svg" />
+											    			<img class="dashboard-table-th-sort-up" src="assets/images/dashboard/up-arrow.svg" />
+											    		</div>
+											    	</div>
+											    </th>
+											    <th class="dashboard-table-th account-summary-table-20">
+											    	<div class="dashboard-table-th-inner-section">
+											    		QTY_PENDING_WITHDRAWAL
+											    		<div class="dashboard-table-th-sort">
+											    			<p class="dashboard-table-sort-title">Low-High</p>
+											    			<img class="dashboard-table-th-sort-down" src="assets/images/dashboard/down-arrow.svg" />
+											    			<img class="dashboard-table-th-sort-up" src="assets/images/dashboard/up-arrow.svg" />
+											    		</div>
+											    	</div>
+											    </th>
+											</tr>		
+										</thead>
+										<tbody class="account-summary-table-tbody">
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td account-summary-table-10">1</td>
+												<td class="dashboard-table-td account-summary-table-10">Laptop</td>
+												<td class="dashboard-table-td account-summary-table-20">2</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">100</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td account-summary-table-10">2</td>
+												<td class="dashboard-table-td account-summary-table-10">Tablet</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">2</td>
+												<td class="dashboard-table-td account-summary-table-20">50</td>
+												<td class="dashboard-table-td account-summary-table-20">47</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td account-summary-table-10">3</td>
+												<td class="dashboard-table-td account-summary-table-10">Stationary</td>
+												<td class="dashboard-table-td account-summary-table-20">100</td>
+												<td class="dashboard-table-td account-summary-table-20">50</td>
+												<td class="dashboard-table-td account-summary-table-20">54</td>
+												<td class="dashboard-table-td account-summary-table-20">48</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td account-summary-table-10">4</td>
+												<td class="dashboard-table-td account-summary-table-10">Stationary</td>
+												<td class="dashboard-table-td account-summary-table-20">100</td>
+												<td class="dashboard-table-td account-summary-table-20">50</td>
+												<td class="dashboard-table-td account-summary-table-20">54</td>
+												<td class="dashboard-table-td account-summary-table-20">48</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td account-summary-table-10">5</td>
+												<td class="dashboard-table-td account-summary-table-10">Laptop</td>
+												<td class="dashboard-table-td account-summary-table-20">2</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">100</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td account-summary-table-10">6</td>
+												<td class="dashboard-table-td account-summary-table-10">Laptop</td>
+												<td class="dashboard-table-td account-summary-table-20">2</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">100</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td account-summary-table-10">7</td>
+												<td class="dashboard-table-td account-summary-table-10">Laptop</td>
+												<td class="dashboard-table-td account-summary-table-20">2</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">100</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td account-summary-table-10">8</td>
+												<td class="dashboard-table-td account-summary-table-10">Laptop</td>
+												<td class="dashboard-table-td account-summary-table-20">2</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">100</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td account-summary-table-10">9</td>
+												<td class="dashboard-table-td account-summary-table-10">Laptop</td>
+												<td class="dashboard-table-td account-summary-table-20">2</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">100</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td account-summary-table-10">10</td>
+												<td class="dashboard-table-td account-summary-table-10">Laptop</td>
+												<td class="dashboard-table-td account-summary-table-20">2</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">100</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td account-summary-table-10">11</td>
+												<td class="dashboard-table-td account-summary-table-10">Laptop</td>
+												<td class="dashboard-table-td account-summary-table-20">2</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">10</td>
+												<td class="dashboard-table-td account-summary-table-20">100</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<br>
+						<br>
+						<div class="dashbaord-section-tables-container">
+							<div class="col-md-12 dashbaord-tables-title-container">
+								<h2 class="dashbaord-section-title">Reports Summary</h2>
+							</div>
+							<div class="dashbaord-section-dual-tables-container">
+								<div class="col-md-6 padding-0">
+									<div class="table-container container">
+										<div class="table-scroll-container">
+											<table class="dashboard-table account-summary-table">
+												<thead class="dashboard-table-thead">
+													<tr class="dashboard-table-tr">
+														<th colspan="2" class="dashboard-table-th">
+															<div class="dashboard-table-th-inner-section">
+																AUDIT LOG
+															</div>
+														</th>
+													</tr>
+												</thead>
+												<tbody class="account-summary-table-tbody">
+													<tr class="dashboard-table-tr">
+														<td class="dashboard-table-td align-top">
+															<div class="dashboard-table-timestamp">
+																<span class="dashboard-table-date">2020-07-06</span>
+																<span class="dashboard-table-time">12:10:07</span>
+															</div>
+														</td>
+														<td class="dashboard-table-td">
+															<ul class="dashboard-table-report-details">
+																<li class="dashboard-table-report-details-list">Request for &nbsp;<a class="strong-highlited-text" href="#">Create_Tx</a>&nbsp; at &nbsp;<a class="strong-highlited-text" href="#">2020-07-06</a>&nbsp;  <a class="strong-highlited-text" href="#">12:04:06</a></li>
+																<li class="dashboard-table-report-details-list">by &nbsp;<a class="strong-highlited-text" href="#">Jane Doe</a> with info &nbsp;<a class="strong-highlited-text" href="#">Create_Contact</a></li>
+																<li class="dashboard-table-report-details-list">Status : <span class="dashbaord-approved dashboard-semibold">APPROVED</span></li>
+															</ul>
+														</td>
+													</tr>
+													<tr class="dashboard-table-tr">
+														<td class="dashboard-table-td align-top">
+															<div class="dashboard-table-timestamp">
+															<span class="dashboard-table-date">2020-07-06</span>
+															<span class="dashboard-table-time">12:10:07</span>
+															</div>
+														</td>
+														<td class="dashboard-table-td">
+															<ul class="dashboard-table-report-details">
+																<li class="dashboard-table-report-details-list">Request for &nbsp;<a class="strong-highlited-text" href="#">Create_Tx</a>&nbsp; at &nbsp;<a class="strong-highlited-text" href="#">2020-07-06</a>&nbsp;  <a class="strong-highlited-text" href="#">12:04:06</a></li>
+																<li class="dashboard-table-report-details-list">by &nbsp;<a class="strong-highlited-text" href="#">Jane Doe</a> with info &nbsp;<a class="strong-highlited-text" href="#">Create_Contact</a></li>
+																<li class="dashboard-table-report-details-list">Status : <span class="dashbaord-declined dashboard-semibold">DECLINED</span></li>
+															</ul>
+														</td>
+													</tr>
+													<tr class="dashboard-table-tr">
+														<td class="dashboard-table-td align-top">
+															<div class="dashboard-table-timestamp">
+																<span class="dashboard-table-date">2020-07-06</span>
+																<span class="dashboard-table-time">12:10:07</span>
+															</div>
+														</td>
+														<td class="dashboard-table-td">
+															<ul class="dashboard-table-report-details">
+																<li class="dashboard-table-report-details-list">Request for &nbsp;<a class="strong-highlited-text" href="#">Create_Tx</a>&nbsp; at &nbsp;<a class="strong-highlited-text" href="#">2020-07-06</a>&nbsp;  <a class="strong-highlited-text" href="#">12:04:06</a></li>
+																<li class="dashboard-table-report-details-list">by &nbsp;<a class="strong-highlited-text" href="#">Jane Doe</a> with info &nbsp;<a class="strong-highlited-text" href="#">Create_Contact</a></li>
+																<li class="dashboard-table-report-details-list">Status : <span class="dashbaord-approved dashboard-semibold">APPROVED</span></li>
+															</ul>
+														</td>
+													</tr>
+													<tr class="dashboard-table-tr">
+														<td class="dashboard-table-td align-top">
+															<div class="dashboard-table-timestamp">
+															<span class="dashboard-table-date">2020-07-06</span>
+															<span class="dashboard-table-time">12:10:07</span>
+															</div>
+														</td>
+														<td class="dashboard-table-td">
+															<ul class="dashboard-table-report-details">
+																<li class="dashboard-table-report-details-list">Request for &nbsp;<a class="strong-highlited-text" href="#">Create_Tx</a>&nbsp; at &nbsp;<a class="strong-highlited-text" href="#">2020-07-06</a>&nbsp;  <a class="strong-highlited-text" href="#">12:04:06</a></li>
+																<li class="dashboard-table-report-details-list">by &nbsp;<a class="strong-highlited-text" href="#">Jane Doe</a> with info &nbsp;<a class="strong-highlited-text" href="#">Create_Contact</a></li>
+																<li class="dashboard-table-report-details-list">Status : <span class="dashbaord-approved dashboard-semibold">APPROVED</span></li>
+															</ul>
+														</td>
+													</tr>
+													<tr class="dashboard-table-tr">
+														<td class="dashboard-table-td align-top">
+															<div class="dashboard-table-timestamp">
+																<span class="dashboard-table-date">2020-07-06</span>
+																<span class="dashboard-table-time">12:10:07</span>
+															</div>
+														</td>
+														<td class="dashboard-table-td">
+															<ul class="dashboard-table-report-details">
+																<li class="dashboard-table-report-details-list">Request for &nbsp;<a class="strong-highlited-text" href="#">Create_Tx</a>&nbsp; at &nbsp;<a class="strong-highlited-text" href="#">2020-07-06</a>&nbsp;  <a class="strong-highlited-text" href="#">12:04:06</a></li>
+																<li class="dashboard-table-report-details-list">by &nbsp;<a class="strong-highlited-text" href="#">Jane Doe</a> with info &nbsp;<a class="strong-highlited-text" href="#">Create_Contact</a></li>
+																<li class="dashboard-table-report-details-list">Status : <span class="dashbaord-approved dashboard-semibold">APPROVED</span></li>
+															</ul>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 padding-0">
+									<div class="table-container container">
+										<div class="table-scroll-container">
+											<table class="dashboard-table account-summary-table">
+												<thead class="dashboard-table-thead">
+													<tr class="dashboard-table-tr">
+														<th colspan="2" class="dashboard-table-th">
+															<div class="dashboard-table-th-inner-section">
+															TRANSACTION REPORTS
+															</div>
+														</th>
+													</tr>
+												</thead>
+												<tbody class="account-summary-table-tbody">
+													<tr class="dashboard-table-tr">
+														<td class="dashboard-table-td align-top">
+															<div class="dashboard-table-timestamp">
+																<span class="dashboard-table-date">2020-07-06</span>
+																<span class="dashboard-table-time">12:10:07</span>
+															</div>
+														</td>
+														<td class="dashboard-table-td">
+															<ul class="dashboard-table-report-details">
+																<li class="dashboard-table-report-details-list">
+																	<a class="strong-highlited-text" href="#">100 BTC</a>&nbsp; from Account &nbsp;<a class="strong-highlited-text" href="#">ABC123ABC</a>
+																</li>
+																<li class="dashboard-table-report-details-list">
+																	via Address &nbsp;<a class="strong-highlited-text" href="#">CDE234CDE</a>&nbsp; and Label &nbsp;<a class="strong-highlited-text" href="#">fgh345fgh</a>
+																</li>
+																<li class="dashboard-table-report-details-list">Status : <span class="dashbaord-approved dashboard-semibold">APPROVED</span></li>
+															</ul>
+														</td>
+													</tr>
+													<tr class="dashboard-table-tr">
+														<td class="dashboard-table-td align-top">
+															<div class="dashboard-table-timestamp">
+																<span class="dashboard-table-date">2020-07-06</span>
+																<span class="dashboard-table-time">12:10:07</span>
+															</div>
+														</td>
+														<td class="dashboard-table-td">
+															<ul class="dashboard-table-report-details">
+																<li class="dashboard-table-report-details-list">
+																<a class="strong-highlited-text" href="#">100 BTC</a>&nbsp; from Account &nbsp;<a class="strong-highlited-text" href="#">ABC123ABC</a>
+																</li>
+																<li class="dashboard-table-report-details-list">
+																via Address &nbsp;<a class="strong-highlited-text" href="#">CDE234CDE</a>&nbsp; and Label &nbsp;<a class="strong-highlited-text" href="#">fgh345fgh</a>
+																</li>
+																<li class="dashboard-table-report-details-list">Status : <span class="dashbaord-approved dashboard-semibold">APPROVED</span></li>
+															</ul>
+														</td>
+													</tr>
+													<tr class="dashboard-table-tr">
+														<td class="dashboard-table-td align-top">
+															<div class="dashboard-table-timestamp">
+																<span class="dashboard-table-date">2020-07-06</span>
+																<span class="dashboard-table-time">12:10:07</span>
+															</div>
+														</td>
+														<td class="dashboard-table-td">
+															<ul class="dashboard-table-report-details">
+																<li class="dashboard-table-report-details-list">
+																<a class="strong-highlited-text" href="#">100 BTC</a>&nbsp; from Account &nbsp;<a class="strong-highlited-text" href="#">ABC123ABC</a>
+																</li>
+																<li class="dashboard-table-report-details-list">
+																via Address &nbsp;<a class="strong-highlited-text" href="#">CDE234CDE</a>&nbsp; and Label &nbsp;<a class="strong-highlited-text" href="#">fgh345fgh</a>
+																</li>
+																<li class="dashboard-table-report-details-list">Status : <span class="dashbaord-declined dashboard-semibold">DECLINED</span></li>
+															</ul>
+														</td>
+													</tr>
+													<tr class="dashboard-table-tr">
+														<td class="dashboard-table-td align-top">
+															<div class="dashboard-table-timestamp">
+																<span class="dashboard-table-date">2020-07-06</span>
+																<span class="dashboard-table-time">12:10:07</span>
+															</div>
+														</td>
+														<td class="dashboard-table-td">
+															<ul class="dashboard-table-report-details">
+																<li class="dashboard-table-report-details-list">
+																<a class="strong-highlited-text" href="#">100 BTC</a>&nbsp; from Account &nbsp;<a class="strong-highlited-text" href="#">ABC123ABC</a>
+																</li>
+																<li class="dashboard-table-report-details-list">
+																via Address &nbsp;<a class="strong-highlited-text" href="#">CDE234CDE</a>&nbsp; and Label &nbsp;<a class="strong-highlited-text" href="#">fgh345fgh</a>
+																</li>
+																<li class="dashboard-table-report-details-list">Status : <span class="dashbaord-approved dashboard-semibold">APPROVED</span></li>
+															</ul>
+														</td>
+													</tr>
+													<tr class="dashboard-table-tr">
+														<td class="dashboard-table-td align-top">
+															<div class="dashboard-table-timestamp">
+																<span class="dashboard-table-date">2020-07-06</span>
+																<span class="dashboard-table-time">12:10:07</span>
+															</div>
+														</td>
+														<td class="dashboard-table-td">
+															<ul class="dashboard-table-report-details">
+																<li class="dashboard-table-report-details-list">
+																	<a class="strong-highlited-text" href="#">100 BTC</a>&nbsp; from Account &nbsp;<a class="strong-highlited-text" href="#">ABC123ABC</a>
+																</li>
+																<li class="dashboard-table-report-details-list">
+																	via Address &nbsp;<a class="strong-highlited-text" href="#">CDE234CDE</a>&nbsp; and Label &nbsp;<a class="strong-highlited-text" href="#">fgh345fgh</a>
+																</li>
+																<li class="dashboard-table-report-details-list">Status : <span class="dashbaord-approved dashboard-semibold">APPROVED</span></li>
+															</ul>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<br>
+						<div class="dashbaord-section-tables-container">
+							<div class="col-md-12 dashbaord-tables-title-container">
+								<h2 class="dashbaord-section-title">Approvals Queue</h2>
+							</div>
+							<div class="table-container container height-100">
+								<div class="table-scroll-container table-not-scroll">
+									<table class="dashboard-table account-summary-table">
+										<thead class="dashboard-table-thead">
+											<tr class="dashboard-table-tr">
+												<th class="dashboard-table-th approvals-queue-table-20">
+													<div class="dashboard-table-th-inner-section">
+													TIMESTAMP
+													</div>
+												</th>
+												<th class="dashboard-table-th approvals-queue-table-15">
+													<div class="dashboard-table-th-inner-section">
+													ACTION
+													</div>
+												</th>
+												<th class="dashboard-table-th approvals-queue-table-20">
+													<div class="dashboard-table-th-inner-section">
+													INFO
+													</div>
+												</th>
+												<th class="dashboard-table-th approvals-queue-table-15">
+													<div class="dashboard-table-th-inner-section">
+													REQUESTER
+													</div>
+												</th>
+												<th class="dashboard-table-th approvals-queue-table-30">
+													<div class="dashboard-table-th-inner-section">
+													</div>
+												</th>
+											</tr>
+										</thead>
+										<tbody class="approvals-queue-table-tbody">
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<div class="dashboard-table-timestamp">
+														<span class="dashboard-table-date">2020-07-06</span>
+														<span class="dashboard-table-time">12:10:07</span>
+													</div>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-30">
+													<div class="dashboard-table-approval-btn-section">
+														<a class="theme-btn table-btn" href="#">APPROVE</a>
+														<a class="theme-btn table-btn secondary-theme-btn" href="#">DECLINE</a>
+													</div>
+												</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<div class="dashboard-table-timestamp">
+														<span class="dashboard-table-date">2020-07-06</span>
+														<span class="dashboard-table-time">12:10:07</span>
+													</div>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-30">
+													<div class="dashboard-table-approval-btn-section">
+														<a class="theme-btn table-btn" href="#">APPROVE</a>
+														<a class="theme-btn table-btn secondary-theme-btn" href="#">DECLINE</a>
+													</div>
+												</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<div class="dashboard-table-timestamp">
+														<span class="dashboard-table-date">2020-07-06</span>
+														<span class="dashboard-table-time">12:10:07</span>
+													</div>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-30">
+													<div class="dashboard-table-approval-btn-section">
+														<a class="theme-btn table-btn" href="#">APPROVE</a>
+														<a class="theme-btn table-btn secondary-theme-btn" href="#">DECLINE</a>
+													</div>
+												</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<div class="dashboard-table-timestamp">
+														<span class="dashboard-table-date">2020-07-06</span>
+														<span class="dashboard-table-time">12:10:07</span>
+													</div>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-30">
+													<div class="dashboard-table-approval-btn-section">
+														<a class="theme-btn table-btn" href="#">APPROVE</a>
+														<a class="theme-btn table-btn secondary-theme-btn" href="#">DECLINE</a>
+													</div>
+												</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<div class="dashboard-table-timestamp">
+														<span class="dashboard-table-date">2020-07-06</span>
+														<span class="dashboard-table-time">12:10:07</span>
+													</div>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-30">
+													<div class="dashboard-table-approval-btn-section">
+														<a class="theme-btn table-btn" href="#">APPROVE</a>
+														<a class="theme-btn table-btn secondary-theme-btn" href="#">DECLINE</a>
+													</div>
+												</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<div class="dashboard-table-timestamp">
+														<span class="dashboard-table-date">2020-07-06</span>
+														<span class="dashboard-table-time">12:10:07</span>
+													</div>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-30">
+													<div class="dashboard-table-approval-btn-section">
+														<a class="theme-btn table-btn" href="#">APPROVE</a>
+														<a class="theme-btn table-btn secondary-theme-btn" href="#">DECLINE</a>
+													</div>
+												</td>
+											</tr>
+											<tr class="dashboard-table-tr">
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<div class="dashboard-table-timestamp">
+														<span class="dashboard-table-date">2020-07-06</span>
+														<span class="dashboard-table-time">12:10:07</span>
+													</div>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-20">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-15">
+													<a href="#">Create_Tx</a>
+												</td>
+												<td class="dashboard-table-td approvals-queue-table-30">
+													<div class="dashboard-table-approval-btn-section">
+														<a class="theme-btn table-btn" href="#">APPROVE</a>
+														<a class="theme-btn table-btn secondary-theme-btn" href="#">DECLINE</a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div id="accounts" class="dashbaord-tables-container-section">
+					<div class="dashbaord-tables-container">
+						<h2>Accounts</h2>
+					</div>
+				</div> -->
+				<div id="transact" class="dashbaord-tables-container-section">
+					<div class="dashbaord-forms-container">
+						<div class="col-md-6 dashboard-section">
+							<div class="col-md-12 dashbaord-tables-title-container">
+								<h2 class="dashbaord-section-title">Generate New Receive Address</h2>
+							</div>
+							<div class="container dashboard-form-container">
+								<div class="dashboard-form-card">
+									<div class="dashboard-form-section">
+										<form class="dashboard-form" id="generate_address_form">
+											<div class="col-md-12 dashboard-form-group-section">
+												<div class="dashboard-form-group">
+													<label class="form-label" for="account">ACCOUNT</label>
+													<select class="form-control form-dropdowm" id="">
+												      <option>-SELECT-</option>
+												      <option>1</option>
+												      <option>2</option>
+												      <option>3</option>
+												      <option>4</option>
+												    </select>
+												</div>
+											</div>
+											<div class="col-md-12 dashboard-form-group-section">
+												<div class="col-md-6 dashboard-form-group-sub-section">
+													<div class="dashboard-form-group">
+														<label class="form-label" for="account">SUB ACCOUNT</label>
+														<select class="form-control form-dropdowm" id="">
+													      <option>-SELECT-</option>
+													      <option>1</option>
+													      <option>2</option>
+													      <option>3</option>
+													      <option>4</option>
+													    </select>
+													</div>
+												</div>
+												<div class="col-md-6 dashboard-form-group-sub-section">
+													<div class="dashboard-form-group">
+														<label class="form-label" for="account">ASSET</label>
+														<select class="form-control form-dropdowm" id="">
+													      <option>-SELECT-</option>
+													      <option>1</option>
+													      <option>2</option>
+													      <option>3</option>
+													      <option>4</option>
+													    </select>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12 dashboard-form-group-section">
+												<div class="col-md-8 dashboard-form-group-sub-section">
+													<div class="dashboard-form-group">
+														<label class="form-label" for="account">CONTACT</label>
+														<select class="form-control form-dropdowm" id="">
+													      <option>-SELECT-</option>
+													      <option>1</option>
+													      <option>2</option>
+													      <option>3</option>
+													      <option>4</option>
+													    </select>
+													</div>
+												</div>
+												<div class="col-md-4 dashboard-form-group-sub-section">
+													<div class="dashboard-form-group dahboard-form-btn-group">
+														<p>OR</p>
+														<a href="#" class="form-theme-secondary-btn">NEW CONTACT</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<label for="account">ADDRESS</label>
+													<input type="text" class="form-group-input" name="" data-error=""  placeholder="Type Here...">
+													<div class="help-block-with-errors"></div>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group form-group-btn-section">
+													<a href="#" class="form-theme-btn">CREATE NEW RECEIVE ADDRESS</a>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-md-6 dashboard-section">
+							<div class="col-md-12 dashbaord-tables-title-container">
+								<h2 class="dashbaord-section-title">Withdraw</h2>
+							</div>
+							<div class="container dashboard-form-container">
+								<div class="dashboard-form-card">
+									<div class="dashboard-form-section">
+										<form class="dashboard-form" id="generate_address_form">
+											<div class="col-md-12 dashboard-form-group-section">
+												<div class="dashboard-form-group">
+													<label class="form-label" for="account">ACCOUNT</label>
+													<select class="form-control form-dropdowm" id="">
+												      <option>-SELECT-</option>
+												      <option>1</option>
+												      <option>2</option>
+												      <option>3</option>
+												      <option>4</option>
+												    </select>
+													<div class="help-block-with-errors"></div>
+												</div>
+											</div>
+											<div class="col-md-12 dashboard-form-group-section">
+												<div class="col-md-6 dashboard-form-group-sub-section">
+													<div class="dashboard-form-group">
+														<label class="form-label" for="account">SUB ACCOUNT</label>
+														<select class="form-control form-dropdowm" id="">
+													      <option>-SELECT-</option>
+													      <option>1</option>
+													      <option>2</option>
+													      <option>3</option>
+													      <option>4</option>
+													    </select>
+														<div class="help-block-with-errors"></div>
+													</div>
+												</div>
+												<div class="col-md-6 dashboard-form-group-sub-section">
+													<div class="dashboard-form-group">
+														<label class="form-label" for="account">ASSET</label>
+														<select class="form-control form-dropdowm" id="">
+													      <option>-SELECT-</option>
+													      <option>1</option>
+													      <option>2</option>
+													      <option>3</option>
+													      <option>4</option>
+													    </select>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12 dashboard-form-group-section">
+												<div class="col-md-8 dashboard-form-group-sub-section">
+													<div class="dashboard-form-group">
+														<label class="form-label" for="account">ADDRESS</label>
+														<select class="form-control form-dropdowm" id="">
+													      <option>-SELECT-</option>
+													      <option>1</option>
+													      <option>2</option>
+													      <option>3</option>
+													      <option>4</option>
+													    </select>
+													</div>
+												</div>
+												<div class="col-md-4 dashboard-form-group-sub-section">
+													<div class="dashboard-form-group dahboard-form-btn-group">
+														<p>OR</p>
+														<a href="#" class="form-theme-secondary-btn">NEW ADDRESS</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12 dashboard-form-group-section">
+												<div class="dashboard-form-group">
+													<label class="form-label" for="account">RECEIPENT ADDRESS</label>
+													<select class="form-control form-dropdowm" id="">
+												      <option>-SELECT-</option>
+												      <option>1</option>
+												      <option>2</option>
+												      <option>3</option>
+												      <option>4</option>
+												    </select>
+												</div>
+											</div>
+											<div class="col-md-12 dashboard-form-group-section">
+												<div class="col-md-6 dashboard-form-group-sub-section">
+													<div class="dashboard-form-group">
+														<label class="form-label" for="account">AMOUNT TO WITHDRAW</label>
+														<select class="form-control form-dropdowm" id="">
+													      <option>-SELECT-</option>
+													      <option>1</option>
+													      <option>2</option>
+													      <option>3</option>
+													      <option>4</option>
+													    </select>
+													    <div class="form-text-section">
+													    	<p>Max Withdrawable</p>&nbsp;:&nbsp;<p>2000</p>
+													    </div>
+													</div>
+												</div>
+												<div class="col-md-6 dashboard-form-group-sub-section">
+													<div class="dashboard-form-group">
+														<label class="form-label" for="account">MINING FEE</label>
+														<select class="form-control form-dropdowm" id="">
+													      <option>-SELECT-</option>
+													      <option>1</option>
+													      <option>2</option>
+													      <option>3</option>
+													      <option>4</option>
+													    </select>
+													    <div class="form-text-section">
+													    	<p>Suggested Mining Fee</p>&nbsp;:&nbsp;<p>$45</p>
+													    </div>
+													    
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="dashboard-form-group">
+													<label for="account">MEMO</label>
+													<textarea class="form-group-textarea" placeholder="Type Here..."></textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group form-group-btn-section">
+													<a href="#" class="form-theme-btn">CREATE NEW RECEIVE ADDRESS</a>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+	<!-- SHOW NAVBAR SEARCH DROPDOWN -->
+	<script>
+		function showdropdown() {
+		  var x = document.getElementById("search-drop-down");
+		  var y = document.getElementById("navbar-search-btn-search-icon");
+		  var z = document.getElementById("navbar-search-btn-drop-icon");
+  		  var a = document.getElementById("navbar-search");
+
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		    y.style.display = "none";
+		    z.style.display = "block";
+		    a.style.background = "#fff";
+		   
+		  } else {
+		    x.style.display = "none";
+		    y.style.display = "block";
+		    z.style.display = "none";
+		    a.style.background = "trasparent";
+		  }
+		} 
+	</script>
+
+
+	<!-- SHOW LOGOUT BTN DROPDOWN -->
+	<script>
+		function showlogout() {
+		  var x = document.getElementById("profile-logout-section");
+
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		   
+		  } else {
+		    x.style.display = "none";
+		  }
+		} 
+	</script>
+ 
+
+
+	<!-- HOME TABLE SORT -->
+	<script>
+
+		$('.dashboard-table-th-sort-up').hide();
+
+		$('.dashboard-table-th-sort').on('click', function() {  
+		    $(this).children('.dashboard-table-th-sort-down').hide();
+		    $(this).children('.dashboard-table-th-sort-up').show();
+		});
+
+   	</script>
+
+
+
+
+</body>
+</html>

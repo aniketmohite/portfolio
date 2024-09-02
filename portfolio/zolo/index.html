@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZOLO - House Expense Calculator</title>	
+
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+	<link rel="icon" type="image/png" href="assets/images/favicon.svg">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	
+	<!-- PLEASE CHECK THE PATH OF THE CSS FILE IS CORRECT OR NOT -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/><!-- CSS FILE -->
+
+	<!-- FONTS USED -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">	
+
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- HOW TO USE IT SECTION -->
+		<div class="container guide-container">
+			<div class="guide-section-card">
+				<h2>Zolo Household Budget Template:</h2>
+				<p>It can be hard to know how to budget for house expenses. What are typical household budget items? How much should you spend each month? To help we created this free interactive house expense calculator.</p>
+				<p class="semibold-text">To get the most accurate benchmark costs and the typical earnings for your country, select your country (either Canada or America) from the drop down menu at the top on the right.</p>
+				<p>To use the Zolo Household Budget Calculator, follow these instructions:</p>
+				<ol class="guide-section-card-list">
+					<li>Select your country of residence</li>
+					<li>Click on the arrow in the section you want to complete</li>
+					<li>Choose the income or expense you want and click ‘Include’ button</li>
+					<li>A benchmark price will show up along with a price bar. Add your income or expense. If you don’t know, add the benchmark income or expense that shows up above the price bar. Not all earning sources are costs have benchmarks</li>
+					<li>If you make a mistake, just re-enter the correct amount. If you wish to erase the income source or expense, click the ‘X’ button</li>
+					<li>Repeat this process until all income sources and costs are included. A pie-chart of where your money is allocated will begin to show on the right, along with a summary of your housing costs, in relation to your earnings.</li>
+				</ol>
+			</div>
+		</div>
+
+		<!-- HOUSING CALCULATOR SECTION -->
+		<div class="main-container">
+
+			<!-- DATA INPUT SECTION -->
+			<div class="col-md-7 data-input-section" id="dataInputToggle">
+				<!-- SELECT COUNTRY SECTION -->
+				<div class="select-country-section-container">
+					<div class="select-country-section">
+						<h2 class="select-country-title">Where do you live?</h2>
+						<select class="select-country" id="selectCountry">
+							<option value="0">Canada</option>
+							<option value="1">USA</option>
+						</select>
+					</div>
+				</div>
+				
+				<!-- INCOME AFTER TAX CARD SECTION -->
+				<div class="data-input-card-section">
+					<div class="data-input-card income-after-tax-theme" id="toggleCardOne">
+
+						<!-- INCOME AFTER TAX CARD HEADER SECTION -->
+						<div class="data-input-card-toggle" data-toggle="collapse" data-target="#collpaseCardOne" aria-expanded="false" aria-controls="collpaseCardOne">
+							<div class="col-md-6 data-input-card-toggle-title-section">
+								<div class="data-input-card-toggle-title">Income(After Tax)</div>
+								<div class="data-input-card-toggle-subtitle text-align-left">Enter your take-home, after tax income</div>
+							</div>
+							<div class="col-md-6 data-input-card-toggle-data-section">
+								<div class="data-input-card-toggle-data-content-section">
+									<!-- INCOME AFTER TAX -->
+									<div id="monthlyincomediv" class="data-input-card-toggle-title"></div>
+
+									<!-- ANNUAL TAKE HOME INCOME -->
+									<div id="annualincomediv" class="data-input-card-toggle-subtitle text-align-right"></div>
+								</div>
+
+								<div class="data-input-card-toggle-icon-section">
+									<div class="data-input-card-toggle-icon-card">
+										<svg class="data-input-card-toggle-icon income-after-tax-theme-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 9">
+										  <path id="Polygon_3" data-name="Polygon 3" d="M5.336,1.433a1.5,1.5,0,0,1,2.328,0l3.349,4.121A1.5,1.5,0,0,1,9.849,8h-6.7A1.5,1.5,0,0,1,1.987,5.554Z"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- INCOME AFTER TAX CARD COLLAPSE SECTION -->
+						<div class="col-md-12 collapse data-input-card-collapse" id="collpaseCardOne" aria-labelledby="toggleCardOne" data-parent="#dataInputToggle">
+
+							<div id="income_after_tax_data_cards" class="data-input-card-details-section">
+								<ul class="add-new-category-data-container">
+								</ul>
+							</div>
+
+							<!-- ADD NEW CATEGORY SECTION -->
+							<div class="data-input-card-collapse-footer">
+								<div class="data-input-card-collapse-footer-add-new-section">
+									<select class="add-new-category-input" id="income_after_tax">
+										<option selected disabled="disabled">Select other category</option>
+										<option value="salary">Salary</option>
+										<option value="spouseearning">Spouse's earnings</option>
+										<option value="sidehustle">Side-hustle</option>
+										<option value="investmentincome">Investment Income</option>
+										<option value="childtaxbenefits">Child Tax Benefits</option>
+										<option value="supportpayments">Support Payments</option>
+										<option value="rentalincome">Rental Income</option>
+										<option value="otherincome">Other</option>
+									</select>
+									<button id="add_new_icome_category_btn" class="add-new-category-btn">Include</button>
+								</div>
+							</div>
+						</div>
+					</div><!-- DATA INPUT CARD END -->
+				</div>
+
+				<!-- DIRECT EXPENSES CARD SECTION -->
+				<div class="data-input-card-section">
+					<div class="data-input-card direct-expenses-theme" id="toggleCardTwo">
+
+						<!-- INCOME AFTER TAX CARD HEADER SECTION -->
+						<div class="data-input-card-toggle" data-toggle="collapse" data-target="#collpaseCardTwo" aria-expanded="false" aria-controls="collpaseCardTwo">
+							<div class="col-md-6 data-input-card-toggle-title-section">
+								<div class="data-input-card-toggle-title">Direct Expenses</div>
+								<div class="data-input-card-toggle-subtitle text-align-left">Enter your direct expenses</div>
+							</div>
+							<div class="col-md-6 data-input-card-toggle-data-section">
+								<div id="monthlydirectexpensesdiv" class="data-input-card-toggle-data-content-section">
+									
+								</div>
+
+								<div class="data-input-card-toggle-icon-section">
+									<div class="data-input-card-toggle-icon-card">
+										<svg class="data-input-card-toggle-icon direct-expenses-theme-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 9">
+										  <path id="Polygon_3" data-name="Polygon 3" d="M5.336,1.433a1.5,1.5,0,0,1,2.328,0l3.349,4.121A1.5,1.5,0,0,1,9.849,8h-6.7A1.5,1.5,0,0,1,1.987,5.554Z"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- INCOME AFTER TAX CARD COLLAPSE SECTION -->
+						<div class="col-md-12 collapse data-input-card-collapse" id="collpaseCardTwo" aria-labelledby="toggleCardTwo" data-parent="#dataInputToggle">
+
+							<div class="data-input-card-details-section">
+								<ul id="direct_expenses_data_cards" class="add-new-category-data-container">
+								</ul>
+							</div>
+
+							<!-- ADD NEW CATEGORY SECTION -->
+							<div class="data-input-card-collapse-footer">
+								<div class="data-input-card-collapse-footer-add-new-section">
+									<select class="add-new-category-input" id="direct_expenses">
+										<option selected disabled="disabled">Select other category</option>
+										<option value="mortgage">Mortgage</option>
+										<option value="hydroelectricity">Hydro/Electricity</option>
+										<option value="heating">Heating (Primary: Gas / oil / wood / electricity)</option>
+										<option value="watersewer">Water / Sewer</option>
+										<option value="trashrecycling">Trash/Recycling</option>
+										<option value="housetenantinsurance">House / Tenant insurance</option>
+										<option value="emergencyfund">Emergency fund</option>
+										<option value="maintenance">Maintenance</option>
+										<option value="propertytaxes">Property Taxes</option>
+										<option value="rent">Rent</option>
+										<option value="stratahoacondofees">Strata / HOA / Condo fees</option>
+										<option value="otherdirectexpenses">Other</option>
+									</select>
+									<button id="add_new_direct_expense_category_btn" class="add-new-category-btn direct-expenses-btn">Add</button>
+								</div>
+							</div>
+						</div>
+					</div><!-- DATA INPUT CARD END -->
+				</div>
+
+				<!-- DIRECT EXPENSES DIY OPTIONS CARD SECTION -->
+				<div class="data-input-card-section">
+					<div class="data-input-card direct-expenses-diy-theme" id="toggleCardThree">
+
+						<!-- INCOME AFTER TAX CARD HEADER SECTION -->
+						<div class="data-input-card-toggle" data-toggle="collapse" data-target="#collpaseCardThree" aria-expanded="false" aria-controls="collpaseCardThree">
+							<div class="col-md-6 data-input-card-toggle-title-section">
+								<div class="data-input-card-toggle-title">Direct Expenses w/ DIY Options</div>
+								<div class="data-input-card-toggle-subtitle text-align-left">Enter your direct expenses w/ DIY options</div>
+							</div>
+							<div class="col-md-6 data-input-card-toggle-data-section">
+								<div id="monthlydirectexpensesdiyoptionsdiv" class="data-input-card-toggle-data-content-section">
+									
+								</div>
+
+								<div class="data-input-card-toggle-icon-section">
+									<div class="data-input-card-toggle-icon-card">
+										<svg class="data-input-card-toggle-icon direct-expenses-diy-theme-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 9">
+										  <path id="Polygon_3" data-name="Polygon 3" d="M5.336,1.433a1.5,1.5,0,0,1,2.328,0l3.349,4.121A1.5,1.5,0,0,1,9.849,8h-6.7A1.5,1.5,0,0,1,1.987,5.554Z"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- INCOME AFTER TAX CARD COLLAPSE SECTION -->
+						<div class="col-md-12 collapse data-input-card-collapse" id="collpaseCardThree" aria-labelledby="toggleCardThree" data-parent="#dataInputToggle">
+
+							<div class="data-input-card-details-section">
+								<ul id="direct_expenses_diy_options_data_cards" class="add-new-category-data-container">
+								</ul>
+							</div>
+
+							<!-- ADD NEW CATEGORY SECTION -->
+							<div class="data-input-card-collapse-footer">
+								<div class="data-input-card-collapse-footer-add-new-section">
+									<select class="add-new-category-input" id="direct_expenses_diy_options">
+										<option selected disabled="disabled">Select other category</option>
+										<option value="sumppumpinspection">Sump pump inspection</option>
+										<option value="lawnandgardenmaintenance">Lawn & garden maintenance</option>
+										<option value="snowremoval">Snow removal</option>
+										<option value="gutterandeavestroughcleaning">Gutter & eavestrough cleaning</option>
+										<option value="chimneyorfireboxcleaning">Chimney or fire box cleaning</option>
+										<option value="furnacefilters">Furnace filters</option>
+										<option value="furnaceandhotwatertankinspection">Furnace & Hot water tank inspection</option>
+										<option value="heatpumphrvoracinspection">Heat pump, HRV or A/C inspection</option>
+										<option value="septicwellcoststestsandmaintenance">Septic/Well costs (tests & maintenance)</option>
+										<option value="otherdirectexpensesdiyoptions">Other</option>
+									</select>
+									<button id="add_new_direct_expenses_diy_options_category_btn" class="add-new-category-btn direct-expenses-diy-btn">Add</button>
+								</div>
+							</div>
+						</div>
+					</div><!-- DATA INPUT CARD END -->
+				</div>
+
+				<!-- INDIRECT EXPENSES CARD SECTION -->
+				<div class="data-input-card-section">
+					<div class="data-input-card indirect-expenses-theme" id="toggleCardFour">
+
+						<!-- INCOME AFTER TAX CARD HEADER SECTION -->
+						<div class="data-input-card-toggle" data-toggle="collapse" data-target="#collpaseCardFour" aria-expanded="false" aria-controls="collpaseCardFour">
+							<div class="col-md-6 data-input-card-toggle-title-section">
+								<div class="data-input-card-toggle-title">Indirect Expenses</div>
+								<div class="data-input-card-toggle-subtitle text-align-left">Enter your indirect expenses</div>
+							</div>
+							<div class="col-md-6 data-input-card-toggle-data-section">
+								<div id="monthlyindirectexpensesdiv" class="data-input-card-toggle-data-content-section">
+									
+								</div>
+
+								<div class="data-input-card-toggle-icon-section">
+									<div class="data-input-card-toggle-icon-card">
+										<svg class="data-input-card-toggle-icon indirect-expenses-theme-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 9">
+										  <path id="Polygon_3" data-name="Polygon 3" d="M5.336,1.433a1.5,1.5,0,0,1,2.328,0l3.349,4.121A1.5,1.5,0,0,1,9.849,8h-6.7A1.5,1.5,0,0,1,1.987,5.554Z"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- INCOME AFTER TAX CARD COLLAPSE SECTION -->
+						<div class="col-md-12 collapse data-input-card-collapse" id="collpaseCardFour" aria-labelledby="toggleCardFour" data-parent="#dataInputToggle">
+
+							<div class="data-input-card-details-section">
+								<ul id="indirect_expenses_data_cards" class="add-new-category-data-container">
+								</ul>
+							</div>
+
+							<!-- ADD NEW CATEGORY SECTION -->
+							<div class="data-input-card-collapse-footer">
+								<div class="data-input-card-collapse-footer-add-new-section">
+									<select class="add-new-category-input" id="indirect_expenses">
+										<option selected disabled="disabled">Select other category</option>
+										<option value="housingcleaningsupplies">Housing Cleaning Supplies</option>
+										<option value="pestcontrol">Pest control</option>
+										<option value="deckandffencemaintenance">Deck & fence maintenance</option>
+										<option value="lightbulbsincandescent">Light bulbs - incandescent</option>
+										<option value="lightbulbsled">Light bulbs - LED</option>
+										<option value="batteriessmokeandcarbonmonoxidedetectors">Batteries (smoke & carbon monoxide detectors)</option>
+										<option value="otherindirectexpenses">Other</option>
+									</select>
+									<button id="add_new_indirect_expense_category_btn" class="add-new-category-btn indirect-expenses-btn">Add</button>
+								</div>
+							</div>
+						</div>
+					</div><!-- DATA INPUT CARD END -->
+				</div>
+
+				<!-- DISCRETIONARY EXPENSES CARD SECTION -->
+				<div class="data-input-card-section">
+					<div class="data-input-card discretionary-expenses-theme" id="toggleCardFive">
+
+						<!-- INCOME AFTER TAX CARD HEADER SECTION -->
+						<div class="data-input-card-toggle" data-toggle="collapse" data-target="#collpaseCardFive" aria-expanded="false" aria-controls="collpaseCardFive">
+							<div class="col-md-6 data-input-card-toggle-title-section">
+								<div class="data-input-card-toggle-title">Discretionary Expenses</div>
+								<div class="data-input-card-toggle-subtitle text-align-left">Enter your discretionary expenses</div>
+							</div>
+							<div class="col-md-6 data-input-card-toggle-data-section">
+								<div id="monthlydiscretionaryexpensesdiv" class="data-input-card-toggle-data-content-section">
+									
+								</div>
+
+								<div class="data-input-card-toggle-icon-section">
+									<div class="data-input-card-toggle-icon-card">
+										<svg class="data-input-card-toggle-icon discretionary-expenses-theme-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 9">
+										  <path id="Polygon_3" data-name="Polygon 3" d="M5.336,1.433a1.5,1.5,0,0,1,2.328,0l3.349,4.121A1.5,1.5,0,0,1,9.849,8h-6.7A1.5,1.5,0,0,1,1.987,5.554Z"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- INCOME AFTER TAX CARD COLLAPSE SECTION -->
+						<div class="col-md-12 collapse data-input-card-collapse" id="collpaseCardFive" aria-labelledby="toggleCardFive" data-parent="#dataInputToggle">
+
+							<div class="data-input-card-details-section">
+								<ul id="discretionary_expenses_data_cards" class="add-new-category-data-container">
+								</ul>
+							</div>
+
+							<!-- ADD NEW CATEGORY SECTION -->
+							<div class="data-input-card-collapse-footer">
+								<div class="data-input-card-collapse-footer-add-new-section">
+									<select class="add-new-category-input" id="discretionary_expenses">
+										<option selected disabled="disabled">Select other category</option>
+										<option value="homephonehardline">Home Phone (Hardline)</option>
+										<option value="subscriptioncostcabletvsatellite">Subscription Cost #1: Cable TV/Satellite</option>
+										<option value="subscriptioncostnetflixstreamingvideos">Subscription Cost #2: Netflix / Streaming Videos</option>
+										<option value="subscriptioncostgaming">Subscription Cost #3: Gaming</option>
+										<option value="subscriptioncostmusic">Subscription Cost #4: Music</option>
+										<option value="internet">Internet</option>
+										<option value="cleaningservice">Cleaning Service</option>
+										<option value="homesecurityalarmsystem">Home Security/Alarm System</option>
+										<option value="propanebbqtankfirstpurchase">Propane BBQ tank (first purchase)</option>
+										<option value="bbqpropanerefills">BBQ propane (refills)</option>
+										<option value="firewood">Fire wood</option>
+										<option value="poolheaterandpumpandfilterinspection">Pool heater and pump & filter inspection</option>
+										<option value="otherdiscretionaryexpenses">Other</option>
+									</select>
+									<button id="add_new_discretionary_expense_category_btn" class="add-new-category-btn discretionary-expenses-btn">Add</button>
+								</div>
+							</div>
+						</div>
+					</div><!-- DATA INPUT CARD END -->
+				</div>
+
+
+			</div>
+
+			<!-- RESULTS SECTION -->
+			<div class="col-md-5 results-section">
+				<div class="chart-block">
+                    <canvas id="housingchart"></canvas>
+				</div>
+				<div class="results-block">
+					<div class="results-block-header">
+						<div class="results-block-header-title-section">
+							<h2 class="results-block-header-title">Income Left After Housing...</h2>
+						</div>
+						<div class="results-block-header-income-card-section">
+							<div class="results-block-header-income-card">
+								<div class="results-block-header-income-card-amount-section">
+									<h2 class="results-block-header-income-card-amount" id="incomeaftertaxresultsheader">$0</h2>
+								</div>
+								<div class="results-block-header-income-card-duration-section">
+									<h2 class="results-block-header-income-card-duration">per</h2>
+									<h2 class="results-block-header-income-card-duration">month</h2>
+								</div>
+							</div>
+						</div>
+						<div class="results-block-header-expense-section">
+							<h2 class="results-block-header-expense">Total Expense<span class="results-block-header-expense-amount" id="totalexpensesresultsheader">$ 0</span></h2>
+						</div>
+					</div>
+					<div class="results-block-table-section">
+						<div class="results-block-table-card">
+							<!-- RESULT TABLE HEADER -->
+							<div class="results-block-table-row">
+								<div class="results-block-table-header-summary-section">
+									<div class="results-block-table-header-title-section justify-content-flex-start text-align-left">
+										<h2 class="results-block-table-header-title">Summary</h2>
+									</div>
+								</div>
+								<div class="results-block-table-header-monthly-total-section">
+									<div class="results-block-table-header-title-section">
+										<h2 class="results-block-table-header-subtitle">Monthly<br>Totals</h2>
+									</div>
+								</div>
+								<div class="results-block-table-header-budget-allocation-section">
+									<div class="results-block-table-header-title-section">
+										<h2 class="results-block-table-header-subtitle">Budget<br>Allocation</h2>
+									</div>
+								</div>
+								<div class="results-block-table-header-guideline-maximum-section">
+									<div class="results-block-table-header-title-section">
+										<h2 class="results-block-table-header-subtitle">Guideline<br>Maximum</h2>
+									</div>
+								</div>
+							</div>
+
+							<!-- INCOME AFTER TAX RESULT -->
+							<div class="results-block-table-row">
+								<div class="results-block-table-header-summary-section">
+									<div class="results-block-table-row-title-section justify-content-flex-start text-align-left">
+										<p class="results-block-table-row-summary-title">Income (After Tax)</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-monthly-total-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="incomeaftertaxresultstable">0</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-budget-allocation-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title">100%</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-guideline-maximum-section">
+									<div class="results-block-table-row-title-section">
+									</div>
+								</div>
+							</div>
+
+							<hr style="width: 100%; height: 1px; background-color: #AAAAAA;">
+
+							<!-- DIRECT EXPENSES RESULT -->
+							<div class="results-block-table-row">
+								<div class="results-block-table-header-summary-section">
+									<div class="results-block-table-row-title-section justify-content-flex-start text-align-left">
+										<p class="results-block-table-row-summary-title">Direct Expenses</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-monthly-total-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="directexpensesresulttable">0</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-budget-allocation-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="directexpensesbudgetallocation">0%</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-guideline-maximum-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title">32%</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- DIRECT EXPENSES W/ DIY OPTIONS RESULT -->
+							<div class="results-block-table-row">
+								<div class="results-block-table-header-summary-section">
+									<div class="results-block-table-row-title-section justify-content-flex-start text-align-left">
+										<p class="results-block-table-row-summary-title">Direct Expenses w/ DIY Options</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-monthly-total-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="directexpensesdiyoptionsresulttable">0</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-budget-allocation-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="directexpensesdiyoptionsbudgetallocation">0%</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-guideline-maximum-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title">6%</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- INDIRECT EXPENSES RESULT -->
+							<div class="results-block-table-row">
+								<div class="results-block-table-header-summary-section">
+									<div class="results-block-table-row-title-section justify-content-flex-start text-align-left">
+										<p class="results-block-table-row-summary-title">Indirect Expenses</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-monthly-total-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="indirectexpensesresulttable">0</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-budget-allocation-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="indirectexpensesbudgetallocation">0%</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-guideline-maximum-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title">5%</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- DISCRETIONARY EXPENSES RESULT -->
+							<div class="results-block-table-row">
+								<div class="results-block-table-header-summary-section">
+									<div class="results-block-table-row-title-section justify-content-flex-start text-align-left">
+										<p class="results-block-table-row-summary-title">Discretionary Expenses</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-monthly-total-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="discretionaryexpensesresulttable">0</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-budget-allocation-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="discretionaryexpensesbudgetallocation">0%</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-guideline-maximum-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title">5%</p>
+									</div>
+								</div>
+							</div>
+
+							<hr style="width: 100%; height: 1px; background-color: #AAAAAA;">
+
+							<!-- DISCRETIONARY EXPENSES RESULT -->
+							<div class="results-block-table-row">
+								<div class="results-block-table-header-summary-section">
+									<div class="results-block-table-row-title-section justify-content-flex-start text-align-left">
+										<p class="results-block-table-row-summary-footer-title">Total Expenses</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-monthly-total-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="totalexpensesresultstable">0</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-budget-allocation-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="totalexpensespercentageresultstable">0%</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-guideline-maximum-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title">47%</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- DISCRETIONARY EXPENSES RESULT -->
+							<div class="results-block-table-row">
+								<div class="results-block-table-header-summary-section">
+									<div class="results-block-table-row-title-section justify-content-flex-start text-align-left">
+										<p class="results-block-table-row-summary-footer-title">Income Left After Housing</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-monthly-total-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="incomeleftafterexpensesresultstable">0</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-budget-allocation-section">
+									<div class="results-block-table-row-title-section">
+										<p class="results-block-table-row-title" id="incomeleftafterexpensespercentageresultstable">0%</p>
+									</div>
+								</div>
+								<div class="results-block-table-header-guideline-maximum-section">
+									<div class="results-block-table-row-title-section">
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div><!-- RESULTS SECTION ENDS HERE -->
+		</div><!-- MAIN CONTAINER ENDS HERE -->
+	</div><!-- WRAPPER ENDS HERE -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<!-- FOR PIE CHART -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+	
+	<script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+</html>

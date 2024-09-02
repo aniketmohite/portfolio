@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tests/stock-market-app/static/css/main.17c7b8ca.css",
+    "main.js": "/tests/stock-market-app/static/js/main.f7a7008c.js",
+    "index.html": "/tests/stock-market-app/index.html",
+    "main.17c7b8ca.css.map": "/tests/stock-market-app/static/css/main.17c7b8ca.css.map",
+    "main.f7a7008c.js.map": "/tests/stock-market-app/static/js/main.f7a7008c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17c7b8ca.css",
+    "static/js/main.f7a7008c.js"
+  ]
+}

@@ -1,0 +1,55 @@
+@import url('https//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css');
+ @import url('https//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+
+
+.accordion {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    color: #333D47;
+    cursor: pointer;
+    padding: 18px 10px 18px 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+    text-align: left;
+    outline: none;
+    font-size: 24px;
+    transition: 0.4s;
+    font-weight: 500;
+}
+
+.accordion:active, 
+.accordion:hover {
+    background-color: #ECF6F9;
+}
+
+.accordion:after {
+    content: url('../images/arrowdown.png');
+    font-size: 24px;
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion.active:after {
+    content: url('../images/arrowup.png');
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border: none;
+}
+.panel > p{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    font-size: 18px;
+    color: #6C718B;
+}
